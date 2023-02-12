@@ -1,0 +1,302 @@
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import CheckCookie from "../../components/CheckCookie";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchCart, deleteCart } from "../../redux/async/cart.async";
+import { fetchSingleUser } from "../../redux/async/user.async";
+import { postOrder } from "../../redux/async/order.async";
+
+const Checkout = () => {
+  const dispatch = useDispatch();
+  const [Method, setMethod] = useState("CASH ON DELIVERY");
+  const cart = useSelector((state) => state.cart);
+  const user = useSelector((state) => state.user);
+  let check = 0;
+  let TotalPrice = 0;
+  if (
+    user.data.length &&
+    Object.hasOwn(user.data[0], "shipping") &&
+    Object.hasOwn(user.data[0], "billing")
+  ) {
+    check = 1;
+  }
+  useEffect(() => {
+    dispatch(fetchCart());
+  }, [dispatch]);
+  useEffect(() => {
+    dispatch(fetchSingleUser());
+  }, []);
+  if(!cart.data.length){
+    window.location.href="/cart"
+  }
+  return (
+    <>
+      <CheckCookie path="checkout" />
+      <section className="product-area">
+        <div className="container" data-padding-top="62">
+          <div className="shopping-cart-wrap">
+            <div className="row">
+              <div className="col-lg-8">
+                <div className="shopping-cart-content">
+                  <h4 className="title">Checkout</h4>
+                  {cart.data.map((item) => {
+                    return (
+                      <div className="shopping-cart-item" key={item._id}>
+                        <div className="row">
+                          <div className="col-4 col-md-3">
+                            <div className="product-thumb">
+                              <img
+                                src={`${process.env.PUBLIC_URL}/assets/upload/${item.product[0].thumbnail}`}
+                                alt="Has"
+                              />
+                            </div>
+                          </div>
+                          <div className="col-8 col-md-4">
+                            <div className="product-content">
+                              <h5 className="title">
+                                <Link to="single-product.html">
+                                  {item.product[0].name}
+                                </Link>
+                              </h5>
+                              <h6 className="product-price">
+                                {item.product[0].price -
+                                  item.product[0].discount}{" "}
+                                Rs
+                              </h6>
+                              {/* <span className="product-size">Size: S</span> */}
+                            </div>
+                          </div>
+                          <div className="col-6 offset-4 offset-md-0 col-md-5">
+                            <div className="product-info">
+                              <div className="row">
+                                <div className="col-md-10 col-xs-6">
+                                  <div className="row">
+                                    <div className="col-md-6 col-xs-6 qty">
+                                      <div className="product-quick-qty">
+                                        <div className="pro-qty">
+                                          <input
+                                            type="text"
+                                            id="quantity"
+                                            title="Quantity"
+                                            defaultValue={item.qty}
+                                            disabled
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div className="col-md-6 col-xs-2 price">
+                                      <h6 className="product-price">
+                                        {(item.product[0].price -
+                                          item.product[0].discount) *
+                                          item.qty}{" "}
+                                        Rs
+                                      </h6>
+                                      <span className="visually-hidden">
+                                        {
+                                          (TotalPrice =
+                                            TotalPrice +
+                                            (item.product[0].price -
+                                              item.product[0].discount) *
+                                              item.qty)
+                                        }
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+                {check ? (
+                  <>
+                    <div className="shopping-cart-content mt-5">
+                      <div className="row">
+                        <div className="col-6">
+                          <h4 className="title">Shipping</h4>
+                          <table className="table">
+                            <tr>
+                              <th scope="row">Country</th>
+                              <td>{user.data[0].shipping.country}</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">City</th>
+                              <td>{user.data[0].shipping.city}</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">State</th>
+                              <td>{user.data[0].shipping.state}</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Pincode</th>
+                              <td>{user.data[0].shipping.pincode}</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Address </th>
+                              <td>{user.data[0].shipping.address}</td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div className="col-6">
+                          <h4 className="title">Billing</h4>
+                          <table className="table">
+                            <tr>
+                              <th scope="row">Country</th>
+                              <td>{user.data[0].billing.country}</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">City</th>
+                              <td>{user.data[0].billing.city}</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">State</th>
+                              <td>{user.data[0].billing.state}</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Pincode</th>
+                              <td>{user.data[0].billing.pincode}</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Address </th>
+                              <td>{user.data[0].billing.address}</td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="shopping-cart-content mt-5">
+                      <h4 className="title">Payment Option</h4>
+                      <div className="form-check">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="method"
+                          defaultValue="CASH ON DELIVERY"
+                          onClick={(e) => {
+                            setMethod(e.target.value);
+                          }}
+                          checked
+                        />
+                        <label className="form-check-label">Cash on Delivery</label>
+                      </div>
+                      <div className="form-check">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="method"
+                          defaultValue="PAY TO VENDOR"
+                          onClick={(e) => {
+                            setMethod(e.target.value);
+                          }}
+                        />
+                        <label className="form-check-label">Pay To Vendor</label>
+                      </div>
+                      <div className="form-check">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="method"
+                          defaultValue="PAYTM"
+                          onClick={(e) => {
+                            setMethod(e.target.value);
+                          }}
+                        />
+                        <label className="form-check-label">Paytm</label>
+                      </div>
+                      <div className="form-check">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="method"
+                          defaultValue="RAZORPAY"
+                          onClick={(e) => {
+                            setMethod(e.target.value);
+                          }}
+                        />
+                        <label className="form-check-label">Razorpay</label>
+                      </div>
+                      <Link
+                        className="btn-primary"
+                        to="#"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          dispatch(postOrder({method:Method}));
+                        }}
+                      >
+                        Place Order
+                      </Link>
+                    </div>
+                  </>
+                ) : (
+                  <Link className="btn btn-primary" to="/account">
+                    Fill Up Address
+                  </Link>
+                )}
+              </div>
+              <div className="col-lg-4">
+                <div className="shopping-cart-summary mt-md-70">
+                  <div className="cart-detailed-totals">
+                    <div className="card-block">
+                      <div className="card-block-item">
+                        <span className="label">{cart.data.length} items</span>
+                        <span className="value">{TotalPrice} Rs</span>
+                      </div>
+                      <div className="card-block-item">
+                        <span className="label">Shipping</span>
+                        <span className="value">Free</span>
+                      </div>
+                    </div>
+                    <div className="separator"></div>
+                    <div className="card-block">
+                      <div className="card-block-item">
+                        <span className="label">Total (Tax Incl.)</span>
+                        <span className="value">{TotalPrice} Rs</span>
+                      </div>
+                    </div>
+                    <div className="separator"></div>
+                  </div>
+                </div>
+                <div className="block-reassurance">
+                  <ul>
+                    <li>
+                      <img
+                        src="assets/img/shop/cart/verified-user.png"
+                        alt="Has"
+                      />
+                      <span>
+                        Security Policy (Edit With Customer Reassurance Module)
+                      </span>
+                    </li>
+                    <li>
+                      <img
+                        src="assets/img/shop/cart/local-shipping.png"
+                        alt="Has"
+                      />
+                      <span>
+                        Delivery Policy (Edit With Customer Reassurance Module)
+                      </span>
+                    </li>
+                    <li>
+                      <img
+                        src="assets/img/shop/cart/swap-horiz.png"
+                        alt="Has"
+                      />
+                      <span>
+                        Return Policy (Edit With Customer Reassurance Module)
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default Checkout;
