@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "63dcf9df31df5e1e540ab8a4"
+  },
+  "active": false,
+  "name": "Mainish",
+  "email": "msah30jan2001@gmail.com",
+  "password": "admin",
+  "tokens": [
+    {
+      "_id": {
+        "$oid": "63e5f9e72bf0fa0c04f181e8"
+      },
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2RjZjlkZjMxZGY1ZTFlNTQwYWI4YTQiLCJpYXQiOjE2NzYwMTYxMDN9.pGaa5aXZ4eCGQrW5ei5aDlIlUIxdpxbSuG5T09-cnOU"
+    },
+    {
+      "_id": {
+        "$oid": "63e5fa4ea4e88a30bce70913"
+      },
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2RjZjlkZjMxZGY1ZTFlNTQwYWI4YTQiLCJpYXQiOjE2NzYwMTYyMDZ9.S6wJ9njsk-tFjH9NH18xNfifQBxrGIckVhsbZUU_Jy8"
+    }
+  ],
+  "__v": 12
+}]

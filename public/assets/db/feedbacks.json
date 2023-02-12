@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "63e29bc68771d12f243672d4"
+  },
+  "date": {
+    "$date": {
+      "$numberLong": "1675794918728"
+    }
+  },
+  "user": {
+    "$oid": "63dd13a253cd2130d8e22018"
+  },
+  "product": {
+    "$oid": "63da88eab69a9a1344e3c6e0"
+  },
+  "rate": 4,
+  "review": "nice product",
+  "__v": 0
+}]

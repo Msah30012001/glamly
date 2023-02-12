@@ -1,0 +1,58 @@
+[{
+  "_id": {
+    "$oid": "63dd13a253cd2130d8e22018"
+  },
+  "check": false,
+  "active": false,
+  "name": "Manish Sah",
+  "email": "manish.sah.cs19@ggits.net",
+  "phone": "9518330825",
+  "gender": "M",
+  "password": "admin",
+  "dob": {
+    "$date": {
+      "$numberLong": "1673136000000"
+    }
+  },
+  "__v": 27,
+  "billing": {
+    "country": "India",
+    "city": "Ulhasnagar",
+    "state": "Maharashtra",
+    "pincode": 421005,
+    "address": "NR Block C 938, Meena colony,Ravinder nagar,  kurla camp,ulhasnagar-421005"
+  },
+  "shipping": {
+    "country": "India",
+    "city": "Ulhasnagar",
+    "state": "Maharashtra",
+    "pincode": 421005,
+    "address": "NR Block C 938, Meena colony,Ravinder nagar,  kurla camp,ulhasnagar-421005"
+  },
+  "tokens": [
+    {
+      "_id": {
+        "$oid": "63e5e122c0f52814343c1d60"
+      },
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2RkMTNhMjUzY2QyMTMwZDhlMjIwMTgiLCJpYXQiOjE2NzYwMDk3NjJ9.UOEx50HuLny8P0OKyCje4bsBtVuuOYbpDy5NPUF43_Y"
+    },
+    {
+      "_id": {
+        "$oid": "63e68d1a3d381211a0c2e8c5"
+      },
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2RkMTNhMjUzY2QyMTMwZDhlMjIwMTgiLCJpYXQiOjE2NzYwNTM3ODZ9.lZtCeV50LEtZdCPJmhhikB-00en41RF5oUiwRlgUDxw"
+    },
+    {
+      "_id": {
+        "$oid": "63e7a3f2164a9901645db043"
+      },
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2RkMTNhMjUzY2QyMTMwZDhlMjIwMTgiLCJpYXQiOjE2NzYxMjUxNzB9.6BPN-1Go36HxuRALGS14WlUHqBf-fSf_K6vgtPto7a8"
+    },
+    {
+      "_id": {
+        "$oid": "63e8cd8a0da373279468eff1"
+      },
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2RkMTNhMjUzY2QyMTMwZDhlMjIwMTgiLCJpYXQiOjE2NzYyMDEzNTR9._GmTZISzy62_qsoXK96OzwaiWmZrCOfeqbOpgV0zJgQ"
+    }
+  ]
+}]

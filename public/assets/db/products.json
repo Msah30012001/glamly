@@ -1,0 +1,883 @@
+[{
+  "_id": {
+    "$oid": "63da48225ff21a42fcc04487"
+  },
+  "name": "LIPSTICK",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
+  "childCategory": {
+    "$oid": "63d3b6e595951b1db891f1ff"
+  },
+  "description": "lipstick",
+  "code": "lipstick100",
+  "productType": {
+    "$oid": "63d3c83220348c3524f4ff86"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da489d5ff21a42fcc0448a"
+  },
+  "name": "LIP GLOSS",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
+  "childCategory": {
+    "$oid": "63d3b741bd130b1e34ffa1a2"
+  },
+  "description": "lip gloss",
+  "code": "lipgloss100",
+  "productType": {
+    "$oid": "63d3c83220348c3524f4ff86"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da48c05ff21a42fcc0448c"
+  },
+  "name": "LIP LINER",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
+  "childCategory": {
+    "$oid": "63da31515ff21a42fcc043e5"
+  },
+  "description": "lip liner",
+  "code": "lipliner100",
+  "productType": {
+    "$oid": "63d3c83220348c3524f4ff86"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da4b415ff21a42fcc0448f"
+  },
+  "name": "MASCARA",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
+  "childCategory": {
+    "$oid": "63da31665ff21a42fcc043e9"
+  },
+  "description": "mascara",
+  "code": "mascara100",
+  "productType": {
+    "$oid": "63d3c83220348c3524f4ff86"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da4b545ff21a42fcc04491"
+  },
+  "name": "EYELINER",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
+  "childCategory": {
+    "$oid": "63da315d5ff21a42fcc043e7"
+  },
+  "description": "eyeliner",
+  "code": "eyeliner100",
+  "productType": {
+    "$oid": "63d3c83220348c3524f4ff86"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da4b675ff21a42fcc04493"
+  },
+  "name": "KAJAL",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
+  "childCategory": {
+    "$oid": "63da316d5ff21a42fcc043eb"
+  },
+  "description": "",
+  "code": "kajal100",
+  "productType": {
+    "$oid": "63d3c83220348c3524f4ff86"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da4b7d5ff21a42fcc04495"
+  },
+  "name": "EYESHADOW",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
+  "childCategory": {
+    "$oid": "63da31795ff21a42fcc043ed"
+  },
+  "description": "",
+  "code": "eyeshadow100",
+  "productType": {
+    "$oid": "63d3c83220348c3524f4ff86"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da4b915ff21a42fcc04497"
+  },
+  "name": "FOUNDATION",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
+  "childCategory": {
+    "$oid": "63da31855ff21a42fcc043ef"
+  },
+  "description": "",
+  "code": "foundation100",
+  "productType": {
+    "$oid": "63d3c83220348c3524f4ff86"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da4ba15ff21a42fcc04499"
+  },
+  "name": "PRIMER",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
+  "childCategory": {
+    "$oid": "63da318d5ff21a42fcc043f1"
+  },
+  "description": "",
+  "code": "primer100",
+  "productType": {
+    "$oid": "63d3c83220348c3524f4ff86"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da4bae5ff21a42fcc0449b"
+  },
+  "name": "CONCEALER",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
+  "childCategory": {
+    "$oid": "63da31975ff21a42fcc043f3"
+  },
+  "description": "",
+  "code": "concealer100",
+  "productType": {
+    "$oid": "63d3c83220348c3524f4ff86"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da4bbc5ff21a42fcc0449d"
+  },
+  "name": "COMPACT",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
+  "childCategory": {
+    "$oid": "63da31a35ff21a42fcc043f5"
+  },
+  "description": "",
+  "code": "compact100",
+  "productType": {
+    "$oid": "63d3c83220348c3524f4ff86"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da4bc85ff21a42fcc0449f"
+  },
+  "name": "NAIL POLISH",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
+  "childCategory": {
+    "$oid": "63da31b25ff21a42fcc043f7"
+  },
+  "description": "",
+  "code": "nailpolish00",
+  "productType": {
+    "$oid": "63d3c83220348c3524f4ff86"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da524b5ff21a42fcc044a2"
+  },
+  "name": "FACE MOISTURISER",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da2fb1494a560ccc06ded0"
+  },
+  "childCategory": {
+    "$oid": "63da336f5ff21a42fcc0440d"
+  },
+  "description": "",
+  "code": "facemoisturiser100",
+  "productType": {
+    "$oid": "63da383b5ff21a42fcc04454"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da52585ff21a42fcc044a4"
+  },
+  "name": "CLEANSER",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da2fb1494a560ccc06ded0"
+  },
+  "childCategory": {
+    "$oid": "63da33775ff21a42fcc0440f"
+  },
+  "description": "",
+  "code": "cleanser100",
+  "productType": {
+    "$oid": "63da383b5ff21a42fcc04454"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da59855ff21a42fcc044a6"
+  },
+  "name": "MASKS & PEEL",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da2fb1494a560ccc06ded0"
+  },
+  "childCategory": {
+    "$oid": "63da33845ff21a42fcc04411"
+  },
+  "description": "",
+  "code": "maskspeel100",
+  "productType": {
+    "$oid": "63da383b5ff21a42fcc04454"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da59a85ff21a42fcc044a8"
+  },
+  "name": "SUNSCREEN",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da2fb1494a560ccc06ded0"
+  },
+  "childCategory": {
+    "$oid": "63da338f5ff21a42fcc04413"
+  },
+  "description": "",
+  "code": "sunscreen100",
+  "productType": {
+    "$oid": "63da383b5ff21a42fcc04454"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da59b55ff21a42fcc044aa"
+  },
+  "name": "SERUM",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da2fb1494a560ccc06ded0"
+  },
+  "childCategory": {
+    "$oid": "63da33975ff21a42fcc04415"
+  },
+  "description": "",
+  "code": "serum100",
+  "productType": {
+    "$oid": "63da383b5ff21a42fcc04454"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da59c35ff21a42fcc044ac"
+  },
+  "name": "FACE WASH",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da2fb1494a560ccc06ded0"
+  },
+  "childCategory": {
+    "$oid": "63da339f5ff21a42fcc04417"
+  },
+  "description": "",
+  "code": "facewash100",
+  "productType": {
+    "$oid": "63da383b5ff21a42fcc04454"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da59d25ff21a42fcc044ae"
+  },
+  "name": "EYE CREAM",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da2fb1494a560ccc06ded0"
+  },
+  "childCategory": {
+    "$oid": "63da33aa5ff21a42fcc04419"
+  },
+  "description": "",
+  "code": "eyecream100",
+  "productType": {
+    "$oid": "63da383b5ff21a42fcc04454"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da59df5ff21a42fcc044b0"
+  },
+  "name": "LIP BALM",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da2fb1494a560ccc06ded0"
+  },
+  "childCategory": {
+    "$oid": "63da33b65ff21a42fcc0441b"
+  },
+  "description": "",
+  "code": "lipbalm100",
+  "productType": {
+    "$oid": "63da383b5ff21a42fcc04454"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da59ed5ff21a42fcc044b2"
+  },
+  "name": "BODY LOTION",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da2fb1494a560ccc06ded0"
+  },
+  "childCategory": {
+    "$oid": "63da33c15ff21a42fcc0441d"
+  },
+  "description": "",
+  "code": "bodylotion100",
+  "productType": {
+    "$oid": "63da383b5ff21a42fcc04454"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da59fc5ff21a42fcc044b4"
+  },
+  "name": "BODY WASH",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da2fb1494a560ccc06ded0"
+  },
+  "childCategory": {
+    "$oid": "63da33ca5ff21a42fcc0441f"
+  },
+  "description": "",
+  "code": "bodywash100",
+  "productType": {
+    "$oid": "63da383b5ff21a42fcc04454"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da5a075ff21a42fcc044b6"
+  },
+  "name": "BODY SCRUB",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da2fb1494a560ccc06ded0"
+  },
+  "childCategory": {
+    "$oid": "63da33d55ff21a42fcc04421"
+  },
+  "description": "",
+  "code": "bodyscrub100",
+  "productType": {
+    "$oid": "63da383b5ff21a42fcc04454"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da5a165ff21a42fcc044b8"
+  },
+  "name": "HAND CREAM",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da2fb1494a560ccc06ded0"
+  },
+  "childCategory": {
+    "$oid": "63da33e05ff21a42fcc04423"
+  },
+  "description": "",
+  "code": "handcream100",
+  "productType": {
+    "$oid": "63da383b5ff21a42fcc04454"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da5a245ff21a42fcc044ba"
+  },
+  "name": "SHAMPOO",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da2fee494a560ccc06ded3"
+  },
+  "childCategory": {
+    "$oid": "63da33f95ff21a42fcc04425"
+  },
+  "description": "",
+  "code": "shampoo100",
+  "productType": {
+    "$oid": "63da38905ff21a42fcc04456"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da5a355ff21a42fcc044bc"
+  },
+  "name": "CONDITIONER",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da2ff8494a560ccc06ded5"
+  },
+  "childCategory": {
+    "$oid": "63da34015ff21a42fcc04427"
+  },
+  "description": "",
+  "code": "conditioner100",
+  "productType": {
+    "$oid": "63da394a5ff21a42fcc04464"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da5a435ff21a42fcc044be"
+  },
+  "name": "HAIR CREAM",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da3003494a560ccc06ded7"
+  },
+  "childCategory": {
+    "$oid": "63da340b5ff21a42fcc04429"
+  },
+  "description": "",
+  "code": "haircream100",
+  "productType": {
+    "$oid": "63da36f75ff21a42fcc0444f"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da5a4f5ff21a42fcc044c0"
+  },
+  "name": "HAIR OIL",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da3003494a560ccc06ded7"
+  },
+  "childCategory": {
+    "$oid": "63da34145ff21a42fcc0442b"
+  },
+  "description": "",
+  "code": "hairoil100",
+  "productType": {
+    "$oid": "63da36f75ff21a42fcc0444f"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da5a5e5ff21a42fcc044c2"
+  },
+  "name": "HAIR GEL",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da3003494a560ccc06ded7"
+  },
+  "childCategory": {
+    "$oid": "63da34205ff21a42fcc0442d"
+  },
+  "description": "",
+  "code": "hairgel100",
+  "productType": {
+    "$oid": "63da36f75ff21a42fcc0444f"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da5a685ff21a42fcc044c4"
+  },
+  "name": "HAIR COLOR",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da3003494a560ccc06ded7"
+  },
+  "childCategory": {
+    "$oid": "63da34295ff21a42fcc0442f"
+  },
+  "description": "",
+  "code": "haircolor100",
+  "productType": {
+    "$oid": "63da36f75ff21a42fcc0444f"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da5a795ff21a42fcc044c6"
+  },
+  "name": "HAIR SERUM",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da3003494a560ccc06ded7"
+  },
+  "childCategory": {
+    "$oid": "63da34355ff21a42fcc04431"
+  },
+  "description": "",
+  "code": "hairserum100",
+  "productType": {
+    "$oid": "63da36f75ff21a42fcc0444f"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da5a835ff21a42fcc044c8"
+  },
+  "name": "HAIR ACCESSORY",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da3003494a560ccc06ded7"
+  },
+  "childCategory": {
+    "$oid": "63da34405ff21a42fcc04433"
+  },
+  "description": "",
+  "code": "hairaccessory100",
+  "productType": {
+    "$oid": "63da36f75ff21a42fcc0444f"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da5a8f5ff21a42fcc044ca"
+  },
+  "name": "PERFUME",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da3003494a560ccc06ded7"
+  },
+  "childCategory": {
+    "$oid": "63da34605ff21a42fcc04435"
+  },
+  "description": "",
+  "code": "perfume100",
+  "productType": {
+    "$oid": "63da36f75ff21a42fcc0444f"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da5a9c5ff21a42fcc044cc"
+  },
+  "name": "DEODORANT",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da3003494a560ccc06ded7"
+  },
+  "childCategory": {
+    "$oid": "63da346a5ff21a42fcc04437"
+  },
+  "description": "",
+  "code": "deodorant100",
+  "productType": {
+    "$oid": "63da36f75ff21a42fcc0444f"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da5aa85ff21a42fcc044ce"
+  },
+  "name": "BODY MIST",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da300c494a560ccc06ded9"
+  },
+  "childCategory": {
+    "$oid": "63da34765ff21a42fcc04439"
+  },
+  "description": "",
+  "code": "bodymist100",
+  "productType": {
+    "$oid": "63da39bd5ff21a42fcc04468"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da5ab25ff21a42fcc044d0"
+  },
+  "name": "HAIR STRAIGHTENER",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da300c494a560ccc06ded9"
+  },
+  "childCategory": {
+    "$oid": "63da34925ff21a42fcc0443b"
+  },
+  "description": "",
+  "code": "hairstraightener100",
+  "productType": {
+    "$oid": "63da39bd5ff21a42fcc04468"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da5abf5ff21a42fcc044d2"
+  },
+  "name": "HAIR DRYER",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da300c494a560ccc06ded9"
+  },
+  "childCategory": {
+    "$oid": "63da349e5ff21a42fcc0443d"
+  },
+  "description": "",
+  "code": "hairdryer100",
+  "productType": {
+    "$oid": "63da39bd5ff21a42fcc04468"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da5acd5ff21a42fcc044d4"
+  },
+  "name": "EPILATOR",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da3017494a560ccc06dedb"
+  },
+  "childCategory": {
+    "$oid": "63da34a75ff21a42fcc0443f"
+  },
+  "description": "",
+  "code": "epilator100",
+  "productType": {
+    "$oid": "63da39f95ff21a42fcc0446a"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da5adb5ff21a42fcc044d6"
+  },
+  "name": "TRIMERS",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da3017494a560ccc06dedb"
+  },
+  "childCategory": {
+    "$oid": "63da34c25ff21a42fcc04441"
+  },
+  "description": "",
+  "code": "trimers100",
+  "productType": {
+    "$oid": "63da39f95ff21a42fcc0446a"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da5ae55ff21a42fcc044d8"
+  },
+  "name": "BEARD OIL",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da3017494a560ccc06dedb"
+  },
+  "childCategory": {
+    "$oid": "63da34ca5ff21a42fcc04443"
+  },
+  "description": "",
+  "code": "beardoil100",
+  "productType": {
+    "$oid": "63da39f95ff21a42fcc0446a"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da5af25ff21a42fcc044da"
+  },
+  "name": "HAIR WAX",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da3026494a560ccc06dedd"
+  },
+  "childCategory": {
+    "$oid": "63da34d45ff21a42fcc04445"
+  },
+  "description": "",
+  "code": "hairwax100",
+  "productType": {
+    "$oid": "63da3a5e5ff21a42fcc0446c"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da5b225ff21a42fcc044de"
+  },
+  "name": "MAKEUP KIT",
+  "brand": "",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63da303b494a560ccc06dedf"
+  },
+  "childCategory": {
+    "$oid": "63da34f55ff21a42fcc04449"
+  },
+  "description": "",
+  "code": "makeupkit100",
+  "productType": {
+    "$oid": "63da3ac35ff21a42fcc0446e"
+  },
+  "__v": 0
+}]

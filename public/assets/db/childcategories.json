@@ -1,0 +1,431 @@
+[{
+  "_id": {
+    "$oid": "63d3b6e595951b1db891f1ff"
+  },
+  "name": "LIPSTICK",
+  "slug": "lipstick",
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63d3b741bd130b1e34ffa1a2"
+  },
+  "name": "LIP GLOUSE",
+  "slug": "",
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da31515ff21a42fcc043e5"
+  },
+  "slug": "lip-liner",
+  "name": "LIP LINER",
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da315d5ff21a42fcc043e7"
+  },
+  "slug": "mascara",
+  "name": "MASCARA",
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da31665ff21a42fcc043e9"
+  },
+  "slug": "eyeliner",
+  "name": "EYELINER",
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da316d5ff21a42fcc043eb"
+  },
+  "slug": "kajal",
+  "name": "KAJAL",
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da31795ff21a42fcc043ed"
+  },
+  "slug": "eyeshadow",
+  "name": "EYESHADOW",
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da31855ff21a42fcc043ef"
+  },
+  "slug": "foundation",
+  "name": "FOUNDATION",
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da318d5ff21a42fcc043f1"
+  },
+  "slug": "primer",
+  "name": "PRIMER",
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da31975ff21a42fcc043f3"
+  },
+  "slug": "concealer",
+  "name": "CONCEALER",
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da31a35ff21a42fcc043f5"
+  },
+  "slug": "compact",
+  "name": "COMPACT",
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da31b25ff21a42fcc043f7"
+  },
+  "slug": "nail-polish",
+  "name": "NAIL POLISH",
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da336f5ff21a42fcc0440d"
+  },
+  "slug": "face-moisturiser",
+  "name": "FACE MOISTURISER",
+  "subCategory": {
+    "$oid": "63da2fb1494a560ccc06ded0"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da33775ff21a42fcc0440f"
+  },
+  "slug": "cleanser",
+  "name": "CLEANSER",
+  "subCategory": {
+    "$oid": "63da2fb1494a560ccc06ded0"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da33845ff21a42fcc04411"
+  },
+  "slug": "masks-peel",
+  "name": "MASKS & PEEL",
+  "subCategory": {
+    "$oid": "63da2fb1494a560ccc06ded0"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da338f5ff21a42fcc04413"
+  },
+  "slug": "sunscreen",
+  "name": "SUNSCREEN",
+  "subCategory": {
+    "$oid": "63da2fb1494a560ccc06ded0"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da33975ff21a42fcc04415"
+  },
+  "slug": "serum",
+  "name": "SERUM",
+  "subCategory": {
+    "$oid": "63da2fb1494a560ccc06ded0"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da339f5ff21a42fcc04417"
+  },
+  "slug": "face-wash",
+  "name": "FACE WASH",
+  "subCategory": {
+    "$oid": "63da2fb1494a560ccc06ded0"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da33aa5ff21a42fcc04419"
+  },
+  "slug": "eye-cream",
+  "name": "EYE CREAM",
+  "subCategory": {
+    "$oid": "63da2fb1494a560ccc06ded0"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da33b65ff21a42fcc0441b"
+  },
+  "slug": "lip-balm",
+  "name": "LIP BALM",
+  "subCategory": {
+    "$oid": "63da2fb1494a560ccc06ded0"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da33c15ff21a42fcc0441d"
+  },
+  "slug": "body-lotion",
+  "name": "BODY LOTION",
+  "subCategory": {
+    "$oid": "63da2fb1494a560ccc06ded0"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da33ca5ff21a42fcc0441f"
+  },
+  "slug": "body-wash",
+  "name": "BODY WASH",
+  "subCategory": {
+    "$oid": "63da2fb1494a560ccc06ded0"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da33d55ff21a42fcc04421"
+  },
+  "slug": "body-scrub",
+  "name": "BODY SCRUB",
+  "subCategory": {
+    "$oid": "63da2fb1494a560ccc06ded0"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da33e05ff21a42fcc04423"
+  },
+  "slug": "hand-cream",
+  "name": "HAND CREAM",
+  "subCategory": {
+    "$oid": "63da2fb1494a560ccc06ded0"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da33f95ff21a42fcc04425"
+  },
+  "slug": "shampoo",
+  "name": "SHAMPOO",
+  "subCategory": {
+    "$oid": "63da3003494a560ccc06ded7"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da34015ff21a42fcc04427"
+  },
+  "slug": "conditioner",
+  "name": "CONDITIONER",
+  "subCategory": {
+    "$oid": "63da3003494a560ccc06ded7"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da340b5ff21a42fcc04429"
+  },
+  "slug": "hair-cream",
+  "name": "HAIR CREAM",
+  "subCategory": {
+    "$oid": "63da3003494a560ccc06ded7"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da34145ff21a42fcc0442b"
+  },
+  "slug": "hair-oil",
+  "name": "HAIR OIL",
+  "subCategory": {
+    "$oid": "63da3003494a560ccc06ded7"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da34205ff21a42fcc0442d"
+  },
+  "slug": "hair-gel",
+  "name": "HAIR GEL",
+  "subCategory": {
+    "$oid": "63da3003494a560ccc06ded7"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da34295ff21a42fcc0442f"
+  },
+  "slug": "hair-color",
+  "name": "HAIR COLOR",
+  "subCategory": {
+    "$oid": "63da3003494a560ccc06ded7"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da34355ff21a42fcc04431"
+  },
+  "slug": "hair-serum",
+  "name": "HAIR SERUM",
+  "subCategory": {
+    "$oid": "63da3003494a560ccc06ded7"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da34405ff21a42fcc04433"
+  },
+  "slug": "hair-accesssory",
+  "name": "HAIR ACCESSSORY",
+  "subCategory": {
+    "$oid": "63da3003494a560ccc06ded7"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da34605ff21a42fcc04435"
+  },
+  "slug": "perfume",
+  "name": "PERFUME",
+  "subCategory": {
+    "$oid": "63da300c494a560ccc06ded9"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da346a5ff21a42fcc04437"
+  },
+  "slug": "deodorant",
+  "name": "DEODORANT",
+  "subCategory": {
+    "$oid": "63da300c494a560ccc06ded9"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da34765ff21a42fcc04439"
+  },
+  "slug": "body-mist",
+  "name": "BODY MIST",
+  "subCategory": {
+    "$oid": "63da300c494a560ccc06ded9"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da34925ff21a42fcc0443b"
+  },
+  "slug": "hair-straightener",
+  "name": "HAIR STRAIGHTENER",
+  "subCategory": {
+    "$oid": "63da3017494a560ccc06dedb"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da349e5ff21a42fcc0443d"
+  },
+  "slug": "hair-dryer",
+  "name": "HAIR DRYER",
+  "subCategory": {
+    "$oid": "63da3017494a560ccc06dedb"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da34a75ff21a42fcc0443f"
+  },
+  "slug": "epilator",
+  "name": "EPILATOR",
+  "subCategory": {
+    "$oid": "63da3017494a560ccc06dedb"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da34c25ff21a42fcc04441"
+  },
+  "slug": "trimmers",
+  "name": "TRIMMERS",
+  "subCategory": {
+    "$oid": "63da3026494a560ccc06dedd"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da34ca5ff21a42fcc04443"
+  },
+  "slug": "beard-oil",
+  "name": "BEARD OIL",
+  "subCategory": {
+    "$oid": "63da3026494a560ccc06dedd"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da34d45ff21a42fcc04445"
+  },
+  "slug": "hair-wax",
+  "name": "HAIR WAX",
+  "subCategory": {
+    "$oid": "63da3026494a560ccc06dedd"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da34eb5ff21a42fcc04447"
+  },
+  "slug": "beauty-gift",
+  "name": "BEAUTY GIFT",
+  "subCategory": {
+    "$oid": "63da303b494a560ccc06dedf"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63da34f55ff21a42fcc04449"
+  },
+  "slug": "makeup-kit",
+  "name": "MAKEUP KIT",
+  "subCategory": {
+    "$oid": "63da303b494a560ccc06dedf"
+  },
+  "__v": 0
+}]

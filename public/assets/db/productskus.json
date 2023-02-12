@@ -1,0 +1,133 @@
+[{
+  "_id": {
+    "$oid": "63da88eab69a9a1344e3c6e0"
+  },
+  "image": [
+    "image_1675584549209_475695684.jpg",
+    "image_1675584549210_450869786.jpg",
+    "image_1675584549211_284088642.jpg",
+    "image_1675584549216_282305414.jpg",
+    "image_1675584549217_803612209.jpg"
+  ],
+  "thumbnail": "thumbnail_1675584549207_36806922.jpg",
+  "thumbnail_hover": "thumbnail_hover_1675584549209_937338256.jpg",
+  "specification": {
+    "Colour_Family": "Pink",
+    "Colour_Shade_Name": "Plum Pick",
+    "Features": "High Color Payoff",
+    "Finish": "Matte",
+    "Formulation": "Bullet",
+    "Pigmentation": "Full Coverage",
+    "Preference": "Fragrance-Free",
+    "Sustainable": "Regular"
+  },
+  "name": "LAKME 9 TO 5 PRIMER + MATTE LIPSTICK - PLUM PICK MP4",
+  "sku_code": "lakemepink100",
+  "product": {
+    "$oid": "63da48225ff21a42fcc04487"
+  },
+  "description": "100% Original Products\nPay on delivery might be available\nEasy days exchanges\nThis item is only exchangeable for the same or a different size, if available, and cannot be returned",
+  "qty": 97,
+  "price": 550,
+  "discount": 15,
+  "status": true,
+  "__v": 0,
+  "slug": "lakme-9-to-5-primer-matte-lipstick-plum-pick-mp4"
+},{
+  "_id": {
+    "$oid": "63e111ace888e12ffc7fcf27"
+  },
+  "image": [
+    "image_1675694508759_811223545.jpg",
+    "image_1675694508760_350158275.jpg",
+    "image_1675694508760_58765125.jpg",
+    "image_1675694508780_429979351.jpg",
+    "image_1675694508836_356207040.jpg"
+  ],
+  "thumbnail": "thumbnail_1675694508753_535264550.jpg",
+  "thumbnail_hover": "thumbnail_hover_1675694508755_92528097.jpg",
+  "slug": "maybelline-new-york-super-stay-matte-ink-liquid-lipstick-5-ml-artist-120",
+  "name": "MAYBELLINE NEW YORK SUPER STAY MATTE INK LIQUID LIPSTICK 5 ML - ARTIST 120",
+  "sku_code": "maybelline100",
+  "product": {
+    "$oid": "63da48225ff21a42fcc04487"
+  },
+  "description": "100% Original Products\nPay on delivery might be available\nEasy days exchanges\nThis item is only exchangeable for the same or a different size, if available, and cannot be returned",
+  "qty": 85,
+  "price": 699,
+  "discount": 180,
+  "status": true,
+  "specification": {
+    "Colour_Family": "Pink",
+    "Colour_Shade_Name": "Plum Pick",
+    "Features": "High Color Payoff",
+    "Finish": "Matte",
+    "Formulation": "Bullet",
+    "Pigmentation": "Full Coverage",
+    "Preference": "Fragrance-Free",
+    "Sustainable": "Regular"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63e66f0e6de60e363033c987"
+  },
+  "image": [
+    "image_1676046094694_886996181.png"
+  ],
+  "thumbnail": "thumbnail_1676046094664_490330322.png",
+  "thumbnail_hover": "thumbnail_hover_1676046094686_860116101.png",
+  "slug": "lakme-winter-intense-maximum-moisturiser-120-ml",
+  "specification": {
+    "Concern": "Hydration",
+    "Concern_2": "Hydration",
+    "Formulation": "Lotion",
+    "Key_Ingredient": "Milk",
+    "Preference": "",
+    "SPF": "",
+    "Skin_Type": "Combination",
+    "Sustainable": "Regular"
+  },
+  "name": "LAKME WINTER INTENSE MAXIMUM MOISTURISER 120 ML",
+  "sku_code": "lakememoisture120",
+  "product": {
+    "$oid": "63da524b5ff21a42fcc044a2"
+  },
+  "description": "hello",
+  "qty": 10,
+  "price": 1999,
+  "discount": 80,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63e68c4a63c0f00fa09d845e"
+  },
+  "image": [
+    "image_1676053578606_570923265.png"
+  ],
+  "thumbnail": "thumbnail_1676053578557_216912689.png",
+  "thumbnail_hover": "thumbnail_hover_1676053578574_822140174.png",
+  "slug": "lakme-winter-intense-maximum-moisturiser-150-ml",
+  "specification": {
+    "Concern": "Hydration",
+    "Concern_2": "Hydration",
+    "Formulation": "Lotion",
+    "Key_Ingredient": "Milk",
+    "Preference": "",
+    "SPF": "",
+    "Skin_Type": "Combination",
+    "Sustainable": "Regular"
+  },
+  "name": "LAKME WINTER INTENSE MAXIMUM MOISTURISER 150 ML",
+  "sku_code": "lakememoisture150",
+  "product": {
+    "$oid": "63da524b5ff21a42fcc044a2"
+  },
+  "description": "hello",
+  "qty": 10,
+  "price": 199,
+  "discount": 10,
+  "status": true,
+  "__v": 0
+}]

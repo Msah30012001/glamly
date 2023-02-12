@@ -1,0 +1,10 @@
+[{
+  "_id": {
+    "$oid": "63e8b28a673b943dc8914e70"
+  },
+  "status": "PENDING",
+  "amount": 3130,
+  "method": "CASH ON DELIVERY",
+  "payment_id": "881g225307",
+  "__v": 0
+}]

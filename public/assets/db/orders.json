@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "63e8b28a673b943dc8914e72"
+  },
+  "status": "SUCCESS",
+  "list": [
+    {
+      "_id": {
+        "$oid": "63e8b28a673b943dc8914e73"
+      },
+      "product": "MAYBELLINE NEW YORK SUPER STAY MATTE INK LIQUID LIPSTICK 5 ML - ARTIST 120",
+      "sku_code": "maybelline100",
+      "qty": 5,
+      "price": 699,
+      "discount": 180
+    },
+    {
+      "_id": {
+        "$oid": "63e8b28a673b943dc8914e74"
+      },
+      "product": "LAKME 9 TO 5 PRIMER + MATTE LIPSTICK - PLUM PICK MP4",
+      "sku_code": "lakemepink100",
+      "qty": 1,
+      "price": 550,
+      "discount": 15
+    }
+  ],
+  "order_id": "1676194442395",
+  "user_id": {
+    "$oid": "63dd13a253cd2130d8e22018"
+  },
+  "payment_id": {
+    "$oid": "63e8b28a673b943dc8914e70"
+  },
+  "__v": 0
+}]
