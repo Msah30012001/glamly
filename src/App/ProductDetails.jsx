@@ -7,6 +7,8 @@ import GiveFeedback from "./Components/Feedback/GiveFeedback";
 import { fetchProductDetail } from "../redux/async/productdetail.async";
 import { postWishlist } from "../redux/async/wishlist.async";
 import { postCart } from "../redux/async/cart.async";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Zoom } from "swiper";
 
 const ProductDetails = () => {
   const navigate = useNavigate();
@@ -32,84 +34,80 @@ const ProductDetails = () => {
                     <div className="row">
                       <div className="col-md-6">
                         <div className="product-thumb">
-                          <div className="swiper-container single-product-thumb-content single-product-thumb-slider2">
-                            <div className="swiper-wrapper">
-                              <div className="swiper-slide zoom zoom-hover">
-                                <Link
-                                  className="lightbox-image"
-                                  data-fancybox="gallery"
-                                  to={`${process.env.PUBLIC_URL}/assets/upload/${item.thumbnail}`}
-                                >
-                                  <img
-                                    src={`${process.env.PUBLIC_URL}/assets/upload/${item.thumbnail}`}
-                                    alt="HasTech"
-                                  />
-                                  <span className="product-flag-new">New</span>
-                                </Link>
-                              </div>
-                              <div className="swiper-slide zoom zoom-hover">
-                                <Link
-                                  className="lightbox-image"
-                                  data-fancybox="gallery"
-                                  to={`${process.env.PUBLIC_URL}/assets/upload/${item.thumbnail_hover}`}
-                                >
-                                  <img
-                                    src={`${process.env.PUBLIC_URL}/assets/upload/${item.thumbnail_hover}`}
-                                    alt="HasTech"
-                                  />
-                                  <span className="product-flag-new">New</span>
-                                </Link>
-                              </div>
-                              {item.image.map((item) => {
-                                return (
-                                  <div
-                                    className="swiper-slide zoom zoom-hover"
-                                    key={item}
-                                  >
-                                    <Link
-                                      className="lightbox-image"
-                                      data-fancybox="gallery"
-                                      to={`${process.env.PUBLIC_URL}/assets/upload/${item}`}
-                                    >
-                                      <img
-                                        src={`${process.env.PUBLIC_URL}/assets/upload/${item}`}
-                                        alt="HasTech"
-                                      />
-                                      <span className="product-flag-new">
-                                        New
-                                      </span>
-                                    </Link>
-                                  </div>
-                                );
-                              })}
-                            </div>
-                          </div>
-                          <div className="swiper-container single-product-nav-content single-product-nav-slider2">
-                            <div className="swiper-wrapper">
-                              <div className="swiper-slide">
+                          <Swiper
+                            modules={[Zoom]}
+                            className="single-product-thumb-content single-product-thumb-slider2"
+                          >
+                            <SwiperSlide>
+                              <a
+                                className="lightbox-image"
+                                data-fancybox="gallery"
+                                href={`${process.env.PUBLIC_URL}/assets/upload/${item.thumbnail}`}
+                              >
                                 <img
                                   src={`${process.env.PUBLIC_URL}/assets/upload/${item.thumbnail}`}
                                   alt="HasTech"
                                 />
-                              </div>
-                              <div className="swiper-slide">
+                                <span className="product-flag-new">New</span>
+                              </a>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <a
+                                className="lightbox-image"
+                                data-fancybox="gallery"
+                                href={`${process.env.PUBLIC_URL}/assets/upload/${item.thumbnail_hover}`}
+                              >
                                 <img
                                   src={`${process.env.PUBLIC_URL}/assets/upload/${item.thumbnail_hover}`}
                                   alt="HasTech"
                                 />
-                              </div>
-                              {item.image.map((item) => {
-                                return (
-                                  <div className="swiper-slide" key={item}>
+                                <span className="product-flag-new">New</span>
+                              </a>
+                            </SwiperSlide>
+                            {item.image.map((item) => {
+                              return (
+                                <SwiperSlide key={item}>
+                                  <a
+                                    className="lightbox-image"
+                                    data-fancybox="gallery"
+                                    href={`${process.env.PUBLIC_URL}/assets/upload/${item}`}
+                                  >
                                     <img
                                       src={`${process.env.PUBLIC_URL}/assets/upload/${item}`}
                                       alt="HasTech"
                                     />
-                                  </div>
-                                );
-                              })}
-                            </div>
-                          </div>
+                                    <span className="product-flag-new">
+                                      New
+                                    </span>
+                                  </a>
+                                </SwiperSlide>
+                              );
+                            })}
+                          </Swiper>
+                          <Swiper className="single-product-nav-content single-product-nav-slider2">
+                            <SwiperSlide>
+                              <img
+                                src={`${process.env.PUBLIC_URL}/assets/upload/${item.thumbnail}`}
+                                alt="HasTech"
+                              />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <img
+                                src={`${process.env.PUBLIC_URL}/assets/upload/${item.thumbnail_hover}`}
+                                alt="HasTech"
+                              />
+                            </SwiperSlide>
+                            {item.image.map((item) => {
+                              return (
+                                 <SwiperSlide key={item}>
+                                  <img
+                                    src={`${process.env.PUBLIC_URL}/assets/upload/${item}`}
+                                    alt="HasTech"
+                                  />
+                                </SwiperSlide>
+                              );  
+                            })}
+                          </Swiper>
                         </div>
                       </div>
                       <div className="col-md-6">
@@ -198,7 +196,7 @@ const ProductDetails = () => {
                                   <i className="fa fa-pencil-square-o"></i>Write
                                   a review
                                 </Link>
-                                <GiveFeedback _id={item._id}/>
+                                <GiveFeedback _id={item._id} />
                               </li>
                             </ul>
                           </div>
@@ -398,7 +396,6 @@ const ProductDetails = () => {
                             >
                               Write your review !
                             </Link>
-
 
                             <div className="comment-author">
                               <span className="grade">Grade</span>

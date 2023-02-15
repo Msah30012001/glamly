@@ -4,12 +4,12 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";  
 import {Swiper,SwiperSlide} from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-
+import 'swiper/css/scrollbar'
 
 const Home = () => {
   const responsive =  {
@@ -35,66 +35,19 @@ const Home = () => {
   return (
     <>
       <section className="home-slider-area">
-        <Swiper>
-          <SwiperSlide>
-            <div
-              className="slider-content-area"
-              style={{
-                backgroundImage: `url("assets/img/slider/slider-04.jpg")`,
-              }}
-            >
-              <div className="container">
-                <div className="row">
-                  <div className="col-10 col-sm-6 col-md-5">
-                    <div className="slider-content slider-content-light animate-pulse">
-                      <h5 className="sub-title transition-slide-0">
-                        A SKINCARE ESSENTIAL
-                      </h5>
-                      <h2 className="title transition-slide-1 mb-0">
-                        <span className="font-weight-400">100% NATURAL</span>
-                      </h2>
-                      <h2 className="title transition-slide-2">FACIAL OILS</h2>
-                      <Link className="btn-slide transition-slide-3" to="#/">
-                        Shop Now
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div
-              className="slider-content-area"
-              style={{
-                backgroundImage: `url("assets/img/slider/slider-05.jpg")`,
-              }}
-            >
-              <div className="container">
-                <div className="row">
-                  <div className="col-10 col-sm-6 col-md-5">
-                    <div className="slider-content slider-content-light animate-flipInX">
-                      <h5 className="sub-title transition-slide-0">
-                        ONE STEP MAXI BRUSH
-                      </h5>
-                      <h2 className="title transition-slide-1 mb-0">
-                        <span className="font-weight-400">GOLDEN ROSE</span>
-                      </h2>
-                      <h2 className="title transition-slide-2">RICH COLOUR</h2>
-                      <Link className="btn-slide transition-slide-3" to="#/">
-                        Shop Now
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-        </Swiper>
-        {/* <div className="swiper-container swiper-pagination-style dots-bg-light home-slider-container default-slider-container">
-          <div className="swiper-wrapper home-slider-wrapper slider-default">
-            <div className="swiper-slide">
-              <div className="slider-content-area" style={{backgroundImage: `url("assets/img/slider/slider-04.jpg")`}}>
+        <div class="swiper-container swiper-pagination-style dots-bg-light home-slider-container default-slider-container">
+          <Swiper
+            className="home-slider-wrapper slider-default"
+            pagination={{ clickable: true }}
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+          >
+            <SwiperSlide>
+              <div
+                className="slider-content-area"
+                style={{
+                  backgroundImage: `url("assets/img/slider/slider-04.jpg")`,
+                }}
+              >
                 <div className="container">
                   <div className="row">
                     <div className="col-10 col-sm-6 col-md-5">
@@ -108,17 +61,22 @@ const Home = () => {
                         <h2 className="title transition-slide-2">
                           FACIAL OILS
                         </h2>
-                        <Link className="btn-slide transition-slide-3" to="#/">
+                        <a className="btn-slide transition-slide-3" href="#/">
                           Shop Now
-                        </Link>
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="swiper-slide">
-              <div className="slider-content-area" style={{ backgroundImage: `url("assets/img/slider/slider-05.jpg")`}}>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div
+                className="slider-content-area"
+                style={{
+                  backgroundImage: `url("assets/img/slider/slider-05.jpg")`,
+                }}
+              >
                 <div className="container">
                   <div className="row">
                     <div className="col-10 col-sm-6 col-md-5">
@@ -140,11 +98,9 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className="swiper-pagination"></div>
-        </div> */}
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </section>
 
       <section>
@@ -277,941 +233,939 @@ const Home = () => {
                           className="product-slider owl-theme"
                           zindex="3"
                         >
-                            <div className="product-item">
-                              <div className="inner-content">
-                                <div className="product-thumb">
-                                  <Link to="single-product.html">
-                                    <img
-                                      src={`${process.env.PUBLIC_URL}/assets/img/shop/01.jpg`}
-                                      alt="HasTech"
-                                    />
-                                    <img
-                                      className="second-image"
-                                      src={`${process.env.PUBLIC_URL}/assets/img/shop/01-h1.jpg`}
-                                      alt="HasTech"
-                                    />
-                                  </Link>
-                                  <div className="product-action">
-                                    <div className="addto-wrap">
-                                      <Link
-                                        className="add-wishlist"
-                                        to="wishlist.html"
-                                        title="Add to wishlist"
-                                      >
-                                        <i className="icon-heart icon"></i>
-                                      </Link>
-                                      <Link
-                                        className="add-compare"
-                                        to="compare.html"
-                                        title="Add to compare"
-                                      >
-                                        <i className="icon-shuffle icon"></i>
-                                      </Link>
-                                    </div>
+                          <div className="product-item">
+                            <div className="inner-content">
+                              <div className="product-thumb">
+                                <Link to="single-product.html">
+                                  <img
+                                    src={`${process.env.PUBLIC_URL}/assets/img/shop/01.jpg`}
+                                    alt="HasTech"
+                                  />
+                                  <img
+                                    className="second-image"
+                                    src={`${process.env.PUBLIC_URL}/assets/img/shop/01-h1.jpg`}
+                                    alt="HasTech"
+                                  />
+                                </Link>
+                                <div className="product-action">
+                                  <div className="addto-wrap">
+                                    <Link
+                                      className="add-wishlist"
+                                      to="wishlist.html"
+                                      title="Add to wishlist"
+                                    >
+                                      <i className="icon-heart icon"></i>
+                                    </Link>
+                                    <Link
+                                      className="add-compare"
+                                      to="compare.html"
+                                      title="Add to compare"
+                                    >
+                                      <i className="icon-shuffle icon"></i>
+                                    </Link>
                                   </div>
-                                  <ul className="product-flag">
-                                    <li className="new">New</li>
-                                    <li className="discount">-10%</li>
-                                  </ul>
                                 </div>
-                                <div className="product-desc">
-                                  <div className="product-info">
-                                    <h4 className="title">
-                                      <Link to="single-product.html">
-                                        Originals Kaval Windbreaker Winter
-                                        Jac...
-                                      </Link>
-                                    </h4>
-                                    <div className="star-content">
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                    </div>
-                                    <div className="prices">
-                                      <span className="price-old">€29.16</span>
-                                      <span className="price">€26.24</span>
-                                    </div>
-                                  </div>
-                                  <div className="product-footer">
-                                    <Link
-                                      className="btn-product-add"
-                                      to="single-product.html"
-                                    >
-                                      Add to cart
+                                <ul className="product-flag">
+                                  <li className="new">New</li>
+                                  <li className="discount">-10%</li>
+                                </ul>
+                              </div>
+                              <div className="product-desc">
+                                <div className="product-info">
+                                  <h4 className="title">
+                                    <Link to="single-product.html">
+                                      Originals Kaval Windbreaker Winter Jac...
                                     </Link>
-                                    <Link
-                                      className="btn-quick-view"
-                                      to="#"
-                                      title="Quick view"
-                                    >
-                                      Quick view
-                                    </Link>
+                                  </h4>
+                                  <div className="star-content">
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
                                   </div>
+                                  <div className="prices">
+                                    <span className="price-old">€29.16</span>
+                                    <span className="price">€26.24</span>
+                                  </div>
+                                </div>
+                                <div className="product-footer">
+                                  <Link
+                                    className="btn-product-add"
+                                    to="single-product.html"
+                                  >
+                                    Add to cart
+                                  </Link>
+                                  <Link
+                                    className="btn-quick-view"
+                                    to="#"
+                                    title="Quick view"
+                                  >
+                                    Quick view
+                                  </Link>
                                 </div>
                               </div>
                             </div>
-                            <div className="product-item">
-                              <div className="inner-content">
-                                <div className="product-thumb">
-                                  <Link to="single-product.html">
-                                    <img
-                                      src={`${process.env.PUBLIC_URL}/assets/img/shop/02.jpg`}
-                                      alt="HasTech"
-                                    />
-                                    <img
-                                      className="second-image"
-                                      src={`${process.env.PUBLIC_URL}/assets/img/shop/02-h1.jpg`}
-                                      alt="HasTech"
-                                    />
-                                  </Link>
-                                  <div className="product-action">
-                                    <div className="addto-wrap">
-                                      <Link
-                                        className="add-wishlist"
-                                        to="wishlist.html"
-                                        title="Add to wishlist"
-                                      >
-                                        <i className="icon-heart icon"></i>
-                                      </Link>
-                                      <Link
-                                        className="add-compare"
-                                        to="compare.html"
-                                        title="Add to compare"
-                                      >
-                                        <i className="icon-shuffle icon"></i>
-                                      </Link>
-                                    </div>
-                                  </div>
-                                  <ul className="product-flag">
-                                    <li className="new">New</li>
-                                    <li className="discount visually-hidden">
-                                      -10%
-                                    </li>
-                                  </ul>
-                                </div>
-                                <div className="product-desc">
-                                  <div className="product-info">
-                                    <h4 className="title">
-                                      <Link to="single-product.html">
-                                        Juicy Couture Juicy Quilted Terry
-                                        Track...
-                                      </Link>
-                                    </h4>
-                                    <div className="star-content">
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                    </div>
-                                    <div className="prices">
-                                      <span className="price-old visually-hidden">
-                                        €29.16
-                                      </span>
-                                      <span className="price text-black">
-                                        €43.80
-                                      </span>
-                                    </div>
-                                  </div>
-                                  <div className="product-footer">
+                          </div>
+                          <div className="product-item">
+                            <div className="inner-content">
+                              <div className="product-thumb">
+                                <Link to="single-product.html">
+                                  <img
+                                    src={`${process.env.PUBLIC_URL}/assets/img/shop/02.jpg`}
+                                    alt="HasTech"
+                                  />
+                                  <img
+                                    className="second-image"
+                                    src={`${process.env.PUBLIC_URL}/assets/img/shop/02-h1.jpg`}
+                                    alt="HasTech"
+                                  />
+                                </Link>
+                                <div className="product-action">
+                                  <div className="addto-wrap">
                                     <Link
-                                      className="btn-product-add"
-                                      to="single-product.html"
+                                      className="add-wishlist"
+                                      to="wishlist.html"
+                                      title="Add to wishlist"
                                     >
-                                      Add to cart
+                                      <i className="icon-heart icon"></i>
                                     </Link>
                                     <Link
-                                      className="btn-quick-view"
-                                      to="#"
-                                      title="Quick view"
+                                      className="add-compare"
+                                      to="compare.html"
+                                      title="Add to compare"
                                     >
-                                      Quick view
+                                      <i className="icon-shuffle icon"></i>
                                     </Link>
                                   </div>
                                 </div>
+                                <ul className="product-flag">
+                                  <li className="new">New</li>
+                                  <li className="discount visually-hidden">
+                                    -10%
+                                  </li>
+                                </ul>
                               </div>
-                            </div>      
-                            <div className="product-item">
-                              <div className="inner-content">
-                                <div className="product-thumb">
-                                  <Link to="single-product.html">
-                                    <img
-                                      src={`${process.env.PUBLIC_URL}/assets/img/shop/03.jpg`}
-                                      alt="HasTech"
-                                    />
-                                    <img
-                                      className="second-image"
-                                      src={`${process.env.PUBLIC_URL}/assets/img/shop/03-h1.jpg`}
-                                      alt="HasTech"
-                                    />
+                              <div className="product-desc">
+                                <div className="product-info">
+                                  <h4 className="title">
+                                    <Link to="single-product.html">
+                                      Juicy Couture Juicy Quilted Terry Track...
+                                    </Link>
+                                  </h4>
+                                  <div className="star-content">
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                  </div>
+                                  <div className="prices">
+                                    <span className="price-old visually-hidden">
+                                      €29.16
+                                    </span>
+                                    <span className="price text-black">
+                                      €43.80
+                                    </span>
+                                  </div>
+                                </div>
+                                <div className="product-footer">
+                                  <Link
+                                    className="btn-product-add"
+                                    to="single-product.html"
+                                  >
+                                    Add to cart
                                   </Link>
-                                  <div className="product-action">
-                                    <div className="addto-wrap">
-                                      <Link
-                                        className="add-wishlist"
-                                        to="wishlist.html"
-                                        title="Add to wishlist"
-                                      >
-                                        <i className="icon-heart icon"></i>
-                                      </Link>
-                                      <Link
-                                        className="add-compare"
-                                        to="compare.html"
-                                        title="Add to compare"
-                                      >
-                                        <i className="icon-shuffle icon"></i>
-                                      </Link>
-                                    </div>
-                                  </div>
-                                  <ul className="product-flag">
-                                    <li className="new">New</li>
-                                    <li className="discount">-5%</li>
-                                  </ul>
-                                </div>
-                                <div className="product-desc">
-                                  <div className="product-info">
-                                    <h4 className="title">
-                                      <Link to="single-product.html">
-                                        Madden by Steve Madden Cale 6
-                                      </Link>
-                                    </h4>
-                                    <div className="star-content">
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                    </div>
-                                    <div className="prices">
-                                      <span className="price-old">€14.52</span>
-                                      <span className="price">€13.79</span>
-                                    </div>
-                                  </div>
-                                  <div className="product-footer">
-                                    <Link
-                                      className="btn-product-add"
-                                      to="single-product.html"
-                                    >
-                                      Add to cart
-                                    </Link>
-                                    <Link
-                                      className="btn-quick-view"
-                                      to="#"
-                                      title="Quick view"
-                                    >
-                                      Quick view
-                                    </Link>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>     
-                            <div className="product-item">
-                              <div className="inner-content">
-                                <div className="product-thumb">
-                                  <Link to="single-product.html">
-                                    <img
-                                      src={`${process.env.PUBLIC_URL}/assets/img/shop/04.jpg`}
-                                      alt="HasTech"
-                                    />
-                                    <img
-                                      className="second-image"
-                                      src={`${process.env.PUBLIC_URL}/assets/img/shop/04-h1.jpg`}
-                                      alt="HasTech"
-                                    />
+                                  <Link
+                                    className="btn-quick-view"
+                                    to="#"
+                                    title="Quick view"
+                                  >
+                                    Quick view
                                   </Link>
-                                  <div className="product-action">
-                                    <div className="addto-wrap">
-                                      <Link
-                                        className="add-wishlist"
-                                        to="wishlist.html"
-                                        title="Add to wishlist"
-                                      >
-                                        <i className="icon-heart icon"></i>
-                                      </Link>
-                                      <Link
-                                        className="add-compare"
-                                        to="compare.html"
-                                        title="Add to compare"
-                                      >
-                                        <i className="icon-shuffle icon"></i>
-                                      </Link>
-                                    </div>
-                                  </div>
-                                  <ul className="product-flag">
-                                    <li className="new">New</li>
-                                    <li className="discount visually-hidden">
-                                      -5%
-                                    </li>
-                                  </ul>
-                                </div>
-                                <div className="product-desc">
-                                  <div className="product-info">
-                                    <h4 className="title">
-                                      <Link to="single-product.html">
-                                        Trans-Weight Hooded Wind and Water...
-                                      </Link>
-                                    </h4>
-                                    <div className="star-content">
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                    </div>
-                                    <div className="prices">
-                                      <span className="price-old visually-hidden">
-                                        €14.52
-                                      </span>
-                                      <span className="price text-black">
-                                        €14.52
-                                      </span>
-                                    </div>
-                                  </div>
-                                  <div className="product-footer">
-                                    <Link
-                                      className="btn-product-add"
-                                      to="single-product.html"
-                                    >
-                                      Add to cart
-                                    </Link>
-                                    <Link
-                                      className="btn-quick-view"
-                                      to="#"
-                                      title="Quick view"
-                                    >
-                                      Quick view
-                                    </Link>
-                                  </div>
                                 </div>
                               </div>
                             </div>
-                            <div className="product-item">
-                              <div className="inner-content">
-                                <div className="product-thumb">
-                                  <Link to="single-product.html">
-                                    <img
-                                      src={`${process.env.PUBLIC_URL}/assets/img/shop/05.jpg`}
-                                      alt="HasTech"
-                                    />
-                                    <img
-                                      className="second-image"
-                                      src={`${process.env.PUBLIC_URL}/assets/img/shop/05-h1.jpg`}
-                                      alt="HasTech"
-                                    />
-                                  </Link>
-                                  <div className="product-action">
-                                    <div className="addto-wrap">
-                                      <Link
-                                        className="add-wishlist"
-                                        to="wishlist.html"
-                                        title="Add to wishlist"
-                                      >
-                                        <i className="icon-heart icon"></i>
-                                      </Link>
-                                      <Link
-                                        className="add-compare"
-                                        to="compare.html"
-                                        title="Add to compare"
-                                      >
-                                        <i className="icon-shuffle icon"></i>
-                                      </Link>
-                                    </div>
+                          </div>
+                          <div className="product-item">
+                            <div className="inner-content">
+                              <div className="product-thumb">
+                                <Link to="single-product.html">
+                                  <img
+                                    src={`${process.env.PUBLIC_URL}/assets/img/shop/03.jpg`}
+                                    alt="HasTech"
+                                  />
+                                  <img
+                                    className="second-image"
+                                    src={`${process.env.PUBLIC_URL}/assets/img/shop/03-h1.jpg`}
+                                    alt="HasTech"
+                                  />
+                                </Link>
+                                <div className="product-action">
+                                  <div className="addto-wrap">
+                                    <Link
+                                      className="add-wishlist"
+                                      to="wishlist.html"
+                                      title="Add to wishlist"
+                                    >
+                                      <i className="icon-heart icon"></i>
+                                    </Link>
+                                    <Link
+                                      className="add-compare"
+                                      to="compare.html"
+                                      title="Add to compare"
+                                    >
+                                      <i className="icon-shuffle icon"></i>
+                                    </Link>
                                   </div>
-                                  <ul className="product-flag">
-                                    <li className="new">New</li>
-                                    <li className="discount visually-hidden">
-                                      -5%
-                                    </li>
-                                  </ul>
                                 </div>
-                                <div className="product-desc">
-                                  <div className="product-info">
-                                    <h4 className="title">
-                                      <Link to="single-product.html">
-                                        Water and Wind Resistant Insulated Ja...
-                                      </Link>
-                                    </h4>
-                                    <div className="star-content">
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star icon-color-gray"></i>
-                                    </div>
-                                    <div className="prices">
-                                      <span className="price-old visually-hidden">
-                                        €14.52
-                                      </span>
-                                      <span className="price text-black">
-                                        €14.52
-                                      </span>
-                                    </div>
-                                  </div>
-                                  <div className="product-footer">
-                                    <Link
-                                      className="btn-product-add"
-                                      to="single-product.html"
-                                    >
-                                      Add to cart
+                                <ul className="product-flag">
+                                  <li className="new">New</li>
+                                  <li className="discount">-5%</li>
+                                </ul>
+                              </div>
+                              <div className="product-desc">
+                                <div className="product-info">
+                                  <h4 className="title">
+                                    <Link to="single-product.html">
+                                      Madden by Steve Madden Cale 6
                                     </Link>
-                                    <Link
-                                      className="btn-quick-view"
-                                      to="#"
-                                      title="Quick view"
-                                    >
-                                      Quick view
-                                    </Link>
+                                  </h4>
+                                  <div className="star-content">
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
                                   </div>
+                                  <div className="prices">
+                                    <span className="price-old">€14.52</span>
+                                    <span className="price">€13.79</span>
+                                  </div>
+                                </div>
+                                <div className="product-footer">
+                                  <Link
+                                    className="btn-product-add"
+                                    to="single-product.html"
+                                  >
+                                    Add to cart
+                                  </Link>
+                                  <Link
+                                    className="btn-quick-view"
+                                    to="#"
+                                    title="Quick view"
+                                  >
+                                    Quick view
+                                  </Link>
                                 </div>
                               </div>
                             </div>
-                            <div className="product-item">
-                              <div className="inner-content">
-                                <div className="product-thumb">
-                                  <Link to="single-product.html">
-                                    <img
-                                      src={`${process.env.PUBLIC_URL}/assets/img/shop/06.jpg`}
-                                      alt="HasTech"
-                                    />
-                                  </Link>
-                                  <div className="product-action">
-                                    <div className="addto-wrap">
-                                      <Link
-                                        className="add-wishlist"
-                                        to="wishlist.html"
-                                        title="Add to wishlist"
-                                      >
-                                        <i className="icon-heart icon"></i>
-                                      </Link>
-                                      <Link
-                                        className="add-compare"
-                                        to="compare.html"
-                                        title="Add to compare"
-                                      >
-                                        <i className="icon-shuffle icon"></i>
-                                      </Link>
-                                    </div>
+                          </div>
+                          <div className="product-item">
+                            <div className="inner-content">
+                              <div className="product-thumb">
+                                <Link to="single-product.html">
+                                  <img
+                                    src={`${process.env.PUBLIC_URL}/assets/img/shop/04.jpg`}
+                                    alt="HasTech"
+                                  />
+                                  <img
+                                    className="second-image"
+                                    src={`${process.env.PUBLIC_URL}/assets/img/shop/04-h1.jpg`}
+                                    alt="HasTech"
+                                  />
+                                </Link>
+                                <div className="product-action">
+                                  <div className="addto-wrap">
+                                    <Link
+                                      className="add-wishlist"
+                                      to="wishlist.html"
+                                      title="Add to wishlist"
+                                    >
+                                      <i className="icon-heart icon"></i>
+                                    </Link>
+                                    <Link
+                                      className="add-compare"
+                                      to="compare.html"
+                                      title="Add to compare"
+                                    >
+                                      <i className="icon-shuffle icon"></i>
+                                    </Link>
                                   </div>
-                                  <ul className="product-flag">
-                                    <li className="new">New</li>
-                                    <li className="discount visually-hidden">
-                                      -5%
-                                    </li>
-                                  </ul>
                                 </div>
-                                <div className="product-desc">
-                                  <div className="product-info">
-                                    <h4 className="title">
-                                      <Link to="single-product.html">
-                                        New Balance Fresh Foam Kaymin
-                                      </Link>
-                                    </h4>
-                                    <div className="star-content">
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                    </div>
-                                    <div className="prices">
-                                      <span className="price-old visually-hidden">
-                                        €14.52
-                                      </span>
-                                      <span className="price text-black">
-                                        €23.06
-                                      </span>
-                                    </div>
-                                  </div>
-                                  <div className="product-footer">
-                                    <Link
-                                      className="btn-product-add"
-                                      to="single-product.html"
-                                    >
-                                      Add to cart
+                                <ul className="product-flag">
+                                  <li className="new">New</li>
+                                  <li className="discount visually-hidden">
+                                    -5%
+                                  </li>
+                                </ul>
+                              </div>
+                              <div className="product-desc">
+                                <div className="product-info">
+                                  <h4 className="title">
+                                    <Link to="single-product.html">
+                                      Trans-Weight Hooded Wind and Water...
                                     </Link>
-                                    <Link
-                                      className="btn-quick-view"
-                                      to="#"
-                                      title="Quick view"
-                                    >
-                                      Quick view
-                                    </Link>
+                                  </h4>
+                                  <div className="star-content">
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
                                   </div>
+                                  <div className="prices">
+                                    <span className="price-old visually-hidden">
+                                      €14.52
+                                    </span>
+                                    <span className="price text-black">
+                                      €14.52
+                                    </span>
+                                  </div>
+                                </div>
+                                <div className="product-footer">
+                                  <Link
+                                    className="btn-product-add"
+                                    to="single-product.html"
+                                  >
+                                    Add to cart
+                                  </Link>
+                                  <Link
+                                    className="btn-quick-view"
+                                    to="#"
+                                    title="Quick view"
+                                  >
+                                    Quick view
+                                  </Link>
                                 </div>
                               </div>
                             </div>
-                            <div className="product-item">
-                              <div className="inner-content">
-                                <div className="product-thumb">
-                                  <Link to="single-product.html">
-                                    <img
-                                      src={`${process.env.PUBLIC_URL}/assets/img/shop/07.jpg`}
-                                      alt="HasTech"
-                                    />
-                                    <img
-                                      className="second-image"
-                                      src={`${process.env.PUBLIC_URL}/assets/img/shop/07-h1.jpg`}
-                                      alt="HasTech"
-                                    />
-                                  </Link>
-                                  <div className="product-action">
-                                    <div className="addto-wrap">
-                                      <Link
-                                        className="add-wishlist"
-                                        to="wishlist.html"
-                                        title="Add to wishlist"
-                                      >
-                                        <i className="icon-heart icon"></i>
-                                      </Link>
-                                      <Link
-                                        className="add-compare"
-                                        to="compare.html"
-                                        title="Add to compare"
-                                      >
-                                        <i className="icon-shuffle icon"></i>
-                                      </Link>
-                                    </div>
+                          </div>
+                          <div className="product-item">
+                            <div className="inner-content">
+                              <div className="product-thumb">
+                                <Link to="single-product.html">
+                                  <img
+                                    src={`${process.env.PUBLIC_URL}/assets/img/shop/05.jpg`}
+                                    alt="HasTech"
+                                  />
+                                  <img
+                                    className="second-image"
+                                    src={`${process.env.PUBLIC_URL}/assets/img/shop/05-h1.jpg`}
+                                    alt="HasTech"
+                                  />
+                                </Link>
+                                <div className="product-action">
+                                  <div className="addto-wrap">
+                                    <Link
+                                      className="add-wishlist"
+                                      to="wishlist.html"
+                                      title="Add to wishlist"
+                                    >
+                                      <i className="icon-heart icon"></i>
+                                    </Link>
+                                    <Link
+                                      className="add-compare"
+                                      to="compare.html"
+                                      title="Add to compare"
+                                    >
+                                      <i className="icon-shuffle icon"></i>
+                                    </Link>
                                   </div>
-                                  <ul className="product-flag">
-                                    <li className="new">New</li>
-                                    <li className="discount">-20%</li>
-                                  </ul>
                                 </div>
-                                <div className="product-desc">
-                                  <div className="product-info">
-                                    <h4 className="title">
-                                      <Link to="single-product.html">
-                                        Juicy Couture Solid Sleeve Puffer Jacket
-                                      </Link>
-                                    </h4>
-                                    <div className="star-content">
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                    </div>
-                                    <div className="prices">
-                                      <span className="price-old">€23.06</span>
-                                      <span className="price">€18.45</span>
-                                    </div>
-                                  </div>
-                                  <div className="product-footer">
-                                    <Link
-                                      className="btn-product-add"
-                                      to="single-product.html"
-                                    >
-                                      Add to cart
+                                <ul className="product-flag">
+                                  <li className="new">New</li>
+                                  <li className="discount visually-hidden">
+                                    -5%
+                                  </li>
+                                </ul>
+                              </div>
+                              <div className="product-desc">
+                                <div className="product-info">
+                                  <h4 className="title">
+                                    <Link to="single-product.html">
+                                      Water and Wind Resistant Insulated Ja...
                                     </Link>
-                                    <Link
-                                      className="btn-quick-view"
-                                      to="#"
-                                      title="Quick view"
-                                    >
-                                      Quick view
-                                    </Link>
+                                  </h4>
+                                  <div className="star-content">
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star icon-color-gray"></i>
                                   </div>
+                                  <div className="prices">
+                                    <span className="price-old visually-hidden">
+                                      €14.52
+                                    </span>
+                                    <span className="price text-black">
+                                      €14.52
+                                    </span>
+                                  </div>
+                                </div>
+                                <div className="product-footer">
+                                  <Link
+                                    className="btn-product-add"
+                                    to="single-product.html"
+                                  >
+                                    Add to cart
+                                  </Link>
+                                  <Link
+                                    className="btn-quick-view"
+                                    to="#"
+                                    title="Quick view"
+                                  >
+                                    Quick view
+                                  </Link>
                                 </div>
                               </div>
                             </div>
-                            <div className="product-item">
-                              <div className="inner-content">
-                                <div className="product-thumb">
-                                  <Link to="single-product.html">
-                                    <img
-                                      src={`${process.env.PUBLIC_URL}/assets/img/shop/08.jpg`}
-                                      alt="HasTech"
-                                    />
-                                    <img
-                                      className="second-image"
-                                      src={`${process.env.PUBLIC_URL}/assets/img/shop/08-h1.jpg`}
-                                      alt="HasTech"
-                                    />
-                                  </Link>
-                                  <div className="product-action">
-                                    <div className="addto-wrap">
-                                      <Link
-                                        className="add-wishlist"
-                                        to="wishlist.html"
-                                        title="Add to wishlist"
-                                      >
-                                        <i className="icon-heart icon"></i>
-                                      </Link>
-                                      <Link
-                                        className="add-compare"
-                                        to="compare.html"
-                                        title="Add to compare"
-                                      >
-                                        <i className="icon-shuffle icon"></i>
-                                      </Link>
-                                    </div>
+                          </div>
+                          <div className="product-item">
+                            <div className="inner-content">
+                              <div className="product-thumb">
+                                <Link to="single-product.html">
+                                  <img
+                                    src={`${process.env.PUBLIC_URL}/assets/img/shop/06.jpg`}
+                                    alt="HasTech"
+                                  />
+                                </Link>
+                                <div className="product-action">
+                                  <div className="addto-wrap">
+                                    <Link
+                                      className="add-wishlist"
+                                      to="wishlist.html"
+                                      title="Add to wishlist"
+                                    >
+                                      <i className="icon-heart icon"></i>
+                                    </Link>
+                                    <Link
+                                      className="add-compare"
+                                      to="compare.html"
+                                      title="Add to compare"
+                                    >
+                                      <i className="icon-shuffle icon"></i>
+                                    </Link>
                                   </div>
-                                  <ul className="product-flag">
-                                    <li className="new">New</li>
-                                    <li className="discount visually-hidden">
-                                      -20%
-                                    </li>
-                                  </ul>
                                 </div>
-                                <div className="product-desc">
-                                  <div className="product-info">
-                                    <h4 className="title">
-                                      <Link to="single-product.html">
-                                        New Balance Fresh Foam LAZR v1 Sport
-                                      </Link>
-                                    </h4>
-                                    <div className="star-content">
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                    </div>
-                                    <div className="prices">
-                                      <span className="price-old visually-hidden">
-                                        €23.06
-                                      </span>
-                                      <span className="price text-black">
-                                        €23.06
-                                      </span>
-                                    </div>
-                                  </div>
-                                  <div className="product-footer">
-                                    <Link
-                                      className="btn-product-add"
-                                      to="single-product.html"
-                                    >
-                                      Add to cart
+                                <ul className="product-flag">
+                                  <li className="new">New</li>
+                                  <li className="discount visually-hidden">
+                                    -5%
+                                  </li>
+                                </ul>
+                              </div>
+                              <div className="product-desc">
+                                <div className="product-info">
+                                  <h4 className="title">
+                                    <Link to="single-product.html">
+                                      New Balance Fresh Foam Kaymin
                                     </Link>
-                                    <Link
-                                      className="btn-quick-view"
-                                      to="#"
-                                      title="Quick view"
-                                    >
-                                      Quick view
-                                    </Link>
+                                  </h4>
+                                  <div className="star-content">
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
                                   </div>
+                                  <div className="prices">
+                                    <span className="price-old visually-hidden">
+                                      €14.52
+                                    </span>
+                                    <span className="price text-black">
+                                      €23.06
+                                    </span>
+                                  </div>
+                                </div>
+                                <div className="product-footer">
+                                  <Link
+                                    className="btn-product-add"
+                                    to="single-product.html"
+                                  >
+                                    Add to cart
+                                  </Link>
+                                  <Link
+                                    className="btn-quick-view"
+                                    to="#"
+                                    title="Quick view"
+                                  >
+                                    Quick view
+                                  </Link>
                                 </div>
                               </div>
                             </div>
-                            <div className="product-item">
-                              <div className="inner-content">
-                                <div className="product-thumb">
-                                  <Link to="single-product.html">
-                                    <img
-                                      src={`${process.env.PUBLIC_URL}/assets/img/shop/09.jpg`}
-                                      alt="HasTech"
-                                    />
-                                  </Link>
-                                  <div className="product-action">
-                                    <div className="addto-wrap">
-                                      <Link
-                                        className="add-wishlist"
-                                        to="wishlist.html"
-                                        title="Add to wishlist"
-                                      >
-                                        <i className="icon-heart icon"></i>
-                                      </Link>
-                                      <Link
-                                        className="add-compare"
-                                        to="compare.html"
-                                        title="Add to compare"
-                                      >
-                                        <i className="icon-shuffle icon"></i>
-                                      </Link>
-                                    </div>
+                          </div>
+                          <div className="product-item">
+                            <div className="inner-content">
+                              <div className="product-thumb">
+                                <Link to="single-product.html">
+                                  <img
+                                    src={`${process.env.PUBLIC_URL}/assets/img/shop/07.jpg`}
+                                    alt="HasTech"
+                                  />
+                                  <img
+                                    className="second-image"
+                                    src={`${process.env.PUBLIC_URL}/assets/img/shop/07-h1.jpg`}
+                                    alt="HasTech"
+                                  />
+                                </Link>
+                                <div className="product-action">
+                                  <div className="addto-wrap">
+                                    <Link
+                                      className="add-wishlist"
+                                      to="wishlist.html"
+                                      title="Add to wishlist"
+                                    >
+                                      <i className="icon-heart icon"></i>
+                                    </Link>
+                                    <Link
+                                      className="add-compare"
+                                      to="compare.html"
+                                      title="Add to compare"
+                                    >
+                                      <i className="icon-shuffle icon"></i>
+                                    </Link>
                                   </div>
-                                  <ul className="product-flag">
-                                    <li className="new">New</li>
-                                    <li className="discount visually-hidden">
-                                      -20%
-                                    </li>
-                                  </ul>
                                 </div>
-                                <div className="product-desc">
-                                  <div className="product-info">
-                                    <h4 className="title">
-                                      <Link to="single-product.html">
-                                        Brixton Patrol All Terrain Anorak Jacket
-                                      </Link>
-                                    </h4>
-                                    <div className="star-content">
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                    </div>
-                                    <div className="prices">
-                                      <span className="price-old visually-hidden">
-                                        €23.06
-                                      </span>
-                                      <span className="price text-black">
-                                        €35.38
-                                      </span>
-                                    </div>
-                                  </div>
-                                  <div className="product-footer">
-                                    <Link
-                                      className="btn-product-add"
-                                      to="single-product.html"
-                                    >
-                                      Add to cart
+                                <ul className="product-flag">
+                                  <li className="new">New</li>
+                                  <li className="discount">-20%</li>
+                                </ul>
+                              </div>
+                              <div className="product-desc">
+                                <div className="product-info">
+                                  <h4 className="title">
+                                    <Link to="single-product.html">
+                                      Juicy Couture Solid Sleeve Puffer Jacket
                                     </Link>
-                                    <Link
-                                      className="btn-quick-view"
-                                      to="#"
-                                      title="Quick view"
-                                    >
-                                      Quick view
-                                    </Link>
+                                  </h4>
+                                  <div className="star-content">
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
                                   </div>
+                                  <div className="prices">
+                                    <span className="price-old">€23.06</span>
+                                    <span className="price">€18.45</span>
+                                  </div>
+                                </div>
+                                <div className="product-footer">
+                                  <Link
+                                    className="btn-product-add"
+                                    to="single-product.html"
+                                  >
+                                    Add to cart
+                                  </Link>
+                                  <Link
+                                    className="btn-quick-view"
+                                    to="#"
+                                    title="Quick view"
+                                  >
+                                    Quick view
+                                  </Link>
                                 </div>
                               </div>
                             </div>
-                            <div className="product-item">
-                              <div className="inner-content">
-                                <div className="product-thumb">
-                                  <Link to="single-product.html">
-                                    <img
-                                      src={`${process.env.PUBLIC_URL}/assets/img/shop/10.jpg`}
-                                      alt="HasTech"
-                                    />
-                                    <img
-                                      className="second-image"
-                                      src={`${process.env.PUBLIC_URL}/assets/img/shop/10-h1.jpg`}
-                                      alt="HasTech"
-                                    />
-                                  </Link>
-                                  <div className="product-action">
-                                    <div className="addto-wrap">
-                                      <Link
-                                        className="add-wishlist"
-                                        to="wishlist.html"
-                                        title="Add to wishlist"
-                                      >
-                                        <i className="icon-heart icon"></i>
-                                      </Link>
-                                      <Link
-                                        className="add-compare"
-                                        to="compare.html"
-                                        title="Add to compare"
-                                      >
-                                        <i className="icon-shuffle icon"></i>
-                                      </Link>
-                                    </div>
+                          </div>
+                          <div className="product-item">
+                            <div className="inner-content">
+                              <div className="product-thumb">
+                                <Link to="single-product.html">
+                                  <img
+                                    src={`${process.env.PUBLIC_URL}/assets/img/shop/08.jpg`}
+                                    alt="HasTech"
+                                  />
+                                  <img
+                                    className="second-image"
+                                    src={`${process.env.PUBLIC_URL}/assets/img/shop/08-h1.jpg`}
+                                    alt="HasTech"
+                                  />
+                                </Link>
+                                <div className="product-action">
+                                  <div className="addto-wrap">
+                                    <Link
+                                      className="add-wishlist"
+                                      to="wishlist.html"
+                                      title="Add to wishlist"
+                                    >
+                                      <i className="icon-heart icon"></i>
+                                    </Link>
+                                    <Link
+                                      className="add-compare"
+                                      to="compare.html"
+                                      title="Add to compare"
+                                    >
+                                      <i className="icon-shuffle icon"></i>
+                                    </Link>
                                   </div>
-                                  <ul className="product-flag">
-                                    <li className="new">New</li>
-                                    <li className="discount visually-hidden">
-                                      -20%
-                                    </li>
-                                  </ul>
                                 </div>
-                                <div className="product-desc">
-                                  <div className="product-info">
-                                    <h4 className="title">
-                                      <Link to="single-product.html">
-                                        New Balance Arishi Sport v1
-                                      </Link>
-                                    </h4>
-                                    <div className="star-content">
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star icon-color-gray"></i>
-                                    </div>
-                                    <div className="prices">
-                                      <span className="price-old visually-hidden">
-                                        €23.06
-                                      </span>
-                                      <span className="price text-black">
-                                        €23.06
-                                      </span>
-                                    </div>
-                                  </div>
-                                  <div className="product-footer">
-                                    <Link
-                                      className="btn-product-add"
-                                      to="single-product.html"
-                                    >
-                                      Add to cart
+                                <ul className="product-flag">
+                                  <li className="new">New</li>
+                                  <li className="discount visually-hidden">
+                                    -20%
+                                  </li>
+                                </ul>
+                              </div>
+                              <div className="product-desc">
+                                <div className="product-info">
+                                  <h4 className="title">
+                                    <Link to="single-product.html">
+                                      New Balance Fresh Foam LAZR v1 Sport
                                     </Link>
-                                    <Link
-                                      className="btn-quick-view"
-                                      to="#"
-                                      title="Quick view"
-                                    >
-                                      Quick view
-                                    </Link>
+                                  </h4>
+                                  <div className="star-content">
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
                                   </div>
+                                  <div className="prices">
+                                    <span className="price-old visually-hidden">
+                                      €23.06
+                                    </span>
+                                    <span className="price text-black">
+                                      €23.06
+                                    </span>
+                                  </div>
+                                </div>
+                                <div className="product-footer">
+                                  <Link
+                                    className="btn-product-add"
+                                    to="single-product.html"
+                                  >
+                                    Add to cart
+                                  </Link>
+                                  <Link
+                                    className="btn-quick-view"
+                                    to="#"
+                                    title="Quick view"
+                                  >
+                                    Quick view
+                                  </Link>
                                 </div>
                               </div>
                             </div>
-                            <div className="product-item">
-                              <div className="inner-content">
-                                <div className="product-thumb">
-                                  <Link to="single-product.html">
-                                    <img
-                                      src={`${process.env.PUBLIC_URL}/assets/img/shop/11.jpg`}
-                                      alt="HasTech"
-                                    />
-                                    <img
-                                      className="second-image"
-                                      src={`${process.env.PUBLIC_URL}/assets/img/shop/11-h1.jpg`}
-                                      alt="HasTech"
-                                    />
-                                  </Link>
-                                  <div className="product-action">
-                                    <div className="addto-wrap">
-                                      <Link
-                                        className="add-wishlist"
-                                        to="wishlist.html"
-                                        title="Add to wishlist"
-                                      >
-                                        <i className="icon-heart icon"></i>
-                                      </Link>
-                                      <Link
-                                        className="add-compare"
-                                        to="compare.html"
-                                        title="Add to compare"
-                                      >
-                                        <i className="icon-shuffle icon"></i>
-                                      </Link>
-                                    </div>
+                          </div>
+                          <div className="product-item">
+                            <div className="inner-content">
+                              <div className="product-thumb">
+                                <Link to="single-product.html">
+                                  <img
+                                    src={`${process.env.PUBLIC_URL}/assets/img/shop/09.jpg`}
+                                    alt="HasTech"
+                                  />
+                                </Link>
+                                <div className="product-action">
+                                  <div className="addto-wrap">
+                                    <Link
+                                      className="add-wishlist"
+                                      to="wishlist.html"
+                                      title="Add to wishlist"
+                                    >
+                                      <i className="icon-heart icon"></i>
+                                    </Link>
+                                    <Link
+                                      className="add-compare"
+                                      to="compare.html"
+                                      title="Add to compare"
+                                    >
+                                      <i className="icon-shuffle icon"></i>
+                                    </Link>
                                   </div>
-                                  <ul className="product-flag">
-                                    <li className="new">New</li>
-                                    <li className="discount visually-hidden">
-                                      -20%
-                                    </li>
-                                  </ul>
                                 </div>
-                                <div className="product-desc">
-                                  <div className="product-info">
-                                    <h4 className="title">
-                                      <Link to="single-product.html">
-                                        Calvin Klein Jeans Reflective Logo Full
-                                        Zip
-                                      </Link>
-                                    </h4>
-                                    <div className="star-content">
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                    </div>
-                                    <div className="prices">
-                                      <span className="price-old visually-hidden">
-                                        €23.06
-                                      </span>
-                                      <span className="price text-black">
-                                        €35.38
-                                      </span>
-                                    </div>
-                                  </div>
-                                  <div className="product-footer">
-                                    <Link
-                                      className="btn-product-add"
-                                      to="single-product.html"
-                                    >
-                                      Add to cart
+                                <ul className="product-flag">
+                                  <li className="new">New</li>
+                                  <li className="discount visually-hidden">
+                                    -20%
+                                  </li>
+                                </ul>
+                              </div>
+                              <div className="product-desc">
+                                <div className="product-info">
+                                  <h4 className="title">
+                                    <Link to="single-product.html">
+                                      Brixton Patrol All Terrain Anorak Jacket
                                     </Link>
-                                    <Link
-                                      className="btn-quick-view"
-                                      to="#"
-                                      title="Quick view"
-                                    >
-                                      Quick view
-                                    </Link>
+                                  </h4>
+                                  <div className="star-content">
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
                                   </div>
+                                  <div className="prices">
+                                    <span className="price-old visually-hidden">
+                                      €23.06
+                                    </span>
+                                    <span className="price text-black">
+                                      €35.38
+                                    </span>
+                                  </div>
+                                </div>
+                                <div className="product-footer">
+                                  <Link
+                                    className="btn-product-add"
+                                    to="single-product.html"
+                                  >
+                                    Add to cart
+                                  </Link>
+                                  <Link
+                                    className="btn-quick-view"
+                                    to="#"
+                                    title="Quick view"
+                                  >
+                                    Quick view
+                                  </Link>
                                 </div>
                               </div>
                             </div>
-                            <div className="product-item">
-                              <div className="inner-content">
-                                <div className="product-thumb">
-                                  <Link to="single-product.html">
-                                    <img
-                                      src={`${process.env.PUBLIC_URL}/assets/img/shop/12.jpg`}
-                                      alt="HasTech"
-                                    />
-                                    <img
-                                      className="second-image"
-                                      src={`${process.env.PUBLIC_URL}/assets/img/shop/12-h1.jpg`}
-                                      alt="HasTech"
-                                    />
-                                  </Link>
-                                  <div className="product-action">
-                                    <div className="addto-wrap">
-                                      <Link
-                                        className="add-wishlist"
-                                        to="wishlist.html"
-                                        title="Add to wishlist"
-                                      >
-                                        <i className="icon-heart icon"></i>
-                                      </Link>
-                                      <Link
-                                        className="add-compare"
-                                        to="compare.html"
-                                        title="Add to compare"
-                                      >
-                                        <i className="icon-shuffle icon"></i>
-                                      </Link>
-                                    </div>
+                          </div>
+                          <div className="product-item">
+                            <div className="inner-content">
+                              <div className="product-thumb">
+                                <Link to="single-product.html">
+                                  <img
+                                    src={`${process.env.PUBLIC_URL}/assets/img/shop/10.jpg`}
+                                    alt="HasTech"
+                                  />
+                                  <img
+                                    className="second-image"
+                                    src={`${process.env.PUBLIC_URL}/assets/img/shop/10-h1.jpg`}
+                                    alt="HasTech"
+                                  />
+                                </Link>
+                                <div className="product-action">
+                                  <div className="addto-wrap">
+                                    <Link
+                                      className="add-wishlist"
+                                      to="wishlist.html"
+                                      title="Add to wishlist"
+                                    >
+                                      <i className="icon-heart icon"></i>
+                                    </Link>
+                                    <Link
+                                      className="add-compare"
+                                      to="compare.html"
+                                      title="Add to compare"
+                                    >
+                                      <i className="icon-shuffle icon"></i>
+                                    </Link>
                                   </div>
-                                  <ul className="product-flag">
-                                    <li className="new">New</li>
-                                    <li className="discount visually-hidden">
-                                      -20%
-                                    </li>
-                                  </ul>
                                 </div>
-                                <div className="product-desc">
-                                  <div className="product-info">
-                                    <h4 className="title">
-                                      <Link to="single-product.html">
-                                        Juicy Couture Tricot Logo Stripe Jacket
-                                      </Link>
-                                    </h4>
-                                    <div className="star-content">
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                      <i className="ion-md-star"></i>
-                                    </div>
-                                    <div className="prices">
-                                      <span className="price-old visually-hidden">
-                                        €23.06
-                                      </span>
-                                      <span className="price text-black">
-                                        €10.98
-                                      </span>
-                                    </div>
-                                  </div>
-                                  <div className="product-footer">
-                                    <Link
-                                      className="btn-product-add"
-                                      to="single-product.html"
-                                    >
-                                      Add to cart
+                                <ul className="product-flag">
+                                  <li className="new">New</li>
+                                  <li className="discount visually-hidden">
+                                    -20%
+                                  </li>
+                                </ul>
+                              </div>
+                              <div className="product-desc">
+                                <div className="product-info">
+                                  <h4 className="title">
+                                    <Link to="single-product.html">
+                                      New Balance Arishi Sport v1
                                     </Link>
-                                    <Link
-                                      className="btn-quick-view"
-                                      to="#"
-                                      title="Quick view"
-                                    >
-                                      Quick view
-                                    </Link>
+                                  </h4>
+                                  <div className="star-content">
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star icon-color-gray"></i>
                                   </div>
+                                  <div className="prices">
+                                    <span className="price-old visually-hidden">
+                                      €23.06
+                                    </span>
+                                    <span className="price text-black">
+                                      €23.06
+                                    </span>
+                                  </div>
+                                </div>
+                                <div className="product-footer">
+                                  <Link
+                                    className="btn-product-add"
+                                    to="single-product.html"
+                                  >
+                                    Add to cart
+                                  </Link>
+                                  <Link
+                                    className="btn-quick-view"
+                                    to="#"
+                                    title="Quick view"
+                                  >
+                                    Quick view
+                                  </Link>
                                 </div>
                               </div>
                             </div>
+                          </div>
+                          <div className="product-item">
+                            <div className="inner-content">
+                              <div className="product-thumb">
+                                <Link to="single-product.html">
+                                  <img
+                                    src={`${process.env.PUBLIC_URL}/assets/img/shop/11.jpg`}
+                                    alt="HasTech"
+                                  />
+                                  <img
+                                    className="second-image"
+                                    src={`${process.env.PUBLIC_URL}/assets/img/shop/11-h1.jpg`}
+                                    alt="HasTech"
+                                  />
+                                </Link>
+                                <div className="product-action">
+                                  <div className="addto-wrap">
+                                    <Link
+                                      className="add-wishlist"
+                                      to="wishlist.html"
+                                      title="Add to wishlist"
+                                    >
+                                      <i className="icon-heart icon"></i>
+                                    </Link>
+                                    <Link
+                                      className="add-compare"
+                                      to="compare.html"
+                                      title="Add to compare"
+                                    >
+                                      <i className="icon-shuffle icon"></i>
+                                    </Link>
+                                  </div>
+                                </div>
+                                <ul className="product-flag">
+                                  <li className="new">New</li>
+                                  <li className="discount visually-hidden">
+                                    -20%
+                                  </li>
+                                </ul>
+                              </div>
+                              <div className="product-desc">
+                                <div className="product-info">
+                                  <h4 className="title">
+                                    <Link to="single-product.html">
+                                      Calvin Klein Jeans Reflective Logo Full
+                                      Zip
+                                    </Link>
+                                  </h4>
+                                  <div className="star-content">
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                  </div>
+                                  <div className="prices">
+                                    <span className="price-old visually-hidden">
+                                      €23.06
+                                    </span>
+                                    <span className="price text-black">
+                                      €35.38
+                                    </span>
+                                  </div>
+                                </div>
+                                <div className="product-footer">
+                                  <Link
+                                    className="btn-product-add"
+                                    to="single-product.html"
+                                  >
+                                    Add to cart
+                                  </Link>
+                                  <Link
+                                    className="btn-quick-view"
+                                    to="#"
+                                    title="Quick view"
+                                  >
+                                    Quick view
+                                  </Link>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="product-item">
+                            <div className="inner-content">
+                              <div className="product-thumb">
+                                <Link to="single-product.html">
+                                  <img
+                                    src={`${process.env.PUBLIC_URL}/assets/img/shop/12.jpg`}
+                                    alt="HasTech"
+                                  />
+                                  <img
+                                    className="second-image"
+                                    src={`${process.env.PUBLIC_URL}/assets/img/shop/12-h1.jpg`}
+                                    alt="HasTech"
+                                  />
+                                </Link>
+                                <div className="product-action">
+                                  <div className="addto-wrap">
+                                    <Link
+                                      className="add-wishlist"
+                                      to="wishlist.html"
+                                      title="Add to wishlist"
+                                    >
+                                      <i className="icon-heart icon"></i>
+                                    </Link>
+                                    <Link
+                                      className="add-compare"
+                                      to="compare.html"
+                                      title="Add to compare"
+                                    >
+                                      <i className="icon-shuffle icon"></i>
+                                    </Link>
+                                  </div>
+                                </div>
+                                <ul className="product-flag">
+                                  <li className="new">New</li>
+                                  <li className="discount visually-hidden">
+                                    -20%
+                                  </li>
+                                </ul>
+                              </div>
+                              <div className="product-desc">
+                                <div className="product-info">
+                                  <h4 className="title">
+                                    <Link to="single-product.html">
+                                      Juicy Couture Tricot Logo Stripe Jacket
+                                    </Link>
+                                  </h4>
+                                  <div className="star-content">
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                    <i className="ion-md-star"></i>
+                                  </div>
+                                  <div className="prices">
+                                    <span className="price-old visually-hidden">
+                                      €23.06
+                                    </span>
+                                    <span className="price text-black">
+                                      €10.98
+                                    </span>
+                                  </div>
+                                </div>
+                                <div className="product-footer">
+                                  <Link
+                                    className="btn-product-add"
+                                    to="single-product.html"
+                                  >
+                                    Add to cart
+                                  </Link>
+                                  <Link
+                                    className="btn-quick-view"
+                                    to="#"
+                                    title="Quick view"
+                                  >
+                                    Quick view
+                                  </Link>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </OwlCarousel>
                         {/* <div className="product-slider owl-carousel owl-theme">
                           <div className="item">
