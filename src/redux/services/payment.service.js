@@ -26,8 +26,16 @@ const service = () => {
         throw err.response.data.message
       });
   };
-
-
+  const postPaytmPayment = (Data) => {
+    return axios
+      .post(`${PAYMENT_API}/paytm`, Data,{
+        withCredentials:true
+      })
+      .then((res) => res.data)
+      .catch((err) => {
+        throw err.response.data.message;
+      });
+  };
   const updatePayment = (id, Data) => {
     return axios
       .patch(`${PAYMENT_API}/${id}`, Data,{
@@ -63,6 +71,7 @@ const service = () => {
     updatePayment,
     deletePayment,
     searchPayment,
+    postPaytmPayment,
   };
 };
 

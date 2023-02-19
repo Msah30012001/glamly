@@ -13,10 +13,11 @@ import Wishlist from './App/Account/Wishlist'
 import NotFound from "./components/NotFound";
 import Cart from './App/Account/Cart'
 import Checkout from "./App/Account/Checkout";
-import ThankYou from "./App/ThankYou"
+import AboutUs from "./App/AboutUs"
+import Contact from "./App/Contact"
+import PaymentStatus from "./App/Components/PaymentStatus"
 
 function App() {
-  // const {path} = useRouteMatch()
   return (
     <>
       <div className="wrapper home-default-wrapper">
@@ -25,6 +26,9 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route exact path="/" element={<Home />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route exact path="/status/:orderId" element={<PaymentStatus/>} />
+            <Route path="/contact" element={<Contact />} />
             <Route exact path="/search" element={<ProductList />} />
             <Route exact path="/:slug" element={<ProductList />} />
             <Route path="/d/:slug" element={<ProductDetails />} />
@@ -34,7 +38,6 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/account" element={<Account />} />
-            <Route path="/thank-you" element={<ThankYou/>}/>
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

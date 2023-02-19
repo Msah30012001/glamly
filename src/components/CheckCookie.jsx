@@ -10,7 +10,7 @@ const CheckCookie = (props) => {
 
   useEffect(() => {
     if (redirectAccount.includes(path)) {
-      fetch(`${CHECK_COOKIE_WEB}/redirect-account`, {
+      fetch(`${CHECK_COOKIE_WEB}redirect-account`, {
         credentials: "include",
       })
         .then((response) => {
@@ -23,7 +23,7 @@ const CheckCookie = (props) => {
           console.log(error);
         });
     } else if (redirectLogin.includes(path)) {
-      fetch(`${CHECK_COOKIE_WEB}/redirect-login`, {
+      fetch(`${CHECK_COOKIE_WEB}redirect-login`, {
         credentials: "include",
       })
         .then((response) => {

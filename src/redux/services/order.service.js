@@ -79,7 +79,7 @@ const service = () => {
   };
   const getSingleOrder = (id) => {
     return axios
-      .get(`${ORDER_API}/${id}`)
+      .get(`${ORDER_API}/status/${id}`,{withCredentials: true})
       .then((res) => res.data)
       .catch((err) => {
         throw err.response.data.message

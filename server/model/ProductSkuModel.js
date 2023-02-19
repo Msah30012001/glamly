@@ -9,7 +9,7 @@ const productSkuSchema = new mongoose.Schema({
     trim: true,
     unique: [true, "product sku is already present"],
   },
-  slug:String,
+  slug: String,
   sku_code: {
     type: String,
     required: true,
@@ -32,6 +32,10 @@ const productSkuSchema = new mongoose.Schema({
   specification: {
     type: Map,
     of: String,
+  },
+  date: {
+    type: Date,
+    default: Date.now(),
   },
 });
 

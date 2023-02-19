@@ -17,6 +17,40 @@ Router.get("/product-sku", async (req, res, next) => {
   }
 });
 
+// fetch weekly product sku
+Router.get("/product-sku/weekly", async (req, res, next) => {
+  try {
+    const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000); // Calculate the date 7 days ago
+    const today = new Date(); // Get today's date
+
+    const productSkuData = await ProductSku.aggregate([
+      {
+        $lookup: {
+          from: "feedbacks",
+          localField: "_id",
+          foreignField: "product",
+          as: "feedbacks",
+        },
+      },
+      {
+        $addFields: {
+          avg: {
+            $avg: "$feedbacks.rate",
+          },
+        },
+      },
+      { $match: { date: { $gte: sevenDaysAgo } } },
+    ]);
+    // find({
+    //   date: { $gte: sevenDaysAgo, $lt: today },
+    // });
+    res.status(200).send(productSkuData);
+  } catch (error) {
+    next(error);
+  }
+});
+
+
 //fetch single record
 Router.get("/product-sku/:id", async (req, res, next) => {
   try {

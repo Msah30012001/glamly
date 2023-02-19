@@ -67,6 +67,19 @@ Router.get("/order/:id",authenticate, async (req, res, next) => {
   }
 });
 
+Router.get("/order/status/:id", authenticate, async (req, res, next) => {
+  try {
+    const _id = req.params.id;
+    const orderData = await Order.findOne({order_id:_id});
+    if (!orderData) {
+      throw new BadRequestError("order not found");
+    }
+    res.status(200).json(orderData);
+  } catch (error) {
+    next(error);
+  }
+});
+
 // search for record
 Router.get("/order/search/:key",authenticate, async (req, res, next) => {
   try {

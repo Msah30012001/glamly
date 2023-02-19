@@ -4,6 +4,7 @@ import Breadcrumb from "./Components/Breadcrumb";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import GiveFeedback from "./Components/Feedback/GiveFeedback";
+import FeedbackCard from "./Components/Feedback/FeedbackCard"
 import { fetchProductDetail } from "../redux/async/productdetail.async";
 import { postWishlist } from "../redux/async/wishlist.async";
 import { postCart } from "../redux/async/cart.async";
@@ -20,7 +21,6 @@ const ProductDetails = () => {
   useEffect(() => {
     dispatch(fetchProductDetail(`${param.slug}`));
   }, [param.slug]);
-  console.log(Qty);
   return (
     <>
       <Breadcrumb />
@@ -99,13 +99,13 @@ const ProductDetails = () => {
                             </SwiperSlide>
                             {item.image.map((item) => {
                               return (
-                                 <SwiperSlide key={item}>
+                                <SwiperSlide key={item}>
                                   <img
                                     src={`${process.env.PUBLIC_URL}/assets/upload/${item}`}
                                     alt="HasTech"
                                   />
                                 </SwiperSlide>
-                              );  
+                              );
                             })}
                           </Swiper>
                         </div>
@@ -181,9 +181,15 @@ const ProductDetails = () => {
                             </div>
                             <ul className="comments-advices">
                               <li>
-                                <Link to="#/" className="reviews">
+                                <Link
+                                  to="#/"
+                                  className="reviews"
+                                  data-bs-toggle="pill"
+                                  to="#reviews"
+                                  role="tab"
+                                >
                                   <i className="fa fa-commenting-o"></i>Read
-                                  reviews (1)
+                                  reviews ({item.feedback.length})
                                 </Link>
                               </li>
                               <li>
@@ -259,7 +265,7 @@ const ProductDetails = () => {
                               <i className="icon-shuffle"></i>Add to compare
                             </Link>
                           </div>
-                          <div className="social-sharing">
+                          {/* <div className="social-sharing">
                             <span>Share</span>
                             <div className="social-icons">
                               <Link to="#/">
@@ -269,7 +275,7 @@ const ProductDetails = () => {
                                 <i className="la la-twitter"></i>
                               </Link>
                             </div>
-                          </div>
+                          </div> */}
                         </div>
                       </div>
                     </div>
@@ -374,20 +380,6 @@ const ProductDetails = () => {
                       >
                         <div className="product-comments-content">
                           <div className="comment clearfix">
-                            <div className="comment-author">
-                              <span className="grade">Grade</span>
-                              <div className="star-content">
-                                <i className="ion-md-star"></i>
-                                <i className="ion-md-star"></i>
-                                <i className="ion-md-star"></i>
-                                <i className="ion-md-star"></i>
-                                <i className="ion-md-star icon-color-gray"></i>
-                              </div>
-                              <div className="comment-author-info">
-                                <span className="title">posthemes</span>
-                                <span className="date">05/19/2021</span>
-                              </div>
-                            </div>
                             <Link
                               to="#/"
                               className="btn-review"
@@ -396,22 +388,15 @@ const ProductDetails = () => {
                             >
                               Write your review !
                             </Link>
-
-                            <div className="comment-author">
-                              <span className="grade">Grade</span>
-                              <div className="star-content">
-                                <i className="ion-md-star"></i>
-                                <i className="ion-md-star"></i>
-                                <i className="ion-md-star"></i>
-                                <i className="ion-md-star"></i>
-                                <i className="ion-md-star icon-color-gray"></i>
-                              </div>
-                              <div className="comment-author-info">
-                                <span className="title">posthemes</span>
-
-                                <span className="date">05/19/2021</span>
-                              </div>
-                            </div>
+                            {item.feedback.map((item) => {
+                              return (
+                                <FeedbackCard
+                                  rate={item.rate}
+                                  review={item.review}
+                                  date={item.date}
+                                />
+                              );
+                            })}
                           </div>
                         </div>
                       </div>
@@ -423,6 +408,9 @@ const ProductDetails = () => {
           </section>
         );
       })}
+
+
+
       <section className="product-area">
         <div className="container pt-60">
           <div className="row">

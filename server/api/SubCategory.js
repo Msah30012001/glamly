@@ -5,7 +5,25 @@ const SubCategory = require("../model/SubCategoryModel");
 // fetch all records
 Router.get("/sub-category", async (req, res, next) => {
   try {
-    const subCategoriesData = await SubCategory.find();
+    const subCategoriesData = await SubCategory.aggregate([
+      {
+        $lookup: {
+          from: "products",
+          localField: "_id",
+          foreignField: "subCategory",
+          as: "product",
+        },
+      },
+      {
+        $lookup: {
+          from: "productskus",
+          localField: "product._id",
+          foreignField: "product",
+          as: "productskus",
+        },
+      },
+    ]);
+
     res.status(200).send(subCategoriesData);
   } catch (error) {
     next(error);

@@ -309,7 +309,7 @@ const Header = () => {
                         <Link to="/">Home</Link>
                       </li>
                       <li>
-                        <Link to="about-us.html">About Us</Link>
+                        <Link to="/about-us">About Us</Link>
                       </li>
                       <li className="has-submenu full-width">
                         <Link to="#">Category</Link>
@@ -355,7 +355,7 @@ const Header = () => {
                       </li>
 
                       <li>
-                        <Link to="contact.html">Contact us</Link>
+                        <Link to="/contact">Contact us</Link>
                       </li>
                     </ul>
                   </div>

@@ -29,6 +29,18 @@ export const fetchProductSku = () => {
   };
 };
 
+export const fetchWeeklyProductSku = () => {
+  return async (dispatch) => {
+    try {
+      dispatch(fetchProductSkuRequest());
+      const response = await productSkuService.getWeeklyProductSku();
+      dispatch(fetchProductSkuSuccess(response));
+    } catch (error) {
+      dispatch(fetchProductSkuFailure(error));
+    }
+  };
+};
+
 export const fetchSingleProductSku = (id) => {
   return async (dispatch) => {
     try {

@@ -10,6 +10,14 @@ const service = () => {
         throw err.response.data.message
       });
   };
+   const getWeeklyProductSku = () => {
+     return axios
+       .get(`${PRODUCT_SKU_API}/weekly`)
+       .then((res) => res.data)
+       .catch((err) => {
+         throw err.response.data.message;
+       });
+   };
   const getSingleProductSku = (id) => {
     return axios
       .get(`${PRODUCT_SKU_API}/${id}`)
@@ -52,6 +60,7 @@ const service = () => {
   };
   return {
     getProductSku,
+    getWeeklyProductSku,
     getSingleProductSku,
     postProductSku,
     updateProductSku,

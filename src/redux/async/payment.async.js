@@ -53,6 +53,18 @@ export const postPayment = (Data) => {
   };
 };
 
+export const postPaytmPayment = (Data) => {
+  return async (dispatch) => {
+    try {
+      dispatch(postPaymentRequest());
+      const response = await paymentService.postPaytmPayment(Data);
+      dispatch(postPaymentSuccess(response));
+    } catch (error) {
+      dispatch(postPaymentFailure(error));
+    }
+  };
+};
+
 export const updatePayment = (id, Data) => {
   return async (dispatch) => {
     try {

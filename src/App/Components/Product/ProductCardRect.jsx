@@ -1,14 +1,11 @@
-import React ,{useEffect} from "react";
+import React  from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { postWishlist } from "../../../redux/async/wishlist.async";
 import { postCart } from "../../../redux/async/cart.async";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const ProductCardRect = (props) => {
   const dispatch = useDispatch();
-  const wishlist = useSelector((state) => state.wishlist);
   const {
     _id,
     slug,
@@ -21,21 +18,8 @@ const ProductCardRect = (props) => {
     desc,
     stock,
   } = props;
-  useEffect(() => {
-    if (wishlist.status === "SUCCESS") {
-      (() => {
-        toast.success(wishlist.message);
-      })();
-    } else if (wishlist.status === "FAILED") {
-      (() => {
-        toast.error(wishlist.message);
-      })();
-    }
-  }, [wishlist.status, wishlist.message]);
   return (
     <>
-      <ToastContainer />
-
       <div className="product-item">
         <div className="inner-content product-list-item">
           <div className="row m-0">
