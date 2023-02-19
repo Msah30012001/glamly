@@ -40,6 +40,15 @@ const PaymentStatus = ({ match }) => {
                     <h2 className="text-danger">Order Failed</h2>
                   </>
                 )}
+                {order.data.status === "PENDING" && (
+                  <>
+                    <i
+                      className="fa fa-clock fa-bounce text-warning"
+                      style={{ fontSize: "15em" }}
+                    ></i>
+                    <h2 className="text-warning">Order Pending</h2>
+                  </>
+                )}
               </div>
             </div>
           </div>

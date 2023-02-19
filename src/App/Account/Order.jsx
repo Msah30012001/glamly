@@ -44,7 +44,8 @@ const Order = () => {
                         </tr>
                       </thead>
                       <tbody>
-                        {order.data.map((item) => {
+                        {Array.isArray(order.data)
+                  ? order.data.map((item) => {
                           let x = "";
                           let y = "";
                           if (item.status === "SUCCESS") {
@@ -100,7 +101,7 @@ const Order = () => {
                               <td className={y}>{item.status}</td>
                             </tr>
                           );
-                        })}
+                        }):""}
                       </tbody>
                     </table>
                   </div>

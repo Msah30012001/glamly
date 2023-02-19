@@ -312,7 +312,7 @@ const Header = () => {
                         <Link to="/about-us">About Us</Link>
                       </li>
                       <li className="has-submenu full-width">
-                        <Link to="#">Category</Link>
+                        <Link to="/all">Category</Link>
                         {category.data.map((item) => {
                           return (
                             // <li className="mega-menu-item" key={item._id}>

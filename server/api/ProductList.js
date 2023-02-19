@@ -9,7 +9,28 @@ Router.get("/product-list/:slug*?", async (req, res, next) => {
   try {
     let slug = req.params.slug;
     let s = req.query.s;
-        if (slug) {
+    if (slug) {
+      if(slug === "all"){
+        const productSku = await ProductSku.aggregate([
+          {
+            $lookup: {
+              from: "feedbacks",
+              localField: "_id",
+              foreignField: "product",
+              as: "feedbacks",
+            },
+          },
+          {
+            $addFields: {
+              avg: {
+                $avg: "$feedbacks.rate",
+              },
+            },
+          },
+        ]);
+        res.status(200).send(productSku);
+      }
+
       const subCategory = await SubCategory.find({ slug: slug });
       const childCategory = await ChildCategory.find({ slug: slug });
       let category = subCategory.length > 0 ? subCategory : childCategory;
@@ -61,7 +82,14 @@ Router.get("/product-list/:slug*?", async (req, res, next) => {
             },
           },
         },
-        { $match: { $or: [{ name: { $regex: s, $options: "i" } },{description: {$regex: s, $options: "i"}}] } },
+        {
+          $match: {
+            $or: [
+              { name: { $regex: s, $options: "i" } },
+              { description: { $regex: s, $options: "i" } },
+            ],
+          },
+        },
       ]);
       res.status(200).send(productSku);
     }

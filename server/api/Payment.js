@@ -69,8 +69,14 @@ Router.post("/paytm-callback", async (req, res, next) => {
             let result = JSON.parse(response);
             if (result.STATUS === "TXN_SUCCESS") {
               //store in db
-              const orderDetail = await Order.findOne({order_id:result.ORDERID});
-              const updateOrder = await Order.findByIdAndUpdate(orderDetail._id,{$set: {status: "SUCCESS",},},{ new: true });
+              const orderDetail = await Order.findOne({
+                order_id: result.ORDERID,
+              });
+              const updateOrder = await Order.findByIdAndUpdate(
+                orderDetail._id,
+                { $set: { status: "SUCCESS" } },
+                { new: true }
+              );
               if (!updateOrder) {
                 throw new BadRequestError("order not found");
               }
@@ -97,28 +103,35 @@ Router.post("/paytm-callback", async (req, res, next) => {
               }
             } else if (result.STATUS === "TXN_FAILED") {
               //store in db
-
-              const updateOrder = await Order.update(
-                { order_id: result.ORDERID },
-                {
-                  $set: {
-                    status: "FAILED",
-                    txn_id: result.TXNID,
-                  },
-                }
+              const orderDetail = await Order.findOne({
+                order_id: result.ORDERID,
+              });
+              const updateOrder = await Order.findByIdAndUpdate(
+                orderDetail._id,
+                { $set: { status: "FAILED" } },
+                { new: true }
               );
-
               if (!updateOrder) {
                 throw new BadRequestError("order not found");
               }
 
-              let cart = await Cart.deleteMany({ user: updateOrder.user_id });
+              //  let list = [];
+              //  list = updateOrder.list;
+              //  list.map(async (item) => {
+              //    let productSku = await ProductSku.updateOne(
+              //      { sku_code: item.sku_code },
+              //      { $inc: { qty: -item.qty } }
+              //    );
+              //  });
 
+              //  let cart = await Cart.deleteMany({ user: updateOrder.user_id });
+              //  console.log(cart);
               const updatePayment = await Payment.findByIdAndUpdate(
                 updateOrder.payment_id,
-                { status: "FAILED" },
+                { status: "FAILED", txn_id: result.TXNID },
                 { new: true }
               );
+              //  console.log(updatePayment);
               if (!updatePayment) {
                 throw new BadRequestError("payment  not found");
               }
