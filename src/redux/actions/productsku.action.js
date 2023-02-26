@@ -10,6 +10,9 @@ const {
   UPDATE_PRODUCT_SKU_REQUEST,
   UPDATE_PRODUCT_SKU_SUCCESS,
   UPDATE_PRODUCT_SKU_FAILURE,
+  UPDATE_PRODUCT_SKU_INCREMENT_VIEW_REQUEST,
+  UPDATE_PRODUCT_SKU_INCREMENT_VIEW_SUCCESS,
+  UPDATE_PRODUCT_SKU_INCREMENT_VIEW_FAILURE,
   DELETE_PRODUCT_SKU_REQUEST,
   DELETE_PRODUCT_SKU_SUCCESS,
   DELETE_PRODUCT_SKU_FAILURE,
@@ -74,6 +77,26 @@ export const updateProductSkuSuccess = (data) => {
 export const updateProductSkuFailure = (data) => {
   return {
     type: UPDATE_PRODUCT_SKU_FAILURE,
+    payload: data,
+  };
+};
+
+export const updateProductSkuIncrementViewRequest = () => {
+  return {
+    type: UPDATE_PRODUCT_SKU_INCREMENT_VIEW_REQUEST,
+  };
+};
+
+export const updateProductSkuIncrementViewSuccess = (data) => {
+  return {
+    type: UPDATE_PRODUCT_SKU_INCREMENT_VIEW_SUCCESS,
+    payload: data,
+  };
+};
+
+export const updateProductSkuIncrementViewFailure = (data) => {
+  return {
+    type: UPDATE_PRODUCT_SKU_INCREMENT_VIEW_FAILURE,
     payload: data,
   };
 };

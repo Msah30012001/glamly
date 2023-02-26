@@ -37,7 +37,7 @@ import './assets/js/owlcarousel.min.js'
 import './assets/js/jquery-match-height.min.js'
 import './assets/js/jquery-zoom.min.js'
 // import './assets/js/countdown.js'
-import './assets/js/custom.js'
+// import './assets/js/custom.js'
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(

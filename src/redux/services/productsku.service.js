@@ -42,6 +42,14 @@ const service = () => {
         throw err.response.data.message;
       });
   };
+  const updateProductSkuIncrementView = (Data) => {
+    return axios
+      .patch(`${PRODUCT_SKU_API}/p/increment`, Data)
+      .then((res) => res.data)
+      .catch((err) => {
+        throw err.response.data.message;
+      });
+  };
   const deleteProductSku = (id) => {
     return axios
       .delete(`${PRODUCT_SKU_API}/${id}`)
@@ -64,6 +72,7 @@ const service = () => {
     getSingleProductSku,
     postProductSku,
     updateProductSku,
+    updateProductSkuIncrementView,
     deleteProductSku,
     searchProductSku,
   };

@@ -10,6 +10,9 @@ const {
   UPDATE_PRODUCT_SKU_FAILURE,
   UPDATE_PRODUCT_SKU_REQUEST,
   UPDATE_PRODUCT_SKU_SUCCESS,
+  UPDATE_PRODUCT_SKU_INCREMENT_VIEW_FAILURE,
+  UPDATE_PRODUCT_SKU_INCREMENT_VIEW_REQUEST,
+  UPDATE_PRODUCT_SKU_INCREMENT_VIEW_SUCCESS,
   DELETE_PRODUCT_SKU_REQUEST,
   DELETE_PRODUCT_SKU_SUCCESS,
   DELETE_PRODUCT_SKU_FAILURE,
@@ -90,6 +93,27 @@ export const productSkuReducer = (state = initialState, action) => {
         message: action.payload,
         loading: false,
         status: "FAILED",
+      };
+    case UPDATE_PRODUCT_SKU_INCREMENT_VIEW_REQUEST:
+      return {
+        ...state,
+        loading: true,
+        status: "",
+        message: "",
+      };
+    case UPDATE_PRODUCT_SKU_INCREMENT_VIEW_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        status: "",
+        message: "",
+      };
+    case UPDATE_PRODUCT_SKU_INCREMENT_VIEW_FAILURE:
+      return {
+        ...state,
+        message: action.payload,
+        loading: false,
+        status: "",
       };
     case DELETE_PRODUCT_SKU_REQUEST:
       return {

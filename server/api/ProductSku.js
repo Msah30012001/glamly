@@ -20,7 +20,7 @@ Router.get("/product-sku", async (req, res, next) => {
 // fetch weekly product sku
 Router.get("/product-sku/weekly", async (req, res, next) => {
   try {
-    const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000); // Calculate the date 7 days ago
+    const sevenDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000); // Calculate the date 7 days ago
     const today = new Date(); // Get today's date
 
     const productSkuData = await ProductSku.aggregate([
@@ -50,7 +50,6 @@ Router.get("/product-sku/weekly", async (req, res, next) => {
   }
 });
 
-
 //fetch single record
 Router.get("/product-sku/:id", async (req, res, next) => {
   try {
@@ -79,23 +78,37 @@ Router.get("/product-sku/search/:key", async (req, res, next) => {
 });
 
 //create a record
-Router.post("/product-sku",  upload.fields([{ name: "thumbnail", maxCount: 1 },{ name: "thumbnail_hover", maxCount: 1 },{ name: "image", maxCount: 5 }]), async (req, res, next) => {
+Router.post(
+  "/product-sku",
+  upload.fields([
+    { name: "thumbnail", maxCount: 1 },
+    { name: "thumbnail_hover", maxCount: 1 },
+    { name: "image", maxCount: 5 },
+  ]),
+  async (req, res, next) => {
     let data = {
       thumbnail: "",
       thumbnail_hover: "",
       image: [],
     };
     try {
-       let d = { slug: "" };
+      let d = { slug: "" };
 
-       d.slug = req.body.name.toString().toLowerCase()
-         .replace(/\s+/g, "-")
-         .replace(/[^\w-]+/g, "")
-         .replace(/--+/g, "-")
-         .replace(/^-+/, "")
-         .replace(/-+$/, "");
+      d.slug = req.body.name
+        .toString()
+        .toLowerCase()
+        .replace(/\s+/g, "-")
+        .replace(/[^\w-]+/g, "")
+        .replace(/--+/g, "-")
+        .replace(/^-+/, "")
+        .replace(/-+$/, "");
       let obj = {};
-      data = { ...data,slug:d.slug, ...req.body , specification:JSON.parse(req.body.specification) };
+      data = {
+        ...data,
+        slug: d.slug,
+        ...req.body,
+        specification: JSON.parse(req.body.specification),
+      };
       if (req.files.thumbnail.length > 0) {
         data.thumbnail = req.files.thumbnail[0].filename;
       }
@@ -108,7 +121,7 @@ Router.post("/product-sku",  upload.fields([{ name: "thumbnail", maxCount: 1 },{
         }
       }
       const productSku = new ProductSku(data);
-      const createProductSku = await productSku.save()
+      const createProductSku = await productSku.save();
       res.status(201).send(createProductSku);
     } catch (error) {
       fs.unlink(
@@ -137,58 +150,67 @@ Router.post("/product-sku",  upload.fields([{ name: "thumbnail", maxCount: 1 },{
 );
 
 // update a record
-Router.patch("/product-sku/:id",  upload.fields([{ name: "thumbnail", maxCount: 1 },{ name: "thumbnail_hover", maxCount: 1 },{ name: "image", maxCount: 5 }]), async (req, res, next) => {
-   let data = {
-     thumbnail: "",
-     thumbnail_hover: "",
-     image: [],
-   };
-  try {
-    const _id = req.params.id;
-
-     let d = { slug: "" };
-
-     d.slug = req.body.name
-       .toString()
-       .toLowerCase()
-       .replace(/\s+/g, "-")
-       .replace(/[^\w-]+/g, "")
-       .replace(/--+/g, "-")
-       .replace(/^-+/, "")
-       .replace(/-+$/, "");
-    
-    data = {
-      ...data,
-      slug: d.slug,
-      ...req.body,
-      specification: JSON.parse(req.body.specification),
+Router.patch(
+  "/product-sku/:id",
+  upload.fields([
+    { name: "thumbnail", maxCount: 1 },
+    { name: "thumbnail_hover", maxCount: 1 },
+    { name: "image", maxCount: 5 },
+  ]),
+  async (req, res, next) => {
+    let data = {
+      thumbnail: "",
+      thumbnail_hover: "",
+      image: [],
     };
-    if (req.files.thumbnail.length > 0) {
-      data.thumbnail = req.files.thumbnail[0].filename;
-    }
-    if (req.files.thumbnail_hover.length > 0) {
-      data.thumbnail_hover = req.files.thumbnail_hover[0].filename;
-    }
-    if (req.files.image.length > 0) {
-      for (let i = 0; i < req.files.image.length; i++) {
-        data.image.push(req.files.image[i].filename);
+    try {
+      const _id = req.params.id;
+
+      let d = { slug: "" };
+
+      d.slug = req.body.name
+        .toString()
+        .toLowerCase()
+        .replace(/\s+/g, "-")
+        .replace(/[^\w-]+/g, "")
+        .replace(/--+/g, "-")
+        .replace(/^-+/, "")
+        .replace(/-+$/, "");
+
+      data = {
+        ...data,
+        slug: d.slug,
+        ...req.body,
+        specification: JSON.parse(req.body.specification),
+      };
+      if (req.files.thumbnail.length > 0) {
+        data.thumbnail = req.files.thumbnail[0].filename;
       }
-    }
+      if (req.files.thumbnail_hover.length > 0) {
+        data.thumbnail_hover = req.files.thumbnail_hover[0].filename;
+      }
+      if (req.files.image.length > 0) {
+        for (let i = 0; i < req.files.image.length; i++) {
+          data.image.push(req.files.image[i].filename);
+        }
+      }
 
-    const productSkuData = await ProductSku.findById(_id);
-    if (!productSkuData) {
-      throw new BadRequestError("product sku not found");
-    }
+      const productSkuData = await ProductSku.findById(_id);
+      if (!productSkuData) {
+        throw new BadRequestError("product sku not found");
+      }
 
-     if (req.files.thumbnail.length > 0) {
-          fs.unlink(
-          `${path.resolve("./public/assets/upload")}/${productSkuData.thumbnail}`,
+      if (req.files.thumbnail.length > 0) {
+        fs.unlink(
+          `${path.resolve("./public/assets/upload")}/${
+            productSkuData.thumbnail
+          }`,
           (error) => {
             console.log(error);
           }
         );
-     }
-     if (req.files.thumbnail_hover.length > 0) {
+      }
+      if (req.files.thumbnail_hover.length > 0) {
         fs.unlink(
           `${path.resolve("./public/assets/upload")}/${
             productSkuData.thumbnail_hover
@@ -197,8 +219,8 @@ Router.patch("/product-sku/:id",  upload.fields([{ name: "thumbnail", maxCount: 
             console.log(error);
           }
         );
-     }
-     if (req.files.image.length > 0) {
+      }
+      if (req.files.image.length > 0) {
         productSkuData.image.map((item) => {
           fs.unlink(
             `${path.resolve("./public/assets/upload")}/${item}`,
@@ -207,37 +229,63 @@ Router.patch("/product-sku/:id",  upload.fields([{ name: "thumbnail", maxCount: 
             }
           );
         });
-     }
+      }
 
-    const updateProductSku = await ProductSku.findByIdAndUpdate(_id, data, {
-      new: true,
-    });
+      const updateProductSku = await ProductSku.findByIdAndUpdate(_id, data, {
+        new: true,
+      });
+      if (!updateProductSku) {
+        throw new BadRequestError("product sku not found");
+      }
+      res.set("Access-Control-Allow-Origin", "*");
+      res.status(201).send(updateProductSku);
+    } catch (error) {
+      fs.unlink(
+        `${path.resolve("./public/assets/upload")}/${data.thumbnail}`,
+        (error) => {
+          console.log(error);
+        }
+      );
+      fs.unlink(
+        `${path.resolve("./public/assets/upload")}/${data.thumbnail_hover}`,
+        (error) => {
+          console.log(error);
+        }
+      );
+      data.image.map((item) => {
+        fs.unlink(
+          `${path.resolve("./public/assets/upload")}/${item}`,
+          (error) => {
+            console.log(error);
+          }
+        );
+      });
+      next(error);
+    }
+  }
+);
+
+Router.patch("/product-sku/p/increment", async (req, res, next) => {
+  try {
+    const slug = req.body.slug;
+    
+    const productSkuData = await ProductSku.findOne({slug:slug});
+    if (!productSkuData) {
+      throw new BadRequestError("product sku not found");
+    }
+    const updateProductSku = await ProductSku.findByIdAndUpdate(
+      productSkuData._id,
+      { $inc: { view: 1 } },
+      {
+        new: true,
+      }
+    );
     if (!updateProductSku) {
       throw new BadRequestError("product sku not found");
     }
     res.set("Access-Control-Allow-Origin", "*");
     res.status(201).send(updateProductSku);
   } catch (error) {
-    fs.unlink(
-      `${path.resolve("./public/assets/upload")}/${data.thumbnail}`,
-      (error) => {
-        console.log(error);
-      }
-    );
-    fs.unlink(
-      `${path.resolve("./public/assets/upload")}/${data.thumbnail_hover}`,
-      (error) => {
-        console.log(error);
-      }
-    );
-    data.image.map((item) => {
-      fs.unlink(
-        `${path.resolve("./public/assets/upload")}/${item}`,
-        (error) => {
-          console.log(error);
-        }
-      );
-    });
     next(error);
   }
 });
@@ -255,14 +303,19 @@ Router.delete("/product-sku/:id", async (req, res, next) => {
     if (!productSkuData) {
       throw new BadRequestError("product sku not found");
     }
-    data = { ...data, thumbnail: productSkuData.thumbnail,thumbnail_hover: productSkuData.thumbnail_hover, image:productSkuData.image };
+    data = {
+      ...data,
+      thumbnail: productSkuData.thumbnail,
+      thumbnail_hover: productSkuData.thumbnail_hover,
+      image: productSkuData.image,
+    };
     if (data.thumbnail != "") {
-       fs.unlink(
-         `${path.resolve("./public/assets/upload")}/${data.thumbnail}`,
-         (error) => {
-           console.log(error);
-         }
-       );
+      fs.unlink(
+        `${path.resolve("./public/assets/upload")}/${data.thumbnail}`,
+        (error) => {
+          console.log(error);
+        }
+      );
     }
     if (data.thumbnail_hover != "") {
       fs.unlink(

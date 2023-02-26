@@ -33,6 +33,10 @@ const productSkuSchema = new mongoose.Schema({
     type: Map,
     of: String,
   },
+  view:{
+    type: Number,
+    default: 0
+  },
   date: {
     type: Date,
     default: Date.now(),

@@ -42,6 +42,10 @@ const orderSchema = new mongoose.Schema({
     default: "PENDING",
     required: true,
   },
+  date:{
+    type:Date,
+    default: Date.now()
+  }
 });
 
 const Order = new mongoose.model("Order", orderSchema);

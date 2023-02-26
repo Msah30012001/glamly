@@ -9,6 +9,9 @@ import {
   updateProductSkuRequest,
   updateProductSkuSuccess,
   updateProductSkuFailure,
+  updateProductSkuIncrementViewRequest,
+  updateProductSkuIncrementViewSuccess,
+  updateProductSkuIncrementViewFailure,
   deleteProductSkuRequest,
   deleteProductSkuSuccess,
   deleteProductSkuFailure,
@@ -79,7 +82,17 @@ export const updateProductSku = (id, Data) => {
     }
   };
 };
-
+export const updateProductSkuIncrementView = (slug) => {
+  return async (dispatch) => {
+    try {
+      dispatch(updateProductSkuIncrementViewRequest());
+      const response = await productSkuService.updateProductSkuIncrementView(slug);
+      dispatch(updateProductSkuIncrementViewSuccess(response));
+    } catch (error) {
+      dispatch(updateProductSkuIncrementViewFailure(error));
+    }
+  };
+};
 export const deleteProductSku = (id) => {
   return async (dispatch) => {
     try {
