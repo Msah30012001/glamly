@@ -46,8 +46,10 @@ export const postFeedback = (Data) => {
     try {
       dispatch(postFeedbackRequest());
       const response = await feedbackService.postFeedback(Data);
+      if(response) dispatch(fetchFeedback());
       dispatch(postFeedbackSuccess(response));
     } catch (error) {
+      console.log(error)
       dispatch(postFeedbackFailure(error));
     }
   };

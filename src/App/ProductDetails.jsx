@@ -20,6 +20,7 @@ const ProductDetails = () => {
   const [Qty, setQty] = useState(1);
   const dispatch = useDispatch();
   const productDetail = useSelector((state) => state.productDetail);
+  const feedback = useSelector(state=>state.feedback)
   const param = useParams();
 
   useEffect(() => {
@@ -27,8 +28,8 @@ const ProductDetails = () => {
     dispatch(fetchSimilarProduct(`${param.slug}`));
     dispatch(fetchTrendingProduct());
     dispatch(updateProductSkuIncrementView({slug:`${param.slug}`}))
-  }, [param.slug]);
-  console.log(productDetail)
+  }, [param.slug,feedback.status]);
+
   return (
     <>
       <Breadcrumb />

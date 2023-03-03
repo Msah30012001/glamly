@@ -4,13 +4,16 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchCategory } from "../../redux/async/category.async";
 import { fetchWishlist } from "../../redux/async/wishlist.async";
 import { fetchProductList } from "../../redux/async/productlist.async";
-import {fetchCart} from "../../redux/async/cart.async"
-import {deleteCart} from "../../redux/async/cart.async"
+import { fetchCart } from "../../redux/async/cart.async";
+import { deleteCart } from "../../redux/async/cart.async";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Header = () => {
   const category = useSelector((state) => state.category);
   const wishlist = useSelector((state) => state.wishlist);
   const cart = useSelector((state) => state.cart);
+  const feedback = useSelector((state) => state.feedback);
   let TotalPrice = 0;
   const dispatch = useDispatch();
   const [Search, setSearch] = useState(0);
@@ -18,7 +21,7 @@ const Header = () => {
 
   useEffect(() => {
     dispatch(fetchCategory());
-    dispatch(fetchCart())
+    dispatch(fetchCart());
     dispatch(fetchWishlist());
   }, []);
 
@@ -26,8 +29,49 @@ const Header = () => {
     if (Search) setSearch(0);
     else setSearch(1);
   };
+
+  useEffect(() => {
+    console.log(wishlist.status);
+    if (wishlist.status === "SUCCESS") {
+      (() => {
+        toast.success(wishlist.message);
+      })();
+    }
+    if (wishlist.status === "FAILED") {
+      (() => {
+        toast.error(wishlist.message);
+      })();
+    }
+  }, [wishlist.status]);
+
+  useEffect(() => {
+    if (cart.status === "SUCCESS") {
+      (() => {
+        toast.success(cart.message);
+      })();
+    }
+    if (cart.status === "FAILED") {
+      (() => {
+        toast.error(cart.message);
+      })();
+    }
+  }, [cart.status]);
+
+  useEffect(() => {
+    if (feedback.status === "SUCCESS") {
+      (() => {
+        toast.success(feedback.message);
+      })();
+    }
+    if (feedback.status === "FAILED") {
+      (() => {
+        toast.error(feedback.message);
+      })();
+    }
+  }, [feedback.status]);
   return (
     <>
+      <ToastContainer />
       <header className="header-area header-default header-style2">
         <div className="header-top">
           <div className="container-fluid">
@@ -58,49 +102,6 @@ const Header = () => {
                     </li>
                   </ul>
                 </div>
-                {/* <div className="theme-currency">
-                  <Link className="dropdown-btn" to="#" role="button">
-                    EUR €<i className="ion-ios-arrow-down"></i>
-                  </Link>
-                  <ul className="dropdown-content">
-                    <li>
-                      <Link to="#/">EUR €</Link>
-                    </li>
-                    <li>
-                      <Link to="#/">USD $</Link>
-                    </li>
-                  </ul>
-                </div>
-                <div className="theme-language">
-                  <Link className="dropdown-btn" to="#" role="button">
-                    <img
-                      src={`${process.env.PUBLIC_URL}/assets/img/photos/language-01.jpg`}
-                      alt="Has"
-                    />
-                    English
-                    <i className="ion-ios-arrow-down"></i>
-                  </Link>
-                  <ul className="dropdown-content">
-                    <li>
-                      <Link to="#/">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/assets/img/photos/language-01.jpg`}
-                          alt="Has"
-                        />
-                        English
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="#/">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/assets/img/photos/language-02.jpg`}
-                          alt="Has"
-                        />
-                        Italiano
-                      </Link>
-                    </li>
-                  </ul>
-                </div> */}
               </div>
             </div>
           </div>
@@ -166,51 +167,11 @@ const Header = () => {
                           >
                             <i className="icon-magnifier"></i>
                           </button>
-                          {/* <div className="search-categorie">
-                            <select className="form-select" name="poscats" value={P} onChange={(e)=>{setP(e.target.value)}}>
-                              <option value="all">All categories</option>
-                              {category.data.map((item) => {
-                                return (
-                                  <>
-                                    <option value={item.name} key={item._id}>
-                                      {item.slug}
-                                    </option>
-                                    {item.sub_category.map((sub) => {
-                                      return (
-                                        <>
-                                          <option
-                                            value={sub.slug}
-                                            key={sub._id}
-                                          >{`- - ${sub.name}`}</option>
-                                          {item.child_category.map((child) => {
-                                            if (child.subCategory === sub._id) {
-                                              return (
-                                                <option
-                                                  value={child.slug}
-                                                  key={child._id}
-                                                >{`- - - - ${child.name}`}</option>
-                                              );
-                                            }
-                                          })}
-                                        </>
-                                      );
-                                    })}
-                                  </>
-                                );
-                              })}
-                            </select>
-                          </div> */}
                         </div>
                       </form>
                     </div>
                   </div>
                   <div className="shop-button-group">
-                    {/* <div className="shop-button-item">
-                      <Link className="shop-button" to="compare.html">
-                        <i className="icon-shuffle icon"></i>
-                        <sup className="shop-count">5</sup>
-                      </Link>
-                    </div> */}
                     <div className="shop-button-item">
                       <Link className="shop-button" to="/wishlist">
                         <i className="icon-heart icon"></i>
@@ -221,7 +182,6 @@ const Header = () => {
                       <Link className="shop-button" to="/cart">
                         <i className="icon-bag icon"></i>
                         <sup className="shop-count">{cart.data.length}</sup>
-                        {/* <span className="cart-total">{TotalPrice}</span> */}
                       </Link>
                       <div className="popup-cart-content">
                         <ul className="popup-product-list">
@@ -254,7 +214,6 @@ const Header = () => {
                                         item.qty)
                                   }
                                 </span>
-                                {/* <span className="product-size">Size: S</span> */}
                                 <Link
                                   className="product-close"
                                   to="#"

@@ -39,8 +39,8 @@ export const feedbackReducer = (state = initialState, action) => {
         ...state,
         data: action.payload,
         loading: false,
-        status: "SUCCESS",
-        message: "data fetched successfully",
+        status: "",
+        message: "",
       };
     case FETCH_FEEDBACK_FAILURE:
       return {
@@ -61,7 +61,7 @@ export const feedbackReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         status: "SUCCESS",
-        message: "Insert Successfully",
+        message: "Thank you for your valuable feedback",
       };
     case POST_FEEDBACK_FAILURE:
       return {

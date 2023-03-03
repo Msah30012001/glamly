@@ -11,8 +11,7 @@ const Login = () => {
     email: "",
     password: "",
   });
-  console.log(Cookies.get())
-  console.log(document.cookie)
+
   const inputEvent = (e) => {
     const { name, value } = e.target;
     setData((preValue) => {
@@ -25,7 +24,7 @@ const Login = () => {
   
   return (
     <>
-      <CheckCookie path="login"/>
+      <CheckCookie path="login" />
       <section>
         <div className="container" data-padding-top="62">
           <h4 className="fz-24 mb-25">Log in to your account</h4>
@@ -74,7 +73,10 @@ const Login = () => {
                         </Link> */}
                         <button
                           className="btn-signin"
-                          onClick={(e) =>{e.preventDefault(); dispatch(authUser(Data))}}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            dispatch(authUser(Data));
+                          }}
                         >
                           Sign in
                         </button>
@@ -85,12 +87,14 @@ const Login = () => {
                 <Link className="btn-create-account" to="/register">
                   No account? Create one here
                 </Link>
+                <Link className="btn-create-account" to="/register">
+                  Admin Login? Click Here
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
-
     </>
   );
 };

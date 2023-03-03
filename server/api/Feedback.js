@@ -1,5 +1,5 @@
 const Router = require("express").Router();
-const { BadRequestError } = require("../Errors/error");
+const { BadRequestError , Error } = require("../Errors/error");
 const Feedback = require("../model/FeedbackModel");
 const authenticate = require("../middleware/authenticate")
 
@@ -64,6 +64,11 @@ Router.post("/feedback",authenticate, async (req, res, next) => {
   try {
     let data = {}
     data = {user:req.userId,...req.body}
+    const feedbackData = await Feedback.find({user:req.userId,product:req.body.product});
+    console.log(feedbackData.length)
+    if(feedbackData.length > 0){
+      throw new BadRequestError('feedback is already given')
+    }
     const feedback = new Feedback(data);
     const createFeedback = await feedback.save();
     res.status(201).send(createFeedback);

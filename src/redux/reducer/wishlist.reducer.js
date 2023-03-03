@@ -39,8 +39,8 @@ export const wishlistReducer = (state = initialState, action) => {
         ...state,
         data: action.payload,
         loading: false,
-        status: "SUCCESS",
-        message: "data fetched successfully",
+        status: "",
+        message: "",
       };
     case FETCH_WISHLIST_FAILURE:
       return {
@@ -61,7 +61,7 @@ export const wishlistReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         status: "SUCCESS",
-        message: "Insert Successfully",
+        message: "product is added in your wishlist",
       };
     case POST_WISHLIST_FAILURE:
       return {
@@ -103,7 +103,7 @@ export const wishlistReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         status: "SUCCESS",
-        message: "Delete Successfully",
+        message: "product is successfully removed from your wishlist",
       };
     case DELETE_WISHLIST_FAILURE:
       return {

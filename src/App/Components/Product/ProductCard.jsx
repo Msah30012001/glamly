@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { postWishlist } from "../../../redux/async/wishlist.async";
 import { postCart } from "../../../redux/async/cart.async";
+import { ToastContainer, toast } from "react-toastify";
 
 const ProductCard = (props) => {
   const dispatch = useDispatch();
-  const { _id,slug, thumbnail, thumbnailHover, title, rate, price, discount } = props;
+  const { _id, slug, thumbnail, thumbnailHover, title, rate, price, discount } =
+    props;
+
   return (
     <>
       <div className="product-item">
@@ -36,14 +39,11 @@ const ProductCard = (props) => {
                 >
                   <i className="icon-heart icon"></i>
                 </Link>
-                <Link className="add-compare" to="#" title="Add to compare">
-                  <i className="icon-shuffle icon"></i>
-                </Link>
               </div>
             </div>
             <ul className="product-flag">
               <li className="new">New</li>
-              <li className="discount visually-hidden">-10%</li>
+              <li className={`discount ${!discount ? "visually-hidden" : ""}`}>-{Math.ceil(discount / price * 100)}%</li>
             </ul>
           </div>
           <div className="product-desc">

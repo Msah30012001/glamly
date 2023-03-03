@@ -7,7 +7,6 @@ const GiveFeedback = (props) => {
   const [Review, setReview] = useState("");
   const dispatch = useDispatch()
   const { _id } = props;
-  console.log(props)
   return (
     <>
       <div

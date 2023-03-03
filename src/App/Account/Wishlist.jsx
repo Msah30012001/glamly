@@ -12,7 +12,6 @@ const Wishlist = () => {
     dispatch(fetchWishlist());
   }, [dispatch]);
 
-  console.log(wishlist);
   return (
     <>
       <CheckCookie path="wishlist" />
@@ -54,7 +53,7 @@ const Wishlist = () => {
                                     </td>
                                     <td className="item-delete">
                                       <span>
-                                        <Link to="#/" onClick={()=>{dispatch(deleteWishlist(item._id))}}>
+                                        <Link to="#" onClick={(e)=>{ e.preventDefault(); dispatch(deleteWishlist(item._id))}}>
                                           <i className="fa fa-trash"></i>
                                         </Link>
                                       </span>

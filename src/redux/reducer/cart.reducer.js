@@ -39,8 +39,8 @@ export const cartReducer = (state = initialState, action) => {
         ...state,
         data: action.payload,
         loading: false,
-        status: "SUCCESS",
-        message: "data fetched successfully",
+        status: "",
+        message: "",
       };
     case FETCH_CART_FAILURE:
       return {
@@ -61,7 +61,7 @@ export const cartReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         status: "SUCCESS",
-        message: "Insert Successfully",
+        message: "Product is added in your cart",
       };
     case POST_CART_FAILURE:
       return {
@@ -103,7 +103,7 @@ export const cartReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         status: "SUCCESS",
-        message: "Delete Successfully",
+        message: "Product is removed from your cart",
       };
     case DELETE_CART_FAILURE:
       return {

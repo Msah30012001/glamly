@@ -25,6 +25,7 @@ const service = () => {
       })
       .then((res) => res.data)
       .catch((err) => {
+        console.log(err.response.data.message)
         throw err.response.data.message
       });
   };
