@@ -29,7 +29,7 @@ const authenticate = async (req, res, next) => {
             }
             next()
         }else{
-            throw new UnAuthorizedError("Please login !!! cookie not set");
+            throw new UnAuthorizedError("Please login !!!");
         }
     }catch(error){
         next(error)
