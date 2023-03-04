@@ -14,6 +14,7 @@ const Header = () => {
   const wishlist = useSelector((state) => state.wishlist);
   const cart = useSelector((state) => state.cart);
   const feedback = useSelector((state) => state.feedback);
+  const user = useSelector((state) => state.user);
   let TotalPrice = 0;
   const dispatch = useDispatch();
   const [Search, setSearch] = useState(0);
@@ -69,6 +70,18 @@ const Header = () => {
       })();
     }
   }, [feedback.status]);
+  useEffect(() => {
+    if (user.status === "SUCCESS") {
+      (() => {
+        toast.success(user.message);
+      })();
+    }
+    if (user.status === "FAILED") {
+      (() => {
+        toast.error(user.message);
+      })();
+    }
+  }, [user.status]);
   return (
     <>
       <ToastContainer />

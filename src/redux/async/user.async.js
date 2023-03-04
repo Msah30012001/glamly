@@ -52,10 +52,12 @@ export const authUser = (Data) => {
     try{
       dispatch(authUserRequest());
       const response = await userService.authUser(Data);
-      dispatch(authUserSuccess(response));
-      window.location.href="/account"
+      if(response){
+        dispatch(authUserSuccess(response));
+        window.location.href="/account"
+      }
     }catch(error){
-      dispatch(authUserFailure());
+      dispatch(authUserFailure(error));
     }
   }
 }

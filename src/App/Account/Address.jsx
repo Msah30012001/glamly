@@ -45,22 +45,22 @@ const Address = () => {
   }, []);
 
   useEffect(() => {
-    if (user.data.length && Object.hasOwn(user.data[0], 'shipping')) {
+    if (Object.hasOwn(user.data, 'shipping')) {
       setShipping({
-        country: user.data[0].shipping.country,
-        city: user.data[0].shipping.city,
-        state: user.data[0].shipping.state,
-        pincode: user.data[0].shipping.pincode,
-        address: user.data[0].shipping.address,
+        country: user.data.shipping.country,
+        city: user.data.shipping.city,
+        state: user.data.shipping.state,
+        pincode: user.data.shipping.pincode,
+        address: user.data.shipping.address,
       });
     }
-    if (user.data.length && Object.hasOwn(user.data[0],"billing")) {
+    if (Object.hasOwn(user.data,"billing")) {
       setBilling({
-        country: user.data[0].billing.country,
-        city: user.data[0].billing.city,
-        state: user.data[0].billing.state,
-        pincode: user.data[0].billing.pincode,
-        address: user.data[0].billing.address,
+        country: user.data.billing.country,
+        city: user.data.billing.city,
+        state: user.data.billing.state,
+        pincode: user.data.billing.pincode,
+        address: user.data.billing.address,
       });
     }
   }, [user]);

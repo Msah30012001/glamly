@@ -11,8 +11,10 @@ Router.post("/user/auth", async (req, res, next) => {
   try {
     let token;
     let { email, password } = req.body;
+    console.log(req.body)
     // password = await bcrypt.hash(password,12)
     const userAuth = await User.findOne({ email: email, password: password });
+    console.log(userAuth)
     if (!userAuth) {
       throw new UnAuthorizedError("invalid authenticate credentials");
     }
@@ -42,10 +44,16 @@ Router.get("/user/destroy-auth",authenticate, async (req, res, next) => {
 });
 
 // fetch all records
-Router.get("/user", async (req, res, next) => {
+Router.get("/user",authenticate, async (req, res, next) => {
   try {
-    const userData = await User.find();
-    res.status(200).send(userData);
+    const userId = req.userId;
+    if(userId){
+      let userData = await User.findById(userId);
+      res.status(200).json(userData);
+    }else{
+      const userData = await User.find();
+      res.status(200).send(userData);
+    }
   } catch (error) {
     next(error);
   }

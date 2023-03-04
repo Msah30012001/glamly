@@ -13,22 +13,10 @@ const Register = () => {
     name: "",
     email: "",
     phone: "",
-    gender: "",
+    gender: "M",
     password: "",
     dob: "",
   });
-  useEffect(() => {
-    if (user.status === "SUCCESS") {
-      (() => {
-        toast.success(user.message);
-      })();
-    }
-    if (user.status === "FAILED") {
-      (() => {
-        toast.error(user.message);
-      })();
-    }
-  }, [user.status, user.message]);
   const inputEvent = (e) => {
     const { name, value } = e.target;
 
@@ -43,7 +31,6 @@ const Register = () => {
   return (
     <>
       <CheckCookie path="register" />
-      <ToastContainer />
       <section>
         <div className="container" data-padding-top="62">
           <h4 className="fz-24 mb-25">Create an account</h4>

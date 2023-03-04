@@ -76,6 +76,7 @@ const userSchema = new mongoose.Schema({
 
 userSchema.methods.generateAuthToken = async function () {
   try{
+    console.log(this._id)
     let token = jwt.sign(
       { _id: this._id },
       "eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTY3NDk3MjEwNSwiaWF0IjoxNjc0OTcyMTA1fQ.14jc46zn5tvG8nAm7SJF04TFTtvRdXJZNm3gd4kckP0"

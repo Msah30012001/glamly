@@ -21,19 +21,26 @@ const service = () => {
       });
   };
   const authUser = async (Data) => {
-
-    return await fetch(`${USER_API}/auth`, {
-      method: "POST",
-      mode: "cors",
-      credentials:"include",
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Credentials":true
-      },
-      body: JSON.stringify(Data),
-    })
-    .then((res)=>res.data)
-    .catch((err)=>{throw err.response.data.message});
+ return axios
+   .post(`${USER_API}/auth`,Data, {
+     withCredentials: true,
+   })
+   .then((res) => res.data)
+   .catch((err) => {
+     throw err.response.data.message;
+   });
+    // return await fetch(`${USER_API}/auth`, {
+    //   method: "POST",
+    //   mode: "cors",
+    //   credentials:"include",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     "Access-Control-Allow-Credentials":true
+    //   },
+    //   body: JSON.stringify(Data),
+    // })
+    // .then((res)=>res)
+    // .catch((err)=>{throw err});
   };
   
   const destroyAuthUser = () => {

@@ -46,8 +46,8 @@ export const userReducer = (state = initialState, action) => {
         ...state,
         data: action.payload,
         loading: false,
-        status: "SUCCESS",
-        message: "data fetched successfully",
+        status: "",
+        message: "",
       };
     case FETCH_USER_FAILURE:
       return {
@@ -68,7 +68,7 @@ export const userReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         status: "SUCCESS",
-        message: "Insert Successfully",
+        message: "Register Successfully",
       };
     case POST_USER_FAILURE:
       return {

@@ -25,11 +25,10 @@ const Profile = () => {
   };
   useEffect(() => {
     dispatch(fetchSingleUser());
-  }, []);
-
+  }, [dispatch]);
   useEffect(() => {
-    if (user.data.length) {
-      const dob = new Date(Date.parse(user.data[0].dob));
+    // if (user.data.length) {
+      const dob = new Date(Date.parse(user.data.dob));
       const year = dob.getFullYear();
       const month = dob.getMonth() + 1; // Adding 1 to the zero-based index to get the actual month
       const day = dob.getDate();
@@ -38,15 +37,14 @@ const Profile = () => {
         .toString()
         .padStart(2, "0")}`;
       setProfile({
-        name: user.data[0].name,
-        email: user.data[0].email,
-        phone: user.data[0].phone,
-        gender: user.data[0].gender,
+        name: user.data.name,
+        email: user.data.email,
+        phone: user.data.phone,
+        gender: user.data.gender,
         dob: formattedDate,
       });
-    }
+    // }
   }, [user]);
-console.log(Profile)
   return (
     <>
       <div id="profile" className="modal fade" tabIndex="-1">

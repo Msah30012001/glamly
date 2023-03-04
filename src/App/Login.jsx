@@ -87,7 +87,7 @@ const Login = () => {
                 <Link className="btn-create-account" to="/register">
                   No account? Create one here
                 </Link>
-                <Link className="btn-create-account" to="/register">
+                <Link className="btn-create-account" to="/admin">
                   Admin Login? Click Here
                 </Link>
               </div>
