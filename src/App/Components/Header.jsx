@@ -145,7 +145,7 @@ const Header = () => {
                     />
                     <img
                       className="logo-light d-none"
-                      src={`${process.env.PUBLIC_URL}/assets/img/logo-light.png`}
+                      src={`${process.env.PUBLIC_URL}/assets/img/logo.png`}
                       alt="Logo"
                     />
                   </Link>
