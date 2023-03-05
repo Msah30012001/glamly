@@ -1,133 +1,1135 @@
 [{
   "_id": {
-    "$oid": "63da88eab69a9a1344e3c6e0"
+    "$oid": "64033e63c512eb8898e467c4"
   },
   "image": [
-    "image_1675584549209_475695684.jpg",
-    "image_1675584549210_450869786.jpg",
-    "image_1675584549211_284088642.jpg",
-    "image_1675584549216_282305414.jpg",
-    "image_1675584549217_803612209.jpg"
+    "image_1677934179897_6503552.jpg"
   ],
-  "thumbnail": "thumbnail_1675584549207_36806922.jpg",
-  "thumbnail_hover": "thumbnail_hover_1675584549209_937338256.jpg",
+  "view": 4,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677934179798_778507558.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677934179895_469346615.jpg",
+  "slug": "lakme-absolute-3d-cover-foundation-cool-ivory-15-ml",
   "specification": {
-    "Colour_Family": "Pink",
-    "Colour_Shade_Name": "Plum Pick",
-    "Features": "High Color Payoff",
-    "Finish": "Matte",
-    "Formulation": "Bullet",
-    "Pigmentation": "Full Coverage",
-    "Preference": "Fragrance-Free",
-    "Sustainable": "Regular"
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
   },
-  "name": "LAKME 9 TO 5 PRIMER + MATTE LIPSTICK - PLUM PICK MP4",
-  "sku_code": "lakemepink100",
+  "name": "LAKME ABSOLUTE 3D COVER FOUNDATION, COOL IVORY, 15 ML",
+  "sku_code": "1",
   "product": {
-    "$oid": "63da48225ff21a42fcc04487"
+    "$oid": "63da4b915ff21a42fcc04497"
   },
-  "description": "100% Original Products\nPay on delivery might be available\nEasy days exchanges\nThis item is only exchangeable for the same or a different size, if available, and cannot be returned",
-  "qty": 97,
-  "price": 550,
+  "description": "Liquid foundation that gives 3D coverage from all angles, Velvet finish Formula",
+  "qty": 20,
+  "price": 600,
+  "discount": 59,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64033f0dc512eb8898e467c7"
+  },
+  "image": [
+    "image_1677934349119_399408792.jpg",
+    "image_1677934349120_321587354.jpg"
+  ],
+  "view": 2,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677934349116_654181086.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677934349117_44718702.jpg",
+  "slug": "loreal-paris-true-match-super-blendable-liquid-foundation-with-opaque-finish-30-ml",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "L'OREAL PARIS TRUE MATCH SUPER BLENDABLE LIQUID FOUNDATION WITH OPAQUE FINISH, 30 ML",
+  "sku_code": "2",
+  "product": {
+    "$oid": "63da4b915ff21a42fcc04497"
+  },
+  "description": "Super blendable liquid foundation with SPF for face, True-to-skin face colour with shade-matching technology, Suitable for all skin types",
+  "qty": 25,
+  "price": 699.99,
   "discount": 15,
   "status": true,
-  "__v": 0,
-  "slug": "lakme-9-to-5-primer-matte-lipstick-plum-pick-mp4"
-},{
-  "_id": {
-    "$oid": "63e111ace888e12ffc7fcf27"
-  },
-  "image": [
-    "image_1675694508759_811223545.jpg",
-    "image_1675694508760_350158275.jpg",
-    "image_1675694508760_58765125.jpg",
-    "image_1675694508780_429979351.jpg",
-    "image_1675694508836_356207040.jpg"
-  ],
-  "thumbnail": "thumbnail_1675694508753_535264550.jpg",
-  "thumbnail_hover": "thumbnail_hover_1675694508755_92528097.jpg",
-  "slug": "maybelline-new-york-super-stay-matte-ink-liquid-lipstick-5-ml-artist-120",
-  "name": "MAYBELLINE NEW YORK SUPER STAY MATTE INK LIQUID LIPSTICK 5 ML - ARTIST 120",
-  "sku_code": "maybelline100",
-  "product": {
-    "$oid": "63da48225ff21a42fcc04487"
-  },
-  "description": "100% Original Products\nPay on delivery might be available\nEasy days exchanges\nThis item is only exchangeable for the same or a different size, if available, and cannot be returned",
-  "qty": 85,
-  "price": 699,
-  "discount": 180,
-  "status": true,
-  "specification": {
-    "Colour_Family": "Pink",
-    "Colour_Shade_Name": "Plum Pick",
-    "Features": "High Color Payoff",
-    "Finish": "Matte",
-    "Formulation": "Bullet",
-    "Pigmentation": "Full Coverage",
-    "Preference": "Fragrance-Free",
-    "Sustainable": "Regular"
-  },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63e66f0e6de60e363033c987"
+    "$oid": "64033f7cc512eb8898e467d4"
   },
   "image": [
-    "image_1676046094694_886996181.png"
+    "image_1677934460580_745980206.jpg"
   ],
-  "thumbnail": "thumbnail_1676046094664_490330322.png",
-  "thumbnail_hover": "thumbnail_hover_1676046094686_860116101.png",
-  "slug": "lakme-winter-intense-maximum-moisturiser-120-ml",
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677934460534_679528235.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677934460579_589170788.jpg",
+  "slug": "maybelline-new-york-super-stay-24-h-full-coverage-natural-liquid-foundation-warm-nude-128-30-ml",
   "specification": {
-    "Concern": "Hydration",
-    "Concern_2": "Hydration",
-    "Formulation": "Lotion",
-    "Key_Ingredient": "Milk",
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
     "Preference": "",
-    "SPF": "",
-    "Skin_Type": "Combination",
-    "Sustainable": "Regular"
+    "Sustainable": ""
   },
-  "name": "LAKME WINTER INTENSE MAXIMUM MOISTURISER 120 ML",
-  "sku_code": "lakememoisture120",
+  "name": "MAYBELLINE NEW YORK SUPER STAY 24 H FULL COVERAGE NATURAL LIQUID FOUNDATION, WARM NUDE 128, 30 ML",
+  "sku_code": "3",
   "product": {
-    "$oid": "63da524b5ff21a42fcc044a2"
+    "$oid": "63da4b915ff21a42fcc04497"
   },
-  "description": "hello",
-  "qty": 10,
-  "price": 1999,
-  "discount": 80,
+  "description": "Flawless Matte finish, Lasts up to 24 hrs, Long-lasting foundation that provides full coverage, Suitable for oily skin",
+  "qty": 20,
+  "price": 488,
+  "discount": 45,
   "status": true,
   "__v": 0
 },{
   "_id": {
-    "$oid": "63e68c4a63c0f00fa09d845e"
+    "$oid": "64034250c512eb8898e467e1"
   },
   "image": [
-    "image_1676053578606_570923265.png"
+    "image_1677935184252_790329574.jpg"
   ],
-  "thumbnail": "thumbnail_1676053578557_216912689.png",
-  "thumbnail_hover": "thumbnail_hover_1676053578574_822140174.png",
-  "slug": "lakme-winter-intense-maximum-moisturiser-150-ml",
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677935184093_481772011.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677935184250_292086834.jpg",
+  "slug": "sugar-cosmetics-ace-of-face-foundation-stick-with-inbuilt-brush-20-galao-full-coverage-waterproof-matte-finish",
   "specification": {
-    "Concern": "Hydration",
-    "Concern_2": "Hydration",
-    "Formulation": "Lotion",
-    "Key_Ingredient": "Milk",
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
     "Preference": "",
-    "SPF": "",
-    "Skin_Type": "Combination",
-    "Sustainable": "Regular"
+    "Sustainable": ""
   },
-  "name": "LAKME WINTER INTENSE MAXIMUM MOISTURISER 150 ML",
-  "sku_code": "lakememoisture150",
+  "name": "SUGAR COSMETICS ACE OF  FACE FOUNDATION STICK WITH INBUILT BRUSH- 20 GALA'O, FULL COVERAGE WATERPROOF MATTE FINISH",
+  "sku_code": "4",
   "product": {
-    "$oid": "63da524b5ff21a42fcc044a2"
+    "$oid": "63da4b915ff21a42fcc04497"
   },
-  "description": "hello",
+  "description": "The full-coverage , waterproof formula offers a totally matte finish that lasts for up to 12 hours, Weightless when applied, the handy built-in brush makes it uber-easy to blend the product in or touch-up spots",
+  "qty": 50,
+  "price": 849.99,
+  "discount": 99,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64034485c512eb8898e468c7"
+  },
+  "image": [
+    "image_1677935749165_870683463.jpg"
+  ],
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677935749156_793411981.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677935749165_337392138.jpg",
+  "slug": "lakme-eyeconic-kajal-black-matte-finish",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "LAKME' EYECONIC KAJAL, BLACK MATTE FINISH",
+  "sku_code": "6",
+  "product": {
+    "$oid": "63da4b675ff21a42fcc04493"
+  },
+  "description": "24 hour long-lasting, Smudge-proof, Deep black color, Waterproof, Ophthalmologically tested, Transfer-proof",
+  "qty": 8,
+  "price": 449,
+  "discount": 0,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6403452dc512eb8898e468d4"
+  },
+  "image": [
+    "image_1677935917460_807593617.jpg"
+  ],
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677935917459_190443066.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677935917459_733000095.jpg",
+  "slug": "loreal-paris-magique-kajal-black-matte-finish",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "L'OREAL PARIS MAGIQUE KAJAL, BLACK, MATTE FINISH",
+  "sku_code": "7",
+  "product": {
+    "$oid": "63da4b675ff21a42fcc04493"
+  },
+  "description": "Soothes and nourishes the eye with vitamin E, cocoa butter, olive oil esters and vitamin c derivatives",
+  "qty": 15,
+  "price": 598,
+  "discount": 0,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64034598c512eb8898e468d7"
+  },
+  "image": [
+    "image_1677936023996_875928860.jpg",
+    "image_1677936023997_978129483.jpg"
+  ],
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677936023995_927385376.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677936023995_832815122.jpg",
+  "slug": "maybelline-new-york-kohl-gel-pencil-smudge-proof-waterproof-gel-eye-kajal-tattoo-studio-smokey-black",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "MAYBELLINE NEW YORK KOHL GEL PENCIL, SMUDGE PROOF, WATERPROOF GEL EYE KAJAL, TATTOO STUDIO SMOKEY BLACK",
+  "sku_code": "8",
+  "product": {
+    "$oid": "63da4b675ff21a42fcc04493"
+  },
+  "description": "Maybelline Tattoo Liner Smokey pencil is our 1st blendable gel pencil eye kajal. Just blend and set for a 36H smoldering smokey matte finish look\r\nMade with breakthrough powder in gel formula, this long lasting waterproof eye kajal leaves behind a smokey, blurred and elegant look",
+  "qty": 6,
+  "price": 479,
+  "discount": 82,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6403461ec512eb8898e468da"
+  },
+  "image": [
+    "image_1677936158147_652551658.jpg",
+    "image_1677936158149_518658735.jpg",
+    "image_1677936158151_862891078.jpg"
+  ],
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677936158128_356577322.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677936158146_949392352.jpg",
+  "slug": "sugar-cosmetics-kohl-of-honour-intense-kajal-matte-finish-longlasting-formula-lightweight-01-black-out",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "SUGAR COSMETICS KOHL OF HONOUR INTENSE KAJAL, MATTE FINISH, LONGLASTING FORMULA, LIGHTWEIGHT - 01 BLACK OUT",
+  "sku_code": "9",
+  "product": {
+    "$oid": "63da4b675ff21a42fcc04493"
+  },
+  "description": "This wonder product delivers pigment-rich, high-impact colour that will fill your eyes with all the definition and drama you’ve ever known!",
+  "qty": 6,
+  "price": 299.99,
+  "discount": 51,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64034718c512eb8898e468eb"
+  },
+  "image": [
+    "image_1677936408069_430201795.jpg",
+    "image_1677936408069_558182548.jpg"
+  ],
+  "view": 1,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677936408066_131449919.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677936408068_467152614.jpg",
+  "slug": "wet-n-wild-high-coverage-stick-foundation-with-light-adjusting-complex-semi-matte-finish",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "WET N WILD HIGH-COVERAGE STICK FOUNDATION WITH LIGHT-ADJUSTING COMPLEX SEMI-MATTE FINISH",
+  "sku_code": "5",
+  "product": {
+    "$oid": "63da4b915ff21a42fcc04497"
+  },
+  "description": "long-lasting, Multi-tasking, Stick foundation",
+  "qty": 4,
+  "price": 351.99,
+  "discount": 7,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640347b0c512eb8898e468ee"
+  },
+  "image": [
+    "image_1677936560336_345000031.jpg",
+    "image_1677936560336_807184386.jpg",
+    "image_1677936560337_704808609.jpg"
+  ],
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677936560335_682039061.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677936560336_951013724.jpg",
+  "slug": "wet-n-wild-color-icon-kohl-eye-kajal-pencil-eyeliner-and-pencil-for-eye-makeup-with-an-intense-and-hyper-pigmented-effect-soft-creamy-and-easy-to-use-formula-babys-got-black-matte-finish",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "WET N WILD, COLOR ICON KOHL EYE KAJAL PENCIL, EYELINER AND PENCIL FOR EYE-MAKEUP WITH AN INTENSE AND HYPER-PIGMENTED EFFECT, SOFT, CREAMY AND EASY-TO-USE FORMULA, BABY'S GOT BLACK, MATTE FINISH",
+  "sku_code": "10",
+  "product": {
+    "$oid": "63da4b675ff21a42fcc04493"
+  },
+  "description": "A SEDUCING LOOK: Eye pencil with hyper-pigmented colour to create intense looks from the day to the night. A must-have eyeliner to add to you favourite makeup collection!",
+  "qty": 4,
+  "price": 355.99,
+  "discount": 28,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6403486ac512eb8898e468f1"
+  },
+  "image": [
+    "image_1677936745896_340561534.jpg",
+    "image_1677936745897_331940954.jpg",
+    "image_1677936745898_852050644.jpg",
+    "image_1677936745918_785486016.jpg",
+    "image_1677936746031_817133517.jpg"
+  ],
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677936745868_917851132.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677936745895_531713906.jpg",
+  "slug": "lakm-eyeconic-liquid-eyeliner-black-matte-finish",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "LAKMÉ EYECONIC LIQUID EYELINER, BLACK, MATTE FINISH",
+  "sku_code": "11",
+  "product": {
+    "$oid": "63da4b545ff21a42fcc04491"
+  },
+  "description": "Unique flexi-tip brush, One eyeliner; many looks, Intense black color, Smudgeproof for upto 24 hours, Waterproof and transfer-proof, Ophthalmologically tested",
+  "qty": 12,
+  "price": 651.99,
+  "discount": 32,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6403490fc512eb8898e468fe"
+  },
+  "image": [
+    "image_1677936911782_580378652.jpg"
+  ],
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677936911714_144014417.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677936911781_693148880.jpg",
+  "slug": "loral-paris-liquid-eyeliner-precise-applicator-smudge-proof-and-waterproof-liner-magique-black",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "L'ORÉAL PARIS LIQUID EYELINER, PRECISE APPLICATOR, SMUDGE-PROOF AND WATERPROOF, LINER MAGIQUE, BLACK",
+  "sku_code": "12",
+  "product": {
+    "$oid": "63da4b545ff21a42fcc04491"
+  },
+  "description": "Use it to line your upper or lower lash lines, Use it to define your eyelids or create the perfect wing liner look\r\nInfused with ultra black pigments, Precise felt tip, Non dripping, quick dry, Water and smudge resistant",
+  "qty": 28,
+  "price": 500,
+  "discount": 25,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6403497bc512eb8898e46901"
+  },
+  "image": [
+    "image_1677937019458_154494707.jpg",
+    "image_1677937019458_864082032.jpg"
+  ],
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677937019398_146352035.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677937019457_543804751.jpg",
+  "slug": "maybelline-new-york-eyeliner-kajal-bold-eye-looks-long-lasting-colossal-bold-liner-colossal-kajal-combo-pack-essential-eye-kit",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "MAYBELLINE NEW YORK EYELINER & KAJAL, BOLD EYE LOOKS, LONG-LASTING, COLOSSAL BOLD LINER & COLOSSAL KAJAL, COMBO PACK, ESSENTIAL EYE KIT",
+  "sku_code": "13",
+  "product": {
+    "$oid": "63da4b545ff21a42fcc04491"
+  },
+  "description": "2-piece eye kit for captivating eye looks with an bold eyeliner and kajal, Ophthalmologist tested\r\nFor bold, and intense eye looks, Semi-matte finish, Complete eye kit",
+  "qty": 14,
+  "price": 429,
+  "discount": 25,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64034a09c512eb8898e4690e"
+  },
+  "image": [
+    "image_1677937161605_326131192.jpg"
+  ],
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677937161434_30967541.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677937161604_926804318.jpg",
+  "slug": "sugar-cosmetics-eye-warned-you-so-double-matte-eyeliner-01-black-swan-black-eye-liner-for-women-sweat-proof-100-waterproof-eye-liner-with-matte-finish",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "SUGAR COSMETICS - EYE WARNED YOU SO! - DOUBLE MATTE EYELINER - 01 BLACK SWAN (BLACK EYE LINER FOR WOMEN) - SWEAT PROOF, 100% WATERPROOF EYE LINER WITH MATTE FINISH",
+  "sku_code": "14",
+  "product": {
+    "$oid": "63da4b545ff21a42fcc04491"
+  },
+  "description": "Lasts upto 17HRS, Moisture Resistant, Intensely Pigmented, High Precision Applicator, Rich Matte Finish, Low Setting Time",
+  "qty": 4,
+  "price": 654,
+  "discount": 12,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64034a75c512eb8898e46911"
+  },
+  "image": [
+    "image_1677937269503_143129230.jpg",
+    "image_1677937269504_969607191.jpg"
+  ],
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677937269502_640507585.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677937269503_471498102.jpg",
+  "slug": "wet-n-wild-h2o-proof-felt-tip-liquid-eyeliner-waterproof-and-stain-proof-liquid-eyeliner-waterproof-makeup-long-lasting-fluid-and-pigmented-formula-black",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "WET N WILD, H2O PROOF FELT TIP LIQUID EYELINER, WATERPROOF AND STAIN-PROOF LIQUID EYELINER, WATERPROOF MAKEUP, LONG-LASTING, FLUID AND PIGMENTED FORMULA, BLACK",
+  "sku_code": "15",
+  "product": {
+    "$oid": "63da4b545ff21a42fcc04491"
+  },
+  "description": "FOR AN IRRESISTIBLE LOOK: Long-lasting eyeliner with waterproof and stain-proof formula that doesn't crease or fallout\r\nTIPS AND TRICKS: The eyeliner comes with a fine felt tip applicator to ensure a precise and controlled application",
+  "qty": 41,
+  "price": 600,
+  "discount": 35,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64034aecc512eb8898e46914"
+  },
+  "image": [
+    "image_1677937388330_131864106.jpg",
+    "image_1677937388330_294419739.jpg",
+    "image_1677937388330_152413643.jpg"
+  ],
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677937388329_780616381.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677937388329_672891210.jpg",
+  "slug": "lakme-lip-liner-nude-sparkle-matte",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "LAKME' LIP LINER NUDE SPARKLE (MATTE)",
+  "sku_code": "16",
+  "product": {
+    "$oid": "63da48c05ff21a42fcc0448c"
+  },
+  "description": "Lines and Defines your lips with perfection, A creamy formula for rich application\r\nIntense colour payoff, Prevents feathering of lips\r\nEasy to blend",
+  "qty": 41,
+  "price": 699.99,
+  "discount": 30,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64034c16c512eb8898e4691f"
+  },
+  "image": [
+    "image_1677937686317_583557598.jpg",
+    "image_1677937686317_752852837.jpg",
+    "image_1677937686318_506736497.jpg",
+    "image_1677937686319_372609629.jpg"
+  ],
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677937686316_491650903.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677937686316_23584945.jpg",
+  "slug": "loreal-colour-riche-lip-liner",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "L'OREAL COLOUR RICHE LIP LINER",
+  "sku_code": "17",
+  "product": {
+    "$oid": "63da48c05ff21a42fcc0448c"
+  },
+  "description": "Perfectly defines lips with rich color;Infused with Omega 3 and Vitamin E to condition lips;Coordinate perfectly with Colour Riche Lipcolour",
+  "qty": 5,
+  "price": 17999.99,
+  "discount": 99,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64034c7cc512eb8898e46922"
+  },
+  "image": [
+    "image_1677937787886_610370477.jpg",
+    "image_1677937787887_929354682.jpg",
+    "image_1677937787887_63760326.jpg",
+    "image_1677937787887_185466507.jpg",
+    "image_1677937787888_673600504.jpg"
+  ],
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677937787850_350518714.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677937787885_434687527.jpg",
+  "slug": "maybelline-new-york-color-sensational-lip-liner-very-cherry",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "MAYBELLINE NEW YORK COLOR SENSATIONAL LIP LINER, VERY CHERRY",
+  "sku_code": "18",
+  "product": {
+    "$oid": "63da48c05ff21a42fcc0448c"
+  },
+  "description": "Easily define your lip shape with this creamy liner, coordinate your lip look with matching Color Sensational Lip Colors or create bold definition by lining your lips in a darker shade\r\nThe lip options are endless, easily define your lip shape with this creamy liner",
+  "qty": 5,
+  "price": 999.99,
+  "discount": 59,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64034de6c512eb8898e4692f"
+  },
+  "image": [
+    "image_1677938150077_972692131.jpg"
+  ],
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677938150056_338659261.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677938150076_538870204.jpg",
+  "slug": "sugar-cosmetics-lipping-on-the-edge-lip-liner-07-fiery-berry-marsala-12-gms-smear-proof-water-resistant-lip-liner-lasts-up-to-10-hrs",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "SUGAR COSMETICS - LIPPING ON THE EDGE - LIP LINER - 07 FIERY BERRY (MARSALA) - 1.2 GMS - SMEAR-PROOF, WATER RESISTANT LIP LINER - LASTS UP TO 10 HRS",
+  "sku_code": "19",
+  "product": {
+    "$oid": "63da48c05ff21a42fcc0448c"
+  },
+  "description": "Liner for Defined lips or fuller look, Smear Proof, Water Ressistant, Gel like formula for the smooth glide, 10 Hr Stay",
   "qty": 10,
-  "price": 199,
+  "price": 1351,
+  "discount": 69,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640350e7c512eb8898e4693d"
+  },
+  "image": [
+    "image_1677938919968_11486459.jpg"
+  ],
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677938919966_86334176.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677938919967_448138920.jpg",
+  "slug": "wet-n-wild-coloricon-lip-liner-brandy-wine-666",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "WET N' WILD COLORICON LIP LINER BRANDY WINE #666",
+  "sku_code": "20",
+  "product": {
+    "$oid": "63da48c05ff21a42fcc0448c"
+  },
+  "description": "Easy to blend in lips and gives you elegant look\r\nLip liner Pencil is like crayon which gives you a moisturizing look',\r\n    brand: 'Wet n Wild",
+  "qty": 2,
+  "price": 1126.99,
+  "discount": 49,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6403516ac512eb8898e46940"
+  },
+  "image": [
+    "image_1677939050540_901947478.jpg",
+    "image_1677939050541_529063138.jpg"
+  ],
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677939050487_73228692.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677939050539_152472397.jpg",
+  "slug": "lakme-absolute-white-wet-dry-compact-powder-golden-medium-03-spf-17-long-lasting-face-makeup-for-a-natural-glow-foundation-powder-for-women",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "LAKME ABSOLUTE WHITE WET & DRY COMPACT POWDER, GOLDEN MEDIUM 03, SPF 17, LONG LASTING FACE MAKEUP FOR A NATURAL GLOW -FOUNDATION POWDER FOR WOMEN",
+  "sku_code": "21",
+  "product": {
+    "$oid": "63da4bbc5ff21a42fcc0449d"
+  },
+  "description": "3-in-1 Skin Care product, Long Lasting. Has dual benefits of being used as a wet and dry compact, Enriched with SPF 17",
+  "qty": 12,
+  "price": 520,
+  "discount": 11,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640351f1c512eb8898e4694d"
+  },
+  "image": [
+    "image_1677939185489_714515272.jpg"
+  ],
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677939185387_250012465.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677939185488_439285821.jpg",
+  "slug": "loreal-paris-pressed-powder-foundation-lightweight-and-blendable-verstile-coverage-matches-skintone-true-match-golden-beige-d3w",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "L'OREAL PARIS PRESSED POWDER FOUNDATION, LIGHTWEIGHT AND BLENDABLE, VERSTILE COVERAGE, MATCHES SKINTONE, TRUE MATCH, GOLDEN BEIGE D3W",
+  "sku_code": "22",
+  "product": {
+    "$oid": "63da4bbc5ff21a42fcc0449d"
+  },
+  "description": "Soft and lightweight pressed powder foundation that perfectly blends into the skin, Buildable coverage, Suitable for all skin types\r\nFoundation matches your complaxion, For beautiful camera-ready skin, Natural & luminous finish",
+  "qty": 15,
+  "price": 769,
+  "discount": 22,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64035362c512eb8898e4695a"
+  },
+  "image": [
+    "image_1677939554833_169902423.jpg"
+  ],
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677939554797_167454947.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677939554830_823027066.jpg",
+  "slug": "maybelline-new-york-powder-foundation-pressed-powder-compact-mattifies-skin-incl-mirror-and-applicator-fit-me-220-natural-beige",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "MAYBELLINE NEW YORK POWDER FOUNDATION, PRESSED POWDER COMPACT, MATTIFIES SKIN, INCL. MIRROR AND APPLICATOR, FIT ME, 220 NATURAL BEIGE",
+  "sku_code": "23",
+  "product": {
+    "$oid": "63da4bbc5ff21a42fcc0449d"
+  },
+  "description": "Breathable and lightweight pressed powder foundation that mattifies skin and minimized pores, Ideal for normal to oily skin\r\nMattifies and leaves a poreless looking finish with long lasting shine control, Natural, poreless looking results",
+  "qty": 1,
+  "price": 56.99,
+  "discount": 59,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640353cac512eb8898e46967"
+  },
+  "image": [
+    "image_1677939658080_649115795.jpg"
+  ],
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677939658027_674556391.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677939658078_972525548.jpg",
+  "slug": "sugar-cosmetics-dream-cover-mattifying-compact-30-chococcino-compact-for-medium-tones-lightweight-compact-with-spf-15-and-vitamin-e",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "SUGAR COSMETICS - DREAM COVER - MATTIFYING COMPACT - 30 CHOCOCCINO (COMPACT FOR MEDIUM TONES) - LIGHTWEIGHT COMPACT WITH SPF 15 AND VITAMIN E",
+  "sku_code": "24",
+  "product": {
+    "$oid": "63da4bbc5ff21a42fcc0449d"
+  },
+  "description": "30 Chococcino suits medium skin tones\r\nMattifying compact powder that controls oil for 5+ hours, Enriched with Vitamin E and has SPF15 minerals that protect skin from sun damage",
+  "qty": 5,
+  "price": 520,
   "discount": 10,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6403543fc512eb8898e46974"
+  },
+  "image": [
+    "image_1677939775348_777341104.jpg"
+  ],
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677939775276_152212482.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677939775347_175953771.jpg",
+  "slug": "wet-n-wild-photo-focus-pressed-powder-tan-beige",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "WET N WILD PHOTO FOCUS PRESSED POWDER, TAN BEIGE",
+  "sku_code": "25",
+  "product": {
+    "$oid": "63da4bbc5ff21a42fcc0449d"
+  },
+  "description": "Amazing photos every time, Flawless finish, Light- diffusing pigments",
+  "qty": 55,
+  "price": 499.99,
+  "discount": 60,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6403559cc512eb8898e46981"
+  },
+  "image": [
+    "image_1677940124421_401063783.jpg"
+  ],
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677940124362_394507170.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677940124420_851089112.jpg",
+  "slug": "lakm-absolute-mattereal-mousse-concealer-honey",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "LAKMÉ ABSOLUTE MATTEREAL MOUSSE CONCEALER, HONEY",
+  "sku_code": "26",
+  "product": {
+    "$oid": "63da4bae5ff21a42fcc0449b"
+  },
+  "description": "Conceals imperfections flawlessly, Minimizes the appearance of dark spots and pores, Sets with a smooth matte finish that makes skin even",
+  "qty": 180,
+  "price": 500,
+  "discount": 14,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6403563dc512eb8898e4698e"
+  },
+  "image": [
+    "image_1677940285704_233135212.jpg"
+  ],
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677940285672_239954353.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677940285703_876505013.jpg",
+  "slug": "loral-paris-full-coverage-concealer-waterproof-formula-for-undereye-circles-and-blemishes-for-highlighting-and-contouring-infallible-shade-312",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "L'ORÉAL PARIS FULL COVERAGE CONCEALER, WATERPROOF FORMULA, FOR UNDEREYE CIRCLES AND BLEMISHES, FOR HIGHLIGHTING AND CONTOURING, INFALLIBLE, SHADE: 312",
+  "sku_code": "27",
+  "product": {
+    "$oid": "63da4bae5ff21a42fcc0449b"
+  },
+  "description": "Full coverage waterproof concealer for coverage of imperfections, Can be used for highlighting or contouring\r\n24-hour transfer and fade-proof coverage, Flake-free matte finish, For hiding under-eye circles, acne spots and other blemishes for an even skin tone",
+  "qty": 4,
+  "price": 900,
+  "discount": 59,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64035711c512eb8898e4699b"
+  },
+  "image": [
+    "image_1677940497454_982145613.jpg"
+  ],
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677940497428_722460919.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677940497452_473062347.jpg",
+  "slug": "maybelline-new-york-full-coverage-concealer-matte-poreless-ultra-blendable-fit-me-25-medium",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "MAYBELLINE NEW YORK FULL COVERAGE CONCEALER, MATTE & PORELESS ULTRA BLENDABLE, FIT ME, 25 MEDIUM",
+  "sku_code": "28",
+  "product": {
+    "$oid": "63da4bae5ff21a42fcc0449b"
+  },
+  "description": "Concealer for flawless, natural coverage, Oil-free concealer matches skin tones to deliver a more even complexion\r\nMatte finish, Fulll coverage concealer, Corrects imperfections, and dark spots",
+  "qty": 2,
+  "price": 459.99,
+  "discount": 29,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64035799c512eb8898e469a8"
+  },
+  "image": [
+    "image_1677940633386_411370187.jpg"
+  ],
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677940633385_573255872.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677940633386_775584283.jpg",
+  "slug": "sugar-cosmetics-magic-wand-waterproof-concealer-07-vanilla-latte-fair-concealer-with-golden-undertone-long-lasting-water-proof-concealer-lasts-up-to-8-hours",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "SUGAR COSMETICS - MAGIC WAND- WATERPROOF CONCEALER - 07 VANILLA (LATTE FAIR CONCEALER WITH GOLDEN UNDERTONE) - LONG LASTING, WATER-PROOF CONCEALER, LASTS UP TO 8 HOURS",
+  "sku_code": "29",
+  "product": {
+    "$oid": "63da4bae5ff21a42fcc0449b"
+  },
+  "description": "07 VANILLA LATTE - A fair shade with golden undertone\r\nA full coverage concealer that comes in 6 shades\r\nLongwear water-proof formula that lasts upto 8 hrs",
+  "qty": 59,
+  "price": 925,
+  "discount": 25,
+  "status": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640357fdc512eb8898e469ab"
+  },
+  "image": [
+    "image_1677940733581_475830830.jpg",
+    "image_1677940733582_833218228.jpg"
+  ],
+  "view": 0,
+  "date": {
+    "$date": {
+      "$numberLong": "1677931173026"
+    }
+  },
+  "thumbnail": "thumbnail_1677940733565_503624567.jpg",
+  "thumbnail_hover": "thumbnail_hover_1677940733580_705154257.jpg",
+  "slug": "wet-n-wild-photo-focus-concealer-fair-neutral-nude",
+  "specification": {
+    "Colour_Family": "",
+    "Colour_Shade_Name": "",
+    "Features": "",
+    "Finish": "",
+    "Formulation": "",
+    "Pigmentation": "",
+    "Preference": "",
+    "Sustainable": ""
+  },
+  "name": "WET N WILD PHOTO FOCUS CONCEALER - FAIR NEUTRAL, NUDE",
+  "sku_code": "30",
+  "product": {
+    "$oid": "63da4bae5ff21a42fcc0449b"
+  },
+  "description": "Lightweight, Concealer, Instantly brightens",
+  "qty": 25,
+  "price": 476,
+  "discount": 41,
   "status": true,
   "__v": 0
 }]
