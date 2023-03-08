@@ -36,7 +36,7 @@ const service = () => {
   };
   const updateProductSku = (id, Data) => {
     return axios
-      .patch(`${PRODUCT_SKU_API}/${id}`, Data)
+      .patch(`${PRODUCT_SKU_API}/stock/${id}`, Data)
       .then((res) => res.data)
       .catch((err) => {
         throw err.response.data.message;

@@ -122,6 +122,16 @@ const Sidebar = () => {
                     style={({ isActive }) =>
                       isActive ? activeStyle : undefined
                     }
+                    to={`brand`}
+                  >
+                    Brand
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    style={({ isActive }) =>
+                      isActive ? activeStyle : undefined
+                    }
                     to="user"
                   >
                     User

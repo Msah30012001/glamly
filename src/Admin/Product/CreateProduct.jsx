@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { postProduct } from "../../redux/async/product.async";
 import { fetchMainCategory } from "../../redux/async/maincategory.async";
+import { fetchBrand } from "../../redux/async/brand.async";
 import { fetchSubCategory } from "../../redux/async/subcategory.async";
 import { fetchChildCategory } from "../../redux/async/childcategory.async";
 import { fetchProductType } from "../../redux/async/producttype.async";
@@ -9,6 +10,7 @@ import { fetchProductType } from "../../redux/async/producttype.async";
 const CreateProduct = () => {
   const dispatch = useDispatch();
   const mainCategory = useSelector((state) => state.mainCategory);
+  const brand = useSelector((state) => state.brand);
   const subCategory = useSelector((state) => state.subCategory);
   const childCategory = useSelector((state) => state.childCategory);
   const productType = useSelector((state) => state.productType);
@@ -33,6 +35,7 @@ const CreateProduct = () => {
   };
   useEffect(() => {
     dispatch(fetchMainCategory());
+    dispatch(fetchBrand());
     dispatch(fetchSubCategory());
     dispatch(fetchChildCategory());
     dispatch(fetchProductType());
@@ -87,17 +90,24 @@ const CreateProduct = () => {
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="name" className="form-label">
+                  <label htmlFor="brand" className="form-label">
                     Product Brand
                   </label>
-                  <input
-                    type="text"
-                    className="form-control"
+                  <select
+                    className="form-select"
+                    aria-label="Default select example"
                     name="brand"
-                    value={Data.brand}
                     onChange={inputEvent}
-                    placeholder="Enter product brand here..."
-                  />
+                  >
+                    <option>select brand</option>
+                    {brand.data.map((item) => {
+                      return (
+                        <option value={item._id} key={item._id}>
+                          {item.name}
+                        </option>
+                      );
+                    })}
+                  </select>
                 </div>
                 <div className="row">
                   <div className="col-6">
@@ -208,12 +218,12 @@ const CreateProduct = () => {
                     setData({
                       name: "",
                       brand: "",
-                      mainCategory: "",
-                      subCategory: "",
-                      childCategory: "",
+                      // mainCategory: "",
+                      // subCategory: "",
+                      // childCategory: "",
                       description: "",
                       code: "",
-                      productType: "",
+                      // productType: "",
                     });
                   }}
                 >

@@ -4,6 +4,8 @@ const ProductSku = require("../model/ProductSkuModel");
 const Product = require("../model/ProductModel");
 const ChildCategory = require("../model/ChildCategoryModel");
 const SubCategory = require("../model/SubCategoryModel");
+const Brand = require("../model/BrandModel");
+
 // fetch all records
 Router.get("/product-list/:slug*?", async (req, res, next) => {
   try {
@@ -33,9 +35,12 @@ Router.get("/product-list/:slug*?", async (req, res, next) => {
 
       const subCategory = await SubCategory.find({ slug: slug });
       const childCategory = await ChildCategory.find({ slug: slug });
+      const brand = await Brand.find({name:slug});
+
       let category = subCategory.length > 0 ? subCategory : childCategory;
+      let brandData = brand.length > 0 ?brand:"";
       const product = await Product.find({
-        $or: [{ subCategory: category }, { childCategory: category }],
+        $or: [{ subCategory: category }, { childCategory: category },{brand:brand}],
       });
       let productData = product.length ? product : null;
 

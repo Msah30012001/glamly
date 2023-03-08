@@ -56,7 +56,7 @@
     "$oid": "63da31515ff21a42fcc043e5"
   },
   "description": "lip liner",
-  "code": "lipliner100",
+  "code": "lipliner",
   "productType": {
     "$oid": "63d3c83220348c3524f4ff86"
   },
@@ -74,7 +74,7 @@
     "$oid": "63d38af2feba993a34284bb2"
   },
   "childCategory": {
-    "$oid": "63da31665ff21a42fcc043e9"
+    "$oid": "63da315d5ff21a42fcc043e7"
   },
   "description": "mascara",
   "code": "mascara100",
@@ -95,7 +95,7 @@
     "$oid": "63d38af2feba993a34284bb2"
   },
   "childCategory": {
-    "$oid": "63da315d5ff21a42fcc043e7"
+    "$oid": "63da31665ff21a42fcc043e9"
   },
   "description": "eyeliner",
   "code": "eyeliner100",
@@ -252,632 +252,682 @@
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da524b5ff21a42fcc044a2"
+    "$oid": "640583371d891319b46e29bd"
   },
-  "name": "FACE MOISTURISER",
-  "brand": "",
+  "name": "LOREAL LIP LINEAR",
+  "brand": {
+    "$oid": "6408d74ffd172125dc278c58"
+  },
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
   "subCategory": {
-    "$oid": "63da2fb1494a560ccc06ded0"
+    "$oid": "63d38af2feba993a34284bb2"
   },
   "childCategory": {
-    "$oid": "63da336f5ff21a42fcc0440d"
+    "$oid": "63da31515ff21a42fcc043e5"
   },
   "description": "",
-  "code": "facemoisturiser100",
+  "code": "lorealliplinear",
   "productType": {
-    "$oid": "63da383b5ff21a42fcc04454"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da52585ff21a42fcc044a4"
+    "$oid": "640585471d891319b46e2a86"
   },
-  "name": "CLEANSER",
-  "brand": "",
+  "name": "MAYBELLINE LIP LINEAR",
+  "brand": {
+    "$oid": "6408d781fd172125dc278c75"
+  },
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
   "subCategory": {
-    "$oid": "63da2fb1494a560ccc06ded0"
+    "$oid": "63d38af2feba993a34284bb2"
   },
   "childCategory": {
-    "$oid": "63da33775ff21a42fcc0440f"
+    "$oid": "63da31515ff21a42fcc043e5"
   },
   "description": "",
-  "code": "cleanser100",
+  "code": "maybellineliplinear",
   "productType": {
-    "$oid": "63da383b5ff21a42fcc04454"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da59855ff21a42fcc044a6"
+    "$oid": "640585cc1d891319b46e2a8a"
   },
-  "name": "MASKS & PEEL",
-  "brand": "",
+  "name": "SUGAR COSMETICS LIP LINEAR",
+  "brand": {
+    "$oid": "6408d75cfd172125dc278c5b"
+  },
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
   "subCategory": {
-    "$oid": "63da2fb1494a560ccc06ded0"
+    "$oid": "63d38af2feba993a34284bb2"
   },
   "childCategory": {
-    "$oid": "63da33845ff21a42fcc04411"
+    "$oid": "63da31515ff21a42fcc043e5"
   },
   "description": "",
-  "code": "maskspeel100",
+  "code": "sugarcosmeticsliplinear",
   "productType": {
-    "$oid": "63da383b5ff21a42fcc04454"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da59a85ff21a42fcc044a8"
+    "$oid": "640586491d891319b46e2a9b"
   },
-  "name": "SUNSCREEN",
-  "brand": "",
+  "name": "WET N WILD LIP LINEAR",
+  "brand": {
+    "$oid": "6408d767fd172125dc278c5e"
+  },
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
   "subCategory": {
-    "$oid": "63da2fb1494a560ccc06ded0"
+    "$oid": "63d38af2feba993a34284bb2"
   },
   "childCategory": {
-    "$oid": "63da338f5ff21a42fcc04413"
+    "$oid": "63da31515ff21a42fcc043e5"
   },
   "description": "",
-  "code": "sunscreen100",
+  "code": "wetnwildliplinear",
   "productType": {
-    "$oid": "63da383b5ff21a42fcc04454"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da59b55ff21a42fcc044aa"
+    "$oid": "6408b73f28b3f3056c71eb79"
   },
-  "name": "SERUM",
-  "brand": "",
+  "name": "LAKEME LIP LINER",
+  "brand": {
+    "$oid": "6408d744fd172125dc278c55"
+  },
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
   "subCategory": {
-    "$oid": "63da2fb1494a560ccc06ded0"
+    "$oid": "63d38af2feba993a34284bb2"
   },
   "childCategory": {
-    "$oid": "63da33975ff21a42fcc04415"
+    "$oid": "63da31515ff21a42fcc043e5"
   },
-  "description": "",
-  "code": "serum100",
+  "description": "lakeme lip linear",
+  "code": "lakemeliplinear",
   "productType": {
-    "$oid": "63da383b5ff21a42fcc04454"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da59c35ff21a42fcc044ac"
+    "$oid": "6408b7f128b3f3056c71eb96"
   },
-  "name": "FACE WASH",
-  "brand": "",
+  "name": "LAKEME EYELINER",
+  "brand": {
+    "$oid": "6408d744fd172125dc278c55"
+  },
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
   "subCategory": {
-    "$oid": "63da2fb1494a560ccc06ded0"
+    "$oid": "63d38af2feba993a34284bb2"
   },
   "childCategory": {
-    "$oid": "63da339f5ff21a42fcc04417"
+    "$oid": "63da31665ff21a42fcc043e9"
   },
-  "description": "",
-  "code": "facewash100",
+  "description": "Lakeme Eyeliner",
+  "code": "lakemeeyeliner",
   "productType": {
-    "$oid": "63da383b5ff21a42fcc04454"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da59d25ff21a42fcc044ae"
+    "$oid": "6408b81128b3f3056c71eb99"
   },
-  "name": "EYE CREAM",
-  "brand": "",
+  "name": "LOREAL EYELINER",
+  "brand": {
+    "$oid": "6408d74ffd172125dc278c58"
+  },
+  "description": "Loreal Eyeliner",
+  "code": "lorealeyeliner",
+  "__v": 0,
+  "childCategory": {
+    "$oid": "63da31665ff21a42fcc043e9"
+  },
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "productType": {
+    "$oid": "63d3c83220348c3524f4ff86"
+  },
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  }
+},{
+  "_id": {
+    "$oid": "6408b89f28b3f3056c71eb9f"
+  },
+  "name": "MAYBELLINE EYELINER",
+  "brand": {
+    "$oid": "6408d781fd172125dc278c75"
+  },
+  "description": "Maybelline eyeliner",
+  "code": "maybellineeyeliner",
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
   "subCategory": {
-    "$oid": "63da2fb1494a560ccc06ded0"
+    "$oid": "63d38af2feba993a34284bb2"
   },
   "childCategory": {
-    "$oid": "63da33aa5ff21a42fcc04419"
+    "$oid": "63da31665ff21a42fcc043e9"
   },
-  "description": "",
-  "code": "eyecream100",
   "productType": {
-    "$oid": "63da383b5ff21a42fcc04454"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da59df5ff21a42fcc044b0"
+    "$oid": "6408b8e328b3f3056c71eba2"
   },
-  "name": "LIP BALM",
-  "brand": "",
+  "name": "SUGAR EYELINER",
+  "brand": {
+    "$oid": "6408d75cfd172125dc278c5b"
+  },
+  "description": "sugar eyeliner",
+  "code": "sugareyeliner",
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
   "subCategory": {
-    "$oid": "63da2fb1494a560ccc06ded0"
+    "$oid": "63d38af2feba993a34284bb2"
   },
   "childCategory": {
-    "$oid": "63da33b65ff21a42fcc0441b"
+    "$oid": "63da31665ff21a42fcc043e9"
   },
-  "description": "",
-  "code": "lipbalm100",
   "productType": {
-    "$oid": "63da383b5ff21a42fcc04454"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da59ed5ff21a42fcc044b2"
+    "$oid": "6408b96d28b3f3056c71eba5"
   },
-  "name": "BODY LOTION",
-  "brand": "",
+  "name": "WET N EYELINER",
+  "brand": {
+    "$oid": "6408d767fd172125dc278c5e"
+  },
+  "description": "",
+  "code": "wetneyeliner",
+  "productType": {
+    "$oid": "63d3c83220348c3524f4ff86"
+  },
+  "__v": 0,
+  "childCategory": {
+    "$oid": "63da31665ff21a42fcc043e9"
+  },
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
   "subCategory": {
-    "$oid": "63da2fb1494a560ccc06ded0"
+    "$oid": "63d38af2feba993a34284bb2"
+  }
+},{
+  "_id": {
+    "$oid": "6408ba1e28b3f3056c71ebab"
   },
-  "childCategory": {
-    "$oid": "63da33c15ff21a42fcc0441d"
+  "name": "LAKEME KAJAL",
+  "brand": {
+    "$oid": "6408d744fd172125dc278c55"
   },
   "description": "",
-  "code": "bodylotion100",
+  "code": "lakemekajal",
+  "mainCategory": {
+    "$oid": "63d38a5cfeba993a34284b99"
+  },
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
+  "childCategory": {
+    "$oid": "63da316d5ff21a42fcc043eb"
+  },
   "productType": {
-    "$oid": "63da383b5ff21a42fcc04454"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da59fc5ff21a42fcc044b4"
+    "$oid": "6408ba4c28b3f3056c71ebae"
   },
-  "name": "BODY WASH",
-  "brand": "",
+  "name": "LOREAL KAJAL",
+  "brand": {
+    "$oid": "6408d74ffd172125dc278c58"
+  },
+  "description": "",
+  "code": "lorealkajal",
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
   "subCategory": {
-    "$oid": "63da2fb1494a560ccc06ded0"
+    "$oid": "63d38af2feba993a34284bb2"
   },
   "childCategory": {
-    "$oid": "63da33ca5ff21a42fcc0441f"
+    "$oid": "63da316d5ff21a42fcc043eb"
   },
-  "description": "",
-  "code": "bodywash100",
   "productType": {
-    "$oid": "63da383b5ff21a42fcc04454"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da5a075ff21a42fcc044b6"
+    "$oid": "6408ba8e28b3f3056c71ebb1"
   },
-  "name": "BODY SCRUB",
-  "brand": "",
+  "name": "MAYBELLINE KAJAL",
+  "brand": {
+    "$oid": "6408d781fd172125dc278c75"
+  },
+  "description": "",
+  "code": "maybellinekajal",
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
-  "subCategory": {
-    "$oid": "63da2fb1494a560ccc06ded0"
-  },
   "childCategory": {
-    "$oid": "63da33d55ff21a42fcc04421"
+    "$oid": "63da316d5ff21a42fcc043eb"
   },
-  "description": "",
-  "code": "bodyscrub100",
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
   "productType": {
-    "$oid": "63da383b5ff21a42fcc04454"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da5a165ff21a42fcc044b8"
+    "$oid": "6408bacb28b3f3056c71ebb4"
   },
-  "name": "HAND CREAM",
-  "brand": "",
+  "name": "SUGAR KAJAL",
+  "brand": {
+    "$oid": "6408d75cfd172125dc278c5b"
+  },
+  "description": "",
+  "code": "sugarkajal",
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
-  "subCategory": {
-    "$oid": "63da2fb1494a560ccc06ded0"
-  },
   "childCategory": {
-    "$oid": "63da33e05ff21a42fcc04423"
+    "$oid": "63da316d5ff21a42fcc043eb"
   },
-  "description": "",
-  "code": "handcream100",
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
   "productType": {
-    "$oid": "63da383b5ff21a42fcc04454"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da5a245ff21a42fcc044ba"
+    "$oid": "6408baf728b3f3056c71ebb7"
   },
-  "name": "SHAMPOO",
-  "brand": "",
+  "name": "WET N KAJAL",
+  "brand": {
+    "$oid": "6408d767fd172125dc278c5e"
+  },
+  "description": "",
+  "code": "wetnkajal",
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
-  "subCategory": {
-    "$oid": "63da2fee494a560ccc06ded3"
-  },
   "childCategory": {
-    "$oid": "63da33f95ff21a42fcc04425"
+    "$oid": "63da316d5ff21a42fcc043eb"
   },
-  "description": "",
-  "code": "shampoo100",
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
   "productType": {
-    "$oid": "63da38905ff21a42fcc04456"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da5a355ff21a42fcc044bc"
+    "$oid": "6408bd2028b3f3056c71ebba"
   },
-  "name": "CONDITIONER",
-  "brand": "",
+  "name": "LAKEME COMPACT",
+  "brand": {
+    "$oid": "6408d744fd172125dc278c55"
+  },
+  "description": "",
+  "code": "lakemecompact",
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
-  "subCategory": {
-    "$oid": "63da2ff8494a560ccc06ded5"
-  },
   "childCategory": {
-    "$oid": "63da34015ff21a42fcc04427"
+    "$oid": "63da31a35ff21a42fcc043f5"
   },
-  "description": "",
-  "code": "conditioner100",
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
   "productType": {
-    "$oid": "63da394a5ff21a42fcc04464"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da5a435ff21a42fcc044be"
+    "$oid": "6408bd9028b3f3056c71ebbd"
   },
-  "name": "HAIR CREAM",
-  "brand": "",
+  "name": "LOREAL COMPACT",
+  "brand": {
+    "$oid": "6408d74ffd172125dc278c58"
+  },
+  "description": "",
+  "code": "lorealcompact",
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
-  "subCategory": {
-    "$oid": "63da3003494a560ccc06ded7"
-  },
   "childCategory": {
-    "$oid": "63da340b5ff21a42fcc04429"
+    "$oid": "63da31a35ff21a42fcc043f5"
   },
-  "description": "",
-  "code": "haircream100",
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
   "productType": {
-    "$oid": "63da36f75ff21a42fcc0444f"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da5a4f5ff21a42fcc044c0"
+    "$oid": "6408bdc428b3f3056c71ebc0"
   },
-  "name": "HAIR OIL",
-  "brand": "",
+  "name": "MAYBELLINE COMPACT",
+  "brand": {
+    "$oid": "6408d781fd172125dc278c75"
+  },
+  "description": "",
+  "code": "maybellinecompact",
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
-  "subCategory": {
-    "$oid": "63da3003494a560ccc06ded7"
-  },
   "childCategory": {
-    "$oid": "63da34145ff21a42fcc0442b"
+    "$oid": "63da31a35ff21a42fcc043f5"
   },
-  "description": "",
-  "code": "hairoil100",
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
   "productType": {
-    "$oid": "63da36f75ff21a42fcc0444f"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da5a5e5ff21a42fcc044c2"
+    "$oid": "6408bdf428b3f3056c71ebc3"
   },
-  "name": "HAIR GEL",
-  "brand": "",
+  "name": "SUGAR COMPACT",
+  "brand": {
+    "$oid": "6408d75cfd172125dc278c5b"
+  },
+  "description": "",
+  "code": "sugarcompact",
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
-  "subCategory": {
-    "$oid": "63da3003494a560ccc06ded7"
-  },
   "childCategory": {
-    "$oid": "63da34205ff21a42fcc0442d"
+    "$oid": "63da31a35ff21a42fcc043f5"
   },
-  "description": "",
-  "code": "hairgel100",
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
   "productType": {
-    "$oid": "63da36f75ff21a42fcc0444f"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da5a685ff21a42fcc044c4"
+    "$oid": "6408be4a28b3f3056c71ebc6"
   },
-  "name": "HAIR COLOR",
-  "brand": "",
+  "name": "WET N COMPACT",
+  "brand": {
+    "$oid": "6408d767fd172125dc278c5e"
+  },
+  "description": "",
+  "code": "wetncompact",
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
-  "subCategory": {
-    "$oid": "63da3003494a560ccc06ded7"
-  },
   "childCategory": {
-    "$oid": "63da34295ff21a42fcc0442f"
+    "$oid": "63da31a35ff21a42fcc043f5"
   },
-  "description": "",
-  "code": "haircolor100",
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
   "productType": {
-    "$oid": "63da36f75ff21a42fcc0444f"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da5a795ff21a42fcc044c6"
+    "$oid": "6408be8028b3f3056c71ebc9"
   },
-  "name": "HAIR SERUM",
-  "brand": "",
+  "name": "LAKEME CONCEALER",
+  "brand": {
+    "$oid": "6408d744fd172125dc278c55"
+  },
+  "description": "",
+  "code": "lakemeconcealer",
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
-  "subCategory": {
-    "$oid": "63da3003494a560ccc06ded7"
-  },
   "childCategory": {
-    "$oid": "63da34355ff21a42fcc04431"
+    "$oid": "63da31975ff21a42fcc043f3"
   },
-  "description": "",
-  "code": "hairserum100",
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
   "productType": {
-    "$oid": "63da36f75ff21a42fcc0444f"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da5a835ff21a42fcc044c8"
+    "$oid": "6408bea528b3f3056c71ebcc"
   },
-  "name": "HAIR ACCESSORY",
-  "brand": "",
+  "name": "LOREAL CONCEALER",
+  "brand": {
+    "$oid": "6408d74ffd172125dc278c58"
+  },
+  "description": "",
+  "code": "lorealconcealer",
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
-  "subCategory": {
-    "$oid": "63da3003494a560ccc06ded7"
-  },
   "childCategory": {
-    "$oid": "63da34405ff21a42fcc04433"
+    "$oid": "63da31975ff21a42fcc043f3"
   },
-  "description": "",
-  "code": "hairaccessory100",
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
   "productType": {
-    "$oid": "63da36f75ff21a42fcc0444f"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da5a8f5ff21a42fcc044ca"
+    "$oid": "6408becc28b3f3056c71ebcf"
   },
-  "name": "PERFUME",
-  "brand": "",
+  "name": "MAYBELLINE CONCEALER",
+  "brand": {
+    "$oid": "6408d781fd172125dc278c75"
+  },
+  "description": "",
+  "code": "maybellineconcealer",
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
-  "subCategory": {
-    "$oid": "63da3003494a560ccc06ded7"
-  },
   "childCategory": {
-    "$oid": "63da34605ff21a42fcc04435"
+    "$oid": "63da31975ff21a42fcc043f3"
   },
-  "description": "",
-  "code": "perfume100",
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
   "productType": {
-    "$oid": "63da36f75ff21a42fcc0444f"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da5a9c5ff21a42fcc044cc"
+    "$oid": "6408bf0128b3f3056c71ebd2"
   },
-  "name": "DEODORANT",
-  "brand": "",
+  "name": "SUGAR CONCEALER",
+  "brand": "Sugar",
+  "description": "",
+  "code": "sugarconcealer",
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
-  "subCategory": {
-    "$oid": "63da3003494a560ccc06ded7"
-  },
   "childCategory": {
-    "$oid": "63da346a5ff21a42fcc04437"
+    "$oid": "63da31975ff21a42fcc043f3"
   },
-  "description": "",
-  "code": "deodorant100",
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
   "productType": {
-    "$oid": "63da36f75ff21a42fcc0444f"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da5aa85ff21a42fcc044ce"
+    "$oid": "6408bf2828b3f3056c71ebd5"
   },
-  "name": "BODY MIST",
-  "brand": "",
+  "name": "WET N CONCEALER",
+  "brand": "Wet n",
+  "description": "",
+  "code": "wetnconcealer",
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
-  "subCategory": {
-    "$oid": "63da300c494a560ccc06ded9"
-  },
   "childCategory": {
-    "$oid": "63da34765ff21a42fcc04439"
+    "$oid": "63da31975ff21a42fcc043f3"
   },
-  "description": "",
-  "code": "bodymist100",
+  "subCategory": {
+    "$oid": "63d38af2feba993a34284bb2"
+  },
   "productType": {
-    "$oid": "63da39bd5ff21a42fcc04468"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da5ab25ff21a42fcc044d0"
+    "$oid": "6408bf9c28b3f3056c71ebf7"
   },
-  "name": "HAIR STRAIGHTENER",
-  "brand": "",
+  "name": "LAKEME FOUNDATION",
+  "brand": "Lakeme",
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
   "subCategory": {
-    "$oid": "63da300c494a560ccc06ded9"
+    "$oid": "63d38af2feba993a34284bb2"
   },
   "childCategory": {
-    "$oid": "63da34925ff21a42fcc0443b"
+    "$oid": "63da31855ff21a42fcc043ef"
   },
   "description": "",
-  "code": "hairstraightener100",
+  "code": "lakemefoundation",
   "productType": {
-    "$oid": "63da39bd5ff21a42fcc04468"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da5abf5ff21a42fcc044d2"
+    "$oid": "6408c78b588d480870c36db5"
   },
-  "name": "HAIR DRYER",
-  "brand": "",
+  "name": "LOREAL FOUNDATION",
+  "brand": "Loreal",
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
   "subCategory": {
-    "$oid": "63da300c494a560ccc06ded9"
+    "$oid": "63d38af2feba993a34284bb2"
   },
   "childCategory": {
-    "$oid": "63da349e5ff21a42fcc0443d"
+    "$oid": "63da31855ff21a42fcc043ef"
   },
   "description": "",
-  "code": "hairdryer100",
+  "code": "lorealfoundation",
   "productType": {
-    "$oid": "63da39bd5ff21a42fcc04468"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da5acd5ff21a42fcc044d4"
+    "$oid": "6408c7da588d480870c36dd5"
   },
-  "name": "EPILATOR",
-  "brand": "",
+  "name": "MAYBELLINE FOUNDATION",
+  "brand": "Maybelline",
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
   "subCategory": {
-    "$oid": "63da3017494a560ccc06dedb"
+    "$oid": "63d38af2feba993a34284bb2"
   },
   "childCategory": {
-    "$oid": "63da34a75ff21a42fcc0443f"
+    "$oid": "63da31855ff21a42fcc043ef"
   },
   "description": "",
-  "code": "epilator100",
+  "code": "maybellinefoundation",
   "productType": {
-    "$oid": "63da39f95ff21a42fcc0446a"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da5adb5ff21a42fcc044d6"
+    "$oid": "6408c821588d480870c36e0d"
   },
-  "name": "TRIMERS",
-  "brand": "",
+  "name": "SUGAR FOUNDATION",
+  "brand": {
+    "$oid": "6408d75cfd172125dc278c5b"
+  },
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
   "subCategory": {
-    "$oid": "63da3017494a560ccc06dedb"
+    "$oid": "63d38af2feba993a34284bb2"
   },
   "childCategory": {
-    "$oid": "63da34c25ff21a42fcc04441"
+    "$oid": "63da31855ff21a42fcc043ef"
   },
   "description": "",
-  "code": "trimers100",
+  "code": "sugarcosmetic",
   "productType": {
-    "$oid": "63da39f95ff21a42fcc0446a"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 },{
   "_id": {
-    "$oid": "63da5ae55ff21a42fcc044d8"
+    "$oid": "6408c8ed588d480870c36e45"
   },
-  "name": "BEARD OIL",
-  "brand": "",
+  "name": "WET N FOUNDATION",
+  "brand": {
+    "$oid": "6408d767fd172125dc278c5e"
+  },
   "mainCategory": {
     "$oid": "63d38a5cfeba993a34284b99"
   },
   "subCategory": {
-    "$oid": "63da3017494a560ccc06dedb"
+    "$oid": "63d38af2feba993a34284bb2"
   },
   "childCategory": {
-    "$oid": "63da34ca5ff21a42fcc04443"
+    "$oid": "63da31855ff21a42fcc043ef"
   },
   "description": "",
-  "code": "beardoil100",
+  "code": "wetnfoundation",
   "productType": {
-    "$oid": "63da39f95ff21a42fcc0446a"
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "63da5af25ff21a42fcc044da"
-  },
-  "name": "HAIR WAX",
-  "brand": "",
-  "mainCategory": {
-    "$oid": "63d38a5cfeba993a34284b99"
-  },
-  "subCategory": {
-    "$oid": "63da3026494a560ccc06dedd"
-  },
-  "childCategory": {
-    "$oid": "63da34d45ff21a42fcc04445"
-  },
-  "description": "",
-  "code": "hairwax100",
-  "productType": {
-    "$oid": "63da3a5e5ff21a42fcc0446c"
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "63da5b225ff21a42fcc044de"
-  },
-  "name": "MAKEUP KIT",
-  "brand": "",
-  "mainCategory": {
-    "$oid": "63d38a5cfeba993a34284b99"
-  },
-  "subCategory": {
-    "$oid": "63da303b494a560ccc06dedf"
-  },
-  "childCategory": {
-    "$oid": "63da34f55ff21a42fcc04449"
-  },
-  "description": "",
-  "code": "makeupkit100",
-  "productType": {
-    "$oid": "63da3ac35ff21a42fcc0446e"
+    "$oid": "63d3c83220348c3524f4ff86"
   },
   "__v": 0
 }]

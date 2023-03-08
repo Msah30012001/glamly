@@ -14,12 +14,15 @@ import ProductCard from "./Components/Product/ProductCard";
 import CategoryCard from "./Components/Category/CategoryCard";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSubCategory } from "../redux/async/subcategory.async";
+import { fetchChildCategory } from "../redux/async/childcategory.async";
+import { fetchBrand } from "../redux/async/brand.async";
 import { fetchWeeklyProductSku } from "../redux/async/productsku.async";
 import {fetchTrendingProduct,fetchMostViewedProduct} from "../redux/async/productdetail.async";
 
 const Home = () => {
   const dispatch = useDispatch();
-  const category = useSelector((state) => state.subCategory);
+  const category = useSelector((state) => state.childCategory);
+  const brand = useSelector((state) => state.brand);
   const productDetail = useSelector((state) => state.productDetail);
   const productSku = useSelector((state) => state.productSku);
   const responsive = {
@@ -44,7 +47,9 @@ const Home = () => {
   };
 
   useEffect(() => {
-    dispatch(fetchSubCategory());
+    // dispatch(fetchSubCategory());
+    dispatch(fetchBrand());
+    dispatch(fetchChildCategory());
     dispatch(fetchWeeklyProductSku());
     dispatch(fetchTrendingProduct());
     dispatch(fetchMostViewedProduct());
@@ -212,7 +217,7 @@ const Home = () => {
           <div className="row">
             <div className="col-sm-8 m-auto">
               <div className="section-title text-center mb-30">
-                <h2 className="title">Trending Product</h2>
+                <h2 className="title">Browse by Brand</h2>
                 <div className="desc">
                   {/* <p>Add our products to weekly line up</p> */}
                 </div>
@@ -226,24 +231,18 @@ const Home = () => {
                 nav={true}
                 dots={false}
                 smartSpeed={1000}
-                items={5}
+                items={4}
                 // responsive={responsive}
                 className="product-slider owl-theme"
                 zindex="3"
               >
-                {productDetail.trendingProduct.map((item) => {
+                {brand.data.map((item) => {
                   return (
-                    <ProductCard
-                      _id={item._id}
-                      slug={item.slug}
-                      title={item.name}
-                      thumbnail={item.thumbnail}
-                      thumbnailHover={item.thumbnail_hover}
-                      rate={item.avg}
-                      price={item.price}
-                      discount={item.discount}
+                    <CategoryCard
+                      name={item.name}
+                      slug={item.name}
+                      noOfProducts={item.productskus.length}
                       key={item._id}
-                      className="mb-30"
                     />
                   );
                 })}
@@ -354,7 +353,51 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+      <section className="product-area">
+        <div className="container pb-lg-60">
+          <div className="row">
+            <div className="col-sm-8 m-auto">
+              <div className="section-title text-center mb-30">
+                <h2 className="title">Trending Product</h2>
+                <div className="desc">
+                  {/* <p>Add our products to weekly line up</p> */}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-12">
+              <OwlCarousel
+                // margin={15}
+                nav={true}
+                dots={false}
+                smartSpeed={1000}
+                items={5}
+                // responsive={responsive}
+                className="product-slider owl-theme"
+                zindex="3"
+              >
+                {productDetail.trendingProduct.map((item) => {
+                  return (
+                    <ProductCard
+                      _id={item._id}
+                      slug={item.slug}
+                      title={item.name}
+                      thumbnail={item.thumbnail}
+                      thumbnailHover={item.thumbnail_hover}
+                      rate={item.avg}
+                      price={item.price}
+                      discount={item.discount}
+                      key={item._id}
+                      className="mb-30"
+                    />
+                  );
+                })}
+              </OwlCarousel>
+            </div>
+          </div>
+        </div>
+      </section>
       <section
         className="divider-area divider-product-discount-area bg-img"
         style={{ backgroundImage: `url("assets/img/photos/bg-01.jpg")` }}

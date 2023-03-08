@@ -17,6 +17,7 @@ Router.get("/product-sku", async (req, res, next) => {
   }
 });
 
+
 // fetch weekly product sku
 Router.get("/product-sku/weekly", async (req, res, next) => {
   try {
@@ -177,24 +178,30 @@ Router.patch(
         .replace(/^-+/, "")
         .replace(/-+$/, "");
 
+      console.log(req.files.thumbnail);
+      console.log(req.files.thumbnail_hover);
+      console.log(req.files.image);
+      if (req.files.thumbnail !== undefined && req.files.thumbnail.length > 0) {
+        data.thumbnail = req.files.thumbnail[0].filename;
+      }
+      if (
+        req.files.thumbnail_hover !== undefined &&
+        req.files.thumbnail_hover.length > 0
+      ) {
+        data.thumbnail_hover = req.files.thumbnail_hover[0].filename;
+      }
+      if (req.files.image !== undefined && req.files.image.length > 0) {
+        for (let i = 0; i < req.files.image.length; i++) {
+          data.image.push(req.files.image[i].filename);
+        }
+      }
       data = {
         ...data,
         slug: d.slug,
         ...req.body,
         specification: JSON.parse(req.body.specification),
       };
-      if (req.files.thumbnail.length > 0) {
-        data.thumbnail = req.files.thumbnail[0].filename;
-      }
-      if (req.files.thumbnail_hover.length > 0) {
-        data.thumbnail_hover = req.files.thumbnail_hover[0].filename;
-      }
-      if (req.files.image.length > 0) {
-        for (let i = 0; i < req.files.image.length; i++) {
-          data.image.push(req.files.image[i].filename);
-        }
-      }
-
+      console.log(data);
       const productSkuData = await ProductSku.findById(_id);
       if (!productSkuData) {
         throw new BadRequestError("product sku not found");
@@ -265,11 +272,133 @@ Router.patch(
   }
 );
 
+Router.patch("/product-sku/stock/:id", async (req, res, next) => {
+  try {
+    const _id = req.params.id;
+
+    let d = { slug: "" };
+    console.log(_id)
+    console.log(req.body)
+
+    d.slug = req.body.name
+      .toString()
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[^\w-]+/g, "")
+      .replace(/--+/g, "-")
+      .replace(/^-+/, "")
+      .replace(/-+$/, "");
+
+    // if (req.files.thumbnail !== undefined && req.files.thumbnail.length > 0) {
+    //   data.thumbnail = req.files.thumbnail[0].filename;
+    // }
+    // if (
+    //   req.files.thumbnail_hover !== undefined &&
+    //   req.files.thumbnail_hover.length > 0
+    // ) {
+    //   data.thumbnail_hover = req.files.thumbnail_hover[0].filename;
+    // }
+    // if (req.files.image !== undefined && req.files.image.length > 0) {
+    //   for (let i = 0; i < req.files.image.length; i++) {
+    //     data.image.push(req.files.image[i].filename);
+    //   }
+    // }
+    //  name: "",
+    // sku_code: "",
+    // product: "",
+    // thumbnail: null,
+    // thumbnail_hover: null,
+    // image: [],
+    // description: "",
+    // qty: 0,
+    // price: 0,
+    // discount: 0,
+    // status: 1,
+    // specification: {},
+    data = {
+      slug: d.slug,
+      name: req.body.name,
+      sku_code: req.body.sku_code,
+      product: req.body.product,
+      description: req.body.description,
+      qty: req.body.qty,
+      price: req.body.price,
+      discount: req.body.discount,
+      status: req.body.status,
+      specification: req.body.specification,
+    };
+    const productSkuData = await ProductSku.findById(_id);
+    if (!productSkuData) {
+      throw new BadRequestError("product sku not found");
+    }
+
+    // if (req.files.thumbnail.length > 0) {
+    //   fs.unlink(
+    //     `${path.resolve("./public/assets/upload")}/${productSkuData.thumbnail}`,
+    //     (error) => {
+    //       console.log(error);
+    //     }
+    //   );
+    // }
+    // if (req.files.thumbnail_hover.length > 0) {
+    //   fs.unlink(
+    //     `${path.resolve("./public/assets/upload")}/${
+    //       productSkuData.thumbnail_hover
+    //     }`,
+    //     (error) => {
+    //       console.log(error);
+    //     }
+    //   );
+    // }
+    // if (req.files.image.length > 0) {
+    //   productSkuData.image.map((item) => {
+    //     fs.unlink(
+    //       `${path.resolve("./public/assets/upload")}/${item}`,
+    //       (error) => {
+    //         console.log(error);
+    //       }
+    //     );
+    //   });
+    // }
+
+    const updateProductSku = await ProductSku.findByIdAndUpdate(_id, data, {
+      new: true,
+    });
+    if (!updateProductSku) {
+      throw new BadRequestError("product sku not found");
+    }
+    // res.set("Access-Control-Allow-Origin", "*");
+    res.status(201).send(updateProductSku);
+  } catch (error) {
+    // fs.unlink(
+    //   `${path.resolve("./public/assets/upload")}/${data.thumbnail}`,
+    //   (error) => {
+    //     console.log(error);
+    //   }
+    // );
+    // fs.unlink(
+    //   `${path.resolve("./public/assets/upload")}/${data.thumbnail_hover}`,
+    //   (error) => {
+    //     console.log(error);
+    //   }
+    // );
+    // data.image.map((item) => {
+    //   fs.unlink(
+    //     `${path.resolve("./public/assets/upload")}/${item}`,
+    //     (error) => {
+    //       console.log(error);
+    //     }
+    //   );
+    // });
+    next(error);
+  }
+});
+
 Router.patch("/product-sku/p/increment", async (req, res, next) => {
   try {
     const slug = req.body.slug;
-    
-    const productSkuData = await ProductSku.findOne({slug:slug});
+
+    const productSkuData = await ProductSku.findOne({ slug: slug });
     if (!productSkuData) {
       throw new BadRequestError("product sku not found");
     }

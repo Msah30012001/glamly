@@ -27,7 +27,7 @@
   "name": "LAKME ABSOLUTE 3D COVER FOUNDATION, COOL IVORY, 15 ML",
   "sku_code": "1",
   "product": {
-    "$oid": "63da4b915ff21a42fcc04497"
+    "$oid": "6408bf9c28b3f3056c71ebf7"
   },
   "description": "Liquid foundation that gives 3D coverage from all angles, Velvet finish Formula",
   "qty": 20,
@@ -65,7 +65,7 @@
   "name": "L'OREAL PARIS TRUE MATCH SUPER BLENDABLE LIQUID FOUNDATION WITH OPAQUE FINISH, 30 ML",
   "sku_code": "2",
   "product": {
-    "$oid": "63da4b915ff21a42fcc04497"
+    "$oid": "6408c78b588d480870c36db5"
   },
   "description": "Super blendable liquid foundation with SPF for face, True-to-skin face colour with shade-matching technology, Suitable for all skin types",
   "qty": 25,
@@ -102,7 +102,7 @@
   "name": "MAYBELLINE NEW YORK SUPER STAY 24 H FULL COVERAGE NATURAL LIQUID FOUNDATION, WARM NUDE 128, 30 ML",
   "sku_code": "3",
   "product": {
-    "$oid": "63da4b915ff21a42fcc04497"
+    "$oid": "6408c7da588d480870c36dd5"
   },
   "description": "Flawless Matte finish, Lasts up to 24 hrs, Long-lasting foundation that provides full coverage, Suitable for oily skin",
   "qty": 20,
@@ -139,7 +139,7 @@
   "name": "SUGAR COSMETICS ACE OF  FACE FOUNDATION STICK WITH INBUILT BRUSH- 20 GALA'O, FULL COVERAGE WATERPROOF MATTE FINISH",
   "sku_code": "4",
   "product": {
-    "$oid": "63da4b915ff21a42fcc04497"
+    "$oid": "6408c821588d480870c36e0d"
   },
   "description": "The full-coverage , waterproof formula offers a totally matte finish that lasts for up to 12 hours, Weightless when applied, the handy built-in brush makes it uber-easy to blend the product in or touch-up spots",
   "qty": 50,
@@ -176,7 +176,7 @@
   "name": "LAKME' EYECONIC KAJAL, BLACK MATTE FINISH",
   "sku_code": "6",
   "product": {
-    "$oid": "63da4b675ff21a42fcc04493"
+    "$oid": "6408ba1e28b3f3056c71ebab"
   },
   "description": "24 hour long-lasting, Smudge-proof, Deep black color, Waterproof, Ophthalmologically tested, Transfer-proof",
   "qty": 8,
@@ -213,7 +213,7 @@
   "name": "L'OREAL PARIS MAGIQUE KAJAL, BLACK, MATTE FINISH",
   "sku_code": "7",
   "product": {
-    "$oid": "63da4b675ff21a42fcc04493"
+    "$oid": "6408ba4c28b3f3056c71ebae"
   },
   "description": "Soothes and nourishes the eye with vitamin E, cocoa butter, olive oil esters and vitamin c derivatives",
   "qty": 15,
@@ -251,7 +251,7 @@
   "name": "MAYBELLINE NEW YORK KOHL GEL PENCIL, SMUDGE PROOF, WATERPROOF GEL EYE KAJAL, TATTOO STUDIO SMOKEY BLACK",
   "sku_code": "8",
   "product": {
-    "$oid": "63da4b675ff21a42fcc04493"
+    "$oid": "6408ba8e28b3f3056c71ebb1"
   },
   "description": "Maybelline Tattoo Liner Smokey pencil is our 1st blendable gel pencil eye kajal. Just blend and set for a 36H smoldering smokey matte finish look\r\nMade with breakthrough powder in gel formula, this long lasting waterproof eye kajal leaves behind a smokey, blurred and elegant look",
   "qty": 6,
@@ -290,7 +290,7 @@
   "name": "SUGAR COSMETICS KOHL OF HONOUR INTENSE KAJAL, MATTE FINISH, LONGLASTING FORMULA, LIGHTWEIGHT - 01 BLACK OUT",
   "sku_code": "9",
   "product": {
-    "$oid": "63da4b675ff21a42fcc04493"
+    "$oid": "6408bacb28b3f3056c71ebb4"
   },
   "description": "This wonder product delivers pigment-rich, high-impact colour that will fill your eyes with all the definition and drama you’ve ever known!",
   "qty": 6,
@@ -328,7 +328,7 @@
   "name": "WET N WILD HIGH-COVERAGE STICK FOUNDATION WITH LIGHT-ADJUSTING COMPLEX SEMI-MATTE FINISH",
   "sku_code": "5",
   "product": {
-    "$oid": "63da4b915ff21a42fcc04497"
+    "$oid": "6408c8ed588d480870c36e45"
   },
   "description": "long-lasting, Multi-tasking, Stick foundation",
   "qty": 4,
@@ -345,7 +345,7 @@
     "image_1677936560336_807184386.jpg",
     "image_1677936560337_704808609.jpg"
   ],
-  "view": 0,
+  "view": 12,
   "date": {
     "$date": {
       "$numberLong": "1677931173026"
@@ -367,7 +367,7 @@
   "name": "WET N WILD, COLOR ICON KOHL EYE KAJAL PENCIL, EYELINER AND PENCIL FOR EYE-MAKEUP WITH AN INTENSE AND HYPER-PIGMENTED EFFECT, SOFT, CREAMY AND EASY-TO-USE FORMULA, BABY'S GOT BLACK, MATTE FINISH",
   "sku_code": "10",
   "product": {
-    "$oid": "63da4b675ff21a42fcc04493"
+    "$oid": "6408baf728b3f3056c71ebb7"
   },
   "description": "A SEDUCING LOOK: Eye pencil with hyper-pigmented colour to create intense looks from the day to the night. A must-have eyeliner to add to you favourite makeup collection!",
   "qty": 4,
@@ -408,7 +408,7 @@
   "name": "LAKMÉ EYECONIC LIQUID EYELINER, BLACK, MATTE FINISH",
   "sku_code": "11",
   "product": {
-    "$oid": "63da4b545ff21a42fcc04491"
+    "$oid": "6408b7f128b3f3056c71eb96"
   },
   "description": "Unique flexi-tip brush, One eyeliner; many looks, Intense black color, Smudgeproof for upto 24 hours, Waterproof and transfer-proof, Ophthalmologically tested",
   "qty": 12,
@@ -423,7 +423,7 @@
   "image": [
     "image_1677936911782_580378652.jpg"
   ],
-  "view": 0,
+  "view": 2,
   "date": {
     "$date": {
       "$numberLong": "1677931173026"
@@ -445,7 +445,7 @@
   "name": "L'ORÉAL PARIS LIQUID EYELINER, PRECISE APPLICATOR, SMUDGE-PROOF AND WATERPROOF, LINER MAGIQUE, BLACK",
   "sku_code": "12",
   "product": {
-    "$oid": "63da4b545ff21a42fcc04491"
+    "$oid": "6408b81128b3f3056c71eb99"
   },
   "description": "Use it to line your upper or lower lash lines, Use it to define your eyelids or create the perfect wing liner look\r\nInfused with ultra black pigments, Precise felt tip, Non dripping, quick dry, Water and smudge resistant",
   "qty": 28,
@@ -461,7 +461,7 @@
     "image_1677937019458_154494707.jpg",
     "image_1677937019458_864082032.jpg"
   ],
-  "view": 0,
+  "view": 1,
   "date": {
     "$date": {
       "$numberLong": "1677931173026"
@@ -483,7 +483,7 @@
   "name": "MAYBELLINE NEW YORK EYELINER & KAJAL, BOLD EYE LOOKS, LONG-LASTING, COLOSSAL BOLD LINER & COLOSSAL KAJAL, COMBO PACK, ESSENTIAL EYE KIT",
   "sku_code": "13",
   "product": {
-    "$oid": "63da4b545ff21a42fcc04491"
+    "$oid": "6408b89f28b3f3056c71eb9f"
   },
   "description": "2-piece eye kit for captivating eye looks with an bold eyeliner and kajal, Ophthalmologist tested\r\nFor bold, and intense eye looks, Semi-matte finish, Complete eye kit",
   "qty": 14,
@@ -520,7 +520,7 @@
   "name": "SUGAR COSMETICS - EYE WARNED YOU SO! - DOUBLE MATTE EYELINER - 01 BLACK SWAN (BLACK EYE LINER FOR WOMEN) - SWEAT PROOF, 100% WATERPROOF EYE LINER WITH MATTE FINISH",
   "sku_code": "14",
   "product": {
-    "$oid": "63da4b545ff21a42fcc04491"
+    "$oid": "6408b8e328b3f3056c71eba2"
   },
   "description": "Lasts upto 17HRS, Moisture Resistant, Intensely Pigmented, High Precision Applicator, Rich Matte Finish, Low Setting Time",
   "qty": 4,
@@ -536,7 +536,7 @@
     "image_1677937269503_143129230.jpg",
     "image_1677937269504_969607191.jpg"
   ],
-  "view": 0,
+  "view": 3,
   "date": {
     "$date": {
       "$numberLong": "1677931173026"
@@ -558,7 +558,7 @@
   "name": "WET N WILD, H2O PROOF FELT TIP LIQUID EYELINER, WATERPROOF AND STAIN-PROOF LIQUID EYELINER, WATERPROOF MAKEUP, LONG-LASTING, FLUID AND PIGMENTED FORMULA, BLACK",
   "sku_code": "15",
   "product": {
-    "$oid": "63da4b545ff21a42fcc04491"
+    "$oid": "6408b96d28b3f3056c71eba5"
   },
   "description": "FOR AN IRRESISTIBLE LOOK: Long-lasting eyeliner with waterproof and stain-proof formula that doesn't crease or fallout\r\nTIPS AND TRICKS: The eyeliner comes with a fine felt tip applicator to ensure a precise and controlled application",
   "qty": 41,
@@ -597,7 +597,7 @@
   "name": "LAKME' LIP LINER NUDE SPARKLE (MATTE)",
   "sku_code": "16",
   "product": {
-    "$oid": "63da48c05ff21a42fcc0448c"
+    "$oid": "6408b73f28b3f3056c71eb79"
   },
   "description": "Lines and Defines your lips with perfection, A creamy formula for rich application\r\nIntense colour payoff, Prevents feathering of lips\r\nEasy to blend",
   "qty": 41,
@@ -637,7 +637,7 @@
   "name": "L'OREAL COLOUR RICHE LIP LINER",
   "sku_code": "17",
   "product": {
-    "$oid": "63da48c05ff21a42fcc0448c"
+    "$oid": "640583371d891319b46e29bd"
   },
   "description": "Perfectly defines lips with rich color;Infused with Omega 3 and Vitamin E to condition lips;Coordinate perfectly with Colour Riche Lipcolour",
   "qty": 5,
@@ -678,7 +678,7 @@
   "name": "MAYBELLINE NEW YORK COLOR SENSATIONAL LIP LINER, VERY CHERRY",
   "sku_code": "18",
   "product": {
-    "$oid": "63da48c05ff21a42fcc0448c"
+    "$oid": "640585471d891319b46e2a86"
   },
   "description": "Easily define your lip shape with this creamy liner, coordinate your lip look with matching Color Sensational Lip Colors or create bold definition by lining your lips in a darker shade\r\nThe lip options are endless, easily define your lip shape with this creamy liner",
   "qty": 5,
@@ -715,7 +715,7 @@
   "name": "SUGAR COSMETICS - LIPPING ON THE EDGE - LIP LINER - 07 FIERY BERRY (MARSALA) - 1.2 GMS - SMEAR-PROOF, WATER RESISTANT LIP LINER - LASTS UP TO 10 HRS",
   "sku_code": "19",
   "product": {
-    "$oid": "63da48c05ff21a42fcc0448c"
+    "$oid": "640585cc1d891319b46e2a8a"
   },
   "description": "Liner for Defined lips or fuller look, Smear Proof, Water Ressistant, Gel like formula for the smooth glide, 10 Hr Stay",
   "qty": 10,
@@ -752,7 +752,7 @@
   "name": "WET N' WILD COLORICON LIP LINER BRANDY WINE #666",
   "sku_code": "20",
   "product": {
-    "$oid": "63da48c05ff21a42fcc0448c"
+    "$oid": "640586491d891319b46e2a9b"
   },
   "description": "Easy to blend in lips and gives you elegant look\r\nLip liner Pencil is like crayon which gives you a moisturizing look',\r\n    brand: 'Wet n Wild",
   "qty": 2,
@@ -790,7 +790,7 @@
   "name": "LAKME ABSOLUTE WHITE WET & DRY COMPACT POWDER, GOLDEN MEDIUM 03, SPF 17, LONG LASTING FACE MAKEUP FOR A NATURAL GLOW -FOUNDATION POWDER FOR WOMEN",
   "sku_code": "21",
   "product": {
-    "$oid": "63da4bbc5ff21a42fcc0449d"
+    "$oid": "6408bd2028b3f3056c71ebba"
   },
   "description": "3-in-1 Skin Care product, Long Lasting. Has dual benefits of being used as a wet and dry compact, Enriched with SPF 17",
   "qty": 12,
@@ -827,7 +827,7 @@
   "name": "L'OREAL PARIS PRESSED POWDER FOUNDATION, LIGHTWEIGHT AND BLENDABLE, VERSTILE COVERAGE, MATCHES SKINTONE, TRUE MATCH, GOLDEN BEIGE D3W",
   "sku_code": "22",
   "product": {
-    "$oid": "63da4bbc5ff21a42fcc0449d"
+    "$oid": "6408bd9028b3f3056c71ebbd"
   },
   "description": "Soft and lightweight pressed powder foundation that perfectly blends into the skin, Buildable coverage, Suitable for all skin types\r\nFoundation matches your complaxion, For beautiful camera-ready skin, Natural & luminous finish",
   "qty": 15,
@@ -864,7 +864,7 @@
   "name": "MAYBELLINE NEW YORK POWDER FOUNDATION, PRESSED POWDER COMPACT, MATTIFIES SKIN, INCL. MIRROR AND APPLICATOR, FIT ME, 220 NATURAL BEIGE",
   "sku_code": "23",
   "product": {
-    "$oid": "63da4bbc5ff21a42fcc0449d"
+    "$oid": "6408bdc428b3f3056c71ebc0"
   },
   "description": "Breathable and lightweight pressed powder foundation that mattifies skin and minimized pores, Ideal for normal to oily skin\r\nMattifies and leaves a poreless looking finish with long lasting shine control, Natural, poreless looking results",
   "qty": 1,
@@ -901,7 +901,7 @@
   "name": "SUGAR COSMETICS - DREAM COVER - MATTIFYING COMPACT - 30 CHOCOCCINO (COMPACT FOR MEDIUM TONES) - LIGHTWEIGHT COMPACT WITH SPF 15 AND VITAMIN E",
   "sku_code": "24",
   "product": {
-    "$oid": "63da4bbc5ff21a42fcc0449d"
+    "$oid": "6408bdf428b3f3056c71ebc3"
   },
   "description": "30 Chococcino suits medium skin tones\r\nMattifying compact powder that controls oil for 5+ hours, Enriched with Vitamin E and has SPF15 minerals that protect skin from sun damage",
   "qty": 5,
@@ -938,7 +938,7 @@
   "name": "WET N WILD PHOTO FOCUS PRESSED POWDER, TAN BEIGE",
   "sku_code": "25",
   "product": {
-    "$oid": "63da4bbc5ff21a42fcc0449d"
+    "$oid": "6408be4a28b3f3056c71ebc6"
   },
   "description": "Amazing photos every time, Flawless finish, Light- diffusing pigments",
   "qty": 55,
@@ -953,7 +953,7 @@
   "image": [
     "image_1677940124421_401063783.jpg"
   ],
-  "view": 0,
+  "view": 1,
   "date": {
     "$date": {
       "$numberLong": "1677931173026"
@@ -975,7 +975,7 @@
   "name": "LAKMÉ ABSOLUTE MATTEREAL MOUSSE CONCEALER, HONEY",
   "sku_code": "26",
   "product": {
-    "$oid": "63da4bae5ff21a42fcc0449b"
+    "$oid": "6408be8028b3f3056c71ebc9"
   },
   "description": "Conceals imperfections flawlessly, Minimizes the appearance of dark spots and pores, Sets with a smooth matte finish that makes skin even",
   "qty": 180,
@@ -990,7 +990,7 @@
   "image": [
     "image_1677940285704_233135212.jpg"
   ],
-  "view": 0,
+  "view": 2,
   "date": {
     "$date": {
       "$numberLong": "1677931173026"
@@ -1012,7 +1012,7 @@
   "name": "L'ORÉAL PARIS FULL COVERAGE CONCEALER, WATERPROOF FORMULA, FOR UNDEREYE CIRCLES AND BLEMISHES, FOR HIGHLIGHTING AND CONTOURING, INFALLIBLE, SHADE: 312",
   "sku_code": "27",
   "product": {
-    "$oid": "63da4bae5ff21a42fcc0449b"
+    "$oid": "6408bea528b3f3056c71ebcc"
   },
   "description": "Full coverage waterproof concealer for coverage of imperfections, Can be used for highlighting or contouring\r\n24-hour transfer and fade-proof coverage, Flake-free matte finish, For hiding under-eye circles, acne spots and other blemishes for an even skin tone",
   "qty": 4,
@@ -1049,7 +1049,7 @@
   "name": "MAYBELLINE NEW YORK FULL COVERAGE CONCEALER, MATTE & PORELESS ULTRA BLENDABLE, FIT ME, 25 MEDIUM",
   "sku_code": "28",
   "product": {
-    "$oid": "63da4bae5ff21a42fcc0449b"
+    "$oid": "6408becc28b3f3056c71ebcf"
   },
   "description": "Concealer for flawless, natural coverage, Oil-free concealer matches skin tones to deliver a more even complexion\r\nMatte finish, Fulll coverage concealer, Corrects imperfections, and dark spots",
   "qty": 2,
@@ -1086,7 +1086,7 @@
   "name": "SUGAR COSMETICS - MAGIC WAND- WATERPROOF CONCEALER - 07 VANILLA (LATTE FAIR CONCEALER WITH GOLDEN UNDERTONE) - LONG LASTING, WATER-PROOF CONCEALER, LASTS UP TO 8 HOURS",
   "sku_code": "29",
   "product": {
-    "$oid": "63da4bae5ff21a42fcc0449b"
+    "$oid": "6408bf0128b3f3056c71ebd2"
   },
   "description": "07 VANILLA LATTE - A fair shade with golden undertone\r\nA full coverage concealer that comes in 6 shades\r\nLongwear water-proof formula that lasts upto 8 hrs",
   "qty": 59,
@@ -1124,7 +1124,7 @@
   "name": "WET N WILD PHOTO FOCUS CONCEALER - FAIR NEUTRAL, NUDE",
   "sku_code": "30",
   "product": {
-    "$oid": "63da4bae5ff21a42fcc0449b"
+    "$oid": "6408bf2828b3f3056c71ebd5"
   },
   "description": "Lightweight, Concealer, Instantly brightens",
   "qty": 25,

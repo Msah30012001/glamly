@@ -42,6 +42,7 @@ const admin = require("./api/Admin");
 const checkCookie = require("./web/CheckCookie")
 const productList = require("./api/ProductList");
 const productDetail = require("./api/ProductDetail")
+const brand = require("./api/Brand")
 
 //use api middleware
 app.use("/api", mainCategory);
@@ -59,6 +60,7 @@ app.use("/api", payment);
 app.use("/api", admin);
 app.use("/api", productList);
 app.use("/api",productDetail)
+app.use("/api",brand)
 
 
 app.use("/web",checkCookie)

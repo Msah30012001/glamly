@@ -11,6 +11,7 @@ export const USER_API = "http://localhost:5000/api/user"
 export const ADMIN_API = "http://localhost:5000/api/admin";
 export const CART_API = "http://localhost:5000/api/cart"
 export const FEEDBACK_API = "http://localhost:5000/api/feedback"
+export const BRAND_API = "http://localhost:5000/api/brand"
 // export const USER_LOGIN_API = "http://localhost:5000/api/user/auth";
 
 export const PRODUCT_LIST_API = "http://localhost:5000/api/product-list"

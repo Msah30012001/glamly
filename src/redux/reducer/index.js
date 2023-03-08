@@ -15,6 +15,7 @@ import { feedbackReducer } from "./feedback.reducer";
 import { categoryReducer } from "./category.reducer";
 import { productListReducer } from "./productlist.reducer";
 import { productDetailReducer } from "./productdetail.reducer";
+import { brandReducer } from "./brand.reducer";
 
 const rootReducer = combineReducers({
   mainCategory: mainCategoryReducer,
@@ -27,12 +28,13 @@ const rootReducer = combineReducers({
   productSku: productSkuReducer,
   subCategory: subCategoryReducer,
   user: userReducer,
-  admin:adminReducer,
+  admin: adminReducer,
   wishlist: wishlistReducer,
   feedback: feedbackReducer,
   category: categoryReducer,
   productList: productListReducer,
   productDetail: productDetailReducer,
+  brand: brandReducer,
 });
 
 export default rootReducer;

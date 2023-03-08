@@ -9,14 +9,14 @@ const productSchema = new mongoose.Schema({
     trim: true,
     unique: [true, "product is already present"],
   },
-  brand: String,
+  brand: mongoose.Schema.Types.ObjectId,
   mainCategory: mongoose.Schema.Types.ObjectId,
   subCategory: mongoose.Schema.Types.ObjectId,
   childCategory: mongoose.Schema.Types.ObjectId,
   description: String,
   code: {
     type: String,
-    required: true
+    required: true,
   },
   productType: mongoose.Schema.Types.ObjectId,
 });

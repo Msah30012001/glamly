@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchCategory } from "../../redux/async/category.async";
+import { fetchBrand } from "../../redux/async/brand.async";
 import { fetchWishlist } from "../../redux/async/wishlist.async";
 import { fetchProductList } from "../../redux/async/productlist.async";
 import { fetchCart } from "../../redux/async/cart.async";
@@ -11,6 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Header = () => {
   const category = useSelector((state) => state.category);
+  const brand = useSelector((state) => state.brand);
   const wishlist = useSelector((state) => state.wishlist);
   const cart = useSelector((state) => state.cart);
   const feedback = useSelector((state) => state.feedback);
@@ -22,6 +24,7 @@ const Header = () => {
 
   useEffect(() => {
     dispatch(fetchCategory());
+    dispatch(fetchBrand());
     dispatch(fetchCart());
     dispatch(fetchWishlist());
   }, []);
@@ -301,31 +304,48 @@ const Header = () => {
                             >
                               {item.sub_category.map((sub) => {
                                 return (
-                                  <li key={sub._id} className="mega-menu-item">
-                                    <Link to={`/${sub.slug}`} className="">
-                                      {sub.name}
-                                    </Link>
-                                    <ul className="pl-15">
-                                      {item.child_category.map((child) => {
-                                        if (child.subCategory === sub._id) {
-                                          return (
-                                            <li key={child._id}>
-                                              <Link to={`/${child.slug}`}>
-                                                {child.name}
-                                              </Link>
-                                            </li>
-                                          );
-                                        }
-                                      })}
-                                    </ul>
-                                  </li>
+                                  // <li key={sub._id} className="mega-menu-item">
+                                  //   <Link to={`/${sub.slug}`} className="">
+                                  //     {sub.name}
+                                  //   </Link>
+                                  //   <ul className="pl-15">
+                                  <>
+                                    {item.child_category.map((child) => {
+                                      if (child.subCategory === sub._id) {
+                                        return (
+                                          <li
+                                            key={child._id}
+                                            className="mega-menu-item"
+                                          >
+                                            <Link to={`/${child.slug}`}>
+                                              {child.name}
+                                            </Link>
+                                          </li>
+                                        );
+                                      }
+                                    })}
+                                  </>
+                                  //   </ul>
+                                  // </li>
                                 );
                               })}
                             </ul>
                           );
                         })}
                       </li>
-
+                      <li className="has-submenu full-width">
+                        <Link to="#">Brand</Link>
+                        <ul className="submenu-nav submenu-nav-mega submenu-nav-width mt-0">
+                          {brand.data.map((item) => {
+                            return (
+                              <li key={item._id} className="mega-menu-item">
+                                <Link to={`/${item.name}`}>{item.name}</Link>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                        ;
+                      </li>
                       <li>
                         <Link to="/contact">Contact us</Link>
                       </li>

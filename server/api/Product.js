@@ -45,7 +45,22 @@ Router.get("/product", async (req, res, next) => {
     next(error);
   }
 });
+// Router.get("/product/brand", async (req, res, next) => {
+//   try {
+   
+//     const product = await Product.find();
+//     let brandDuplicate = [];
 
+//     product.forEach((item) => {
+//       brandDuplicate.push(item.brand.toUpperCase());
+//     });
+//     brandDuplicate.filter((item, index) => brandDuplicate.indexOf(item) === index);
+//     let brand = brandDuplicate
+//     res.status(200).send(brand);
+//   } catch (error) {
+//     next(error);
+//   }
+// });
 //fetch single record
 Router.get("/product/:id", async (req, res, next) => {
   try {

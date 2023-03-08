@@ -6,6 +6,7 @@ const EditProduct = () => {
   const product = useSelector((state) => state.product);
   const dispatch = useDispatch();
    const mainCategory = useSelector((state) => state.mainCategory);
+  const brand = useSelector((state) => state.brand);
    const subCategory = useSelector((state) => state.subCategory);
    const childCategory = useSelector((state) => state.childCategory);
    const productType = useSelector((state) => state.productType);
@@ -93,17 +94,25 @@ const EditProduct = () => {
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="name" className="form-label">
+                  <label htmlFor="brand" className="form-label">
                     Product Brand
                   </label>
-                  <input
-                    type="text"
-                    className="form-control"
+                  <select
+                    className="form-select"
+                    aria-label="Default select example"
                     name="brand"
-                    value={Data.brand || ""}
                     onChange={inputEvent}
-                    placeholder="Enter product brand here..."
-                  />
+                    value={Data.brand}
+                  >
+                    <option>select brand</option>
+                    {brand.data.map((item) => {
+                      return (
+                        <option value={item._id} key={item._id}>
+                          {item.name}
+                        </option>
+                      );
+                    })}
+                  </select>
                 </div>
                 <div className="row">
                   <div className="col-6">

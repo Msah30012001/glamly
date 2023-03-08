@@ -8,6 +8,7 @@ import Dashboard from "./Admin/Dashboard";
 import MainCategory from "./Admin/Main Category/MainCategory";
 import SubCategory from "./Admin/Sub Category/SubCategory";
 import ChildCategory from "./Admin/Child Category/ChildCategory";
+import Brand from "./Admin/Brand/Brand";
 import ProductType from "./Admin/Product Type/ProductType";
 import Product from "./Admin/Product/Product";
 import ProductSku from "./Admin/Product Sku/ProductSku";
@@ -38,11 +39,12 @@ const Admin = () => {
                     <Route path="/main-category" element={<MainCategory />} />
                     <Route path="/sub-category" element={<SubCategory />} />
                     <Route path="/child-category" element={<ChildCategory />} />
+                    <Route path="/brand" element={<Brand />} />
                     <Route path="/product-type" element={<ProductType />} />
                     <Route path="/product" element={<Product />} />
                     <Route path="/product-sku" element={<ProductSku />} />
-                    <Route path="/order" element={<Order/>} />
-                    <Route path="/feedback" element={<Feedback/>}/>
+                    <Route path="/order" element={<Order />} />
+                    <Route path="/feedback" element={<Feedback />} />
                     <Route path="*" element={<NotFound />} />
                   </Routes>
                 </div>

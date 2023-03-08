@@ -1,16 +1,16 @@
 const Router = require("express").Router();
 const { BadRequestError } = require("../Errors/error");
-const ChildCategory = require("../model/ChildCategoryModel");
+const Brand = require("../model/BrandModel");
 
 // fetch all records
-Router.get("/child-category", async (req, res, next) => {
+Router.get("/brand", async (req, res, next) => {
   try {
-    const childCategoriesData = await ChildCategory.aggregate([
+    const brandData = await Brand.aggregate([
       {
         $lookup: {
           from: "products",
           localField: "_id",
-          foreignField: "childCategory",
+          foreignField: "brand",
           as: "product",
         },
       },
@@ -23,17 +23,17 @@ Router.get("/child-category", async (req, res, next) => {
         },
       },
     ]);
-    res.status(200).send(childCategoriesData);
+    res.status(200).send(brandData);
   } catch (error) {
     next(error);
   }
 });
 
 //fetch single record
-Router.get("/child-category/:id", async (req, res, next) => {
+Router.get("/brand/:id", async (req, res, next) => {
   try {
     const _id = req.params.id;
-    const childCategoryData = await ChildCategory.findById(_id);
+    const childCategoryData = await Brand.findById(_id);
     if (!childCategoryData) {
       throw new BadRequestError("child category not found");
     }
@@ -44,10 +44,10 @@ Router.get("/child-category/:id", async (req, res, next) => {
 });
 
 // search for record
-Router.get("/child-category/search/:key", async (req, res, next) => {
+Router.get("/brand/search/:key", async (req, res, next) => {
   try {
     const s = req.params.key;
-    const data = await ChildCategory.find({
+    const data = await Brand.find({
       $or: [{ name: { $regex: s, $options: "i" } }],
     });
     res.send(data);
@@ -57,7 +57,7 @@ Router.get("/child-category/search/:key", async (req, res, next) => {
 });
 
 //create a record
-Router.post("/child-category", async (req, res, next) => {
+Router.post("/brand", async (req, res, next) => {
   try {
     let data = { slug: "" };
 
@@ -66,41 +66,41 @@ Router.post("/child-category", async (req, res, next) => {
       .replace(/[^\w ]+/g, "")
       .replace(/ +/g, "-");
     data = { ...data, ...req.body };
-    const childCategory = new ChildCategory(data);
-    const createChildCategory = await childCategory.save();
-    res.status(201).send(createChildCategory);
+    const childCategory = new Brand(data);
+    const createBrand = await childCategory.save();
+    res.status(201).send(createBrand);
   } catch (error) {
     next(error);
   }
 });
 
 // update a record
-Router.patch("/child-category/:id", async (req, res, next) => {
+Router.patch("/brand/:id", async (req, res, next) => {
   try {
     const _id = req.params.id;
-    const updateChildCategory = await ChildCategory.findByIdAndUpdate(
+    const updateBrand = await Brand.findByIdAndUpdate(
       _id,
       req.body,
       { new: true }
     );
-    if (!updateChildCategory) {
+    if (!updateBrand) {
       throw new BadRequestError("child category not found");
     }
-    res.status(201).send(updateChildCategory);
+    res.status(201).send(updateBrand);
   } catch (error) {
     next(error);
   }
 });
 
 //delete a record
-Router.delete("/child-category/:id", async (req, res, next) => {
+Router.delete("/brand/:id", async (req, res, next) => {
   try {
     const _id = req.params.id;
-    const deleteChildCategory = await ChildCategory.findByIdAndDelete(_id);
-    if (!deleteChildCategory) {
+    const deleteBrand = await Brand.findByIdAndDelete(_id);
+    if (!deleteBrand) {
       throw new BadRequestError("child category not found");
     }
-    res.status(200).send(deleteChildCategory);
+    res.status(200).send(deleteBrand);
   } catch (error) {
     next(error);
   }

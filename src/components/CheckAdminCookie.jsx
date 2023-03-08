@@ -15,7 +15,8 @@ const CheckAdminCookie = (props) => {
     "sub-category",
     "dashboard",
     "user",
-    "order"
+    "order",
+    "brand"
   ];
   const redirectLogin = ["login"];
 

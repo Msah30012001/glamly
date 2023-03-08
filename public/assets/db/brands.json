@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "6408d744fd172125dc278c55"
+  },
+  "name": "LAKEME",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6408d74ffd172125dc278c58"
+  },
+  "name": "LOREAL",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6408d75cfd172125dc278c5b"
+  },
+  "name": "SUGAR COSMETIC",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6408d767fd172125dc278c5e"
+  },
+  "name": "WET N WILD",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6408d781fd172125dc278c75"
+  },
+  "name": "MAYBELLINE",
+  "__v": 0
+}]

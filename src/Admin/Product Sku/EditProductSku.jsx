@@ -27,23 +27,23 @@ const EditProductSku = () => {
   });
   let specification = [];
   let specificationObj = [];
-  const getBase64 = (file) => {
-    return new Promise((resolve) => {
-      let baseURL = "";
-      // Make new FileReader
-      let reader = new FileReader();
+  // const getBase64 = (file) => {
+  //   return new Promise((resolve) => {
+  //     let baseURL = "";
+  //     // Make new FileReader
+  //     let reader = new FileReader();
 
-      // Convert the file to base64 text
-      reader.readAsDataURL(file);
+  //     // Convert the file to base64 text
+  //     reader.readAsDataURL(file);
 
-      // on reader load somthing...
-      reader.onload = () => {
-        // Make a fileInfo Object
-        baseURL = reader.result;
-        resolve(baseURL);
-      };
-    });
-  };
+  //     // on reader load somthing...
+  //     reader.onload = () => {
+  //       // Make a fileInfo Object
+  //       baseURL = reader.result;
+  //       resolve(baseURL);
+  //     };
+  //   });
+  // };
 
   const inputEvent = (e) => {
     const { name, value } = e.target;
@@ -82,17 +82,17 @@ const EditProductSku = () => {
 
     let formData = new FormData(this);
     formData.append("specification", JSON.stringify(SpecificationValue));
-    formData.append("thumbnail", Data.thumbnail);
-    formData.append("thumbnail_hover", Data.thumbnail_hover);
+    // formData.append("thumbnail", Data.thumbnail);
+    // formData.append("thumbnail_hover", Data.thumbnail_hover);
     // if (Data.thumbnail !== null) {
     // }
     // if (Data.thumbnail_hover !== null) {
     // }
-    if(Array.isArray(Data.image) && Data.image.length){
-      Data.image.map((item) => {
-        formData.append("image", item);
-      });
-    }
+    // if(Array.isArray(Data.image) && Data.image.length){
+    //   Data.image.map((item) => {
+    //     formData.append("image", item);
+    //   });
+    // }
     formData.append("name", Data.name);
     formData.append("sku_code", Data.sku_code);
     formData.append("product", Data.product);
@@ -101,11 +101,10 @@ const EditProductSku = () => {
     formData.append("price", Data.price);
     formData.append("discount", Data.discount);
     formData.append("status", Data.status);
-    console.log(formData);
-    console.log(Data)
-    console.log(productSku.data._id)
     setData({ ...Data, specification: SpecificationValue });
-    dispatch(updateProductSku(productSku.data._id, formData));
+    // console.log(formData);
+    console.log(formData);
+    dispatch(updateProductSku(productSku.data._id, Data));
   };
   useEffect(() => {
     dispatch(fetchProduct());
@@ -187,7 +186,7 @@ const EditProductSku = () => {
                 method="POST"
                 onSubmit={handleSubmit}
               >
-                <div className="row">
+                <div className="row justify-content-center">
                   <div className="col-sm-6">
                     <div className="mb-3">
                       <label htmlFor="name" className="form-label">
@@ -313,7 +312,7 @@ const EditProductSku = () => {
                       </fieldset>
                     </div>
                   </div>
-                  <div className="col-sm-6">
+                  {/* <div className="col-sm-6">
                     <div className="mb-3">
                       <label htmlFor="formFile" className="form-label">
                         product thumbnail
@@ -358,7 +357,7 @@ const EditProductSku = () => {
                         multiple
                       />
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 <button type="submit" className="btn btn-primary">
                   Update
