@@ -18,6 +18,9 @@ import {
   authUserRequest,
   authUserSuccess,
   authUserFailure,
+  changePasswordUserRequest,
+  changePasswordUserSuccess,
+  changePasswordUserFailure,
   destroyAuthUserRequest,
   destroyAuthUserSuccess,
   destroyAuthUserFailure,
@@ -61,7 +64,19 @@ export const authUser = (Data) => {
     }
   }
 }
-
+export const changePasswordUser = (Data) => {
+  return async (dispatch) => {
+    try {
+      dispatch(changePasswordUserRequest());
+      const response = await userService.changePasswordUser(Data);
+      if (response) {
+        dispatch(changePasswordUserSuccess(response));
+      }
+    } catch (error) {
+      dispatch(changePasswordUserFailure(error));
+    }
+  };
+};
 export const destroyAuthUser = () => {
   return async (dispatch) => {
     try {

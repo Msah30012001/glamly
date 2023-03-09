@@ -43,6 +43,17 @@ const service = () => {
     // .catch((err)=>{throw err});
   };
   
+  const changePasswordUser = async (Data) => {
+    return axios
+      .patch(`${USER_API}/change-password`, Data, {
+        withCredentials: true,
+      })
+      .then((res) => res.data)
+      .catch((err) => {
+        throw err.response.data.message;
+      });
+  };
+  
   const destroyAuthUser = () => {
     return axios
       .get(`${USER_API}/destroy-auth`, {
@@ -97,7 +108,8 @@ const service = () => {
     deleteUser,
     searchUser,
     authUser,
-    destroyAuthUser
+    destroyAuthUser,
+    changePasswordUser
   };
 };
 

@@ -16,6 +16,7 @@ import Checkout from "./App/Account/Checkout";
 import AboutUs from "./App/AboutUs"
 import Contact from "./App/Contact"
 import PaymentStatus from "./App/Components/PaymentStatus"
+import ForgotPassword from "./App/ForgotPassword"
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/about-us" element={<AboutUs />} />
-            <Route exact path="/status/:orderId" element={<PaymentStatus/>} />
+            <Route exact path="/status/:orderId" element={<PaymentStatus />} />
             <Route path="/contact" element={<Contact />} />
             <Route exact path="/search" element={<ProductList />} />
             <Route exact path="/:slug" element={<ProductList />} />
@@ -38,6 +39,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/account" element={<Account />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

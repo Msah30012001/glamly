@@ -77,6 +77,7 @@ const Header = () => {
     if (user.status === "SUCCESS") {
       (() => {
         toast.success(user.message);
+        console.log(user.message)
       })();
     }
     if (user.status === "FAILED") {

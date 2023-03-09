@@ -19,9 +19,12 @@ const {
   AUTH_USER_REQUEST,
   AUTH_USER_SUCCESS,
   AUTH_USER_FAILURE,
- DESTROY_AUTH_USER_REQUEST,
- DESTROY_AUTH_USER_SUCCESS,
- DESTROY_AUTH_USER_FAILURE,
+ CHANGE_PASSWORD_USER_REQUEST,
+ CHANGE_PASSWORD_USER_SUCCESS,
+ CHANGE_PASSWORD_USER_FAILURE,
+  DESTROY_AUTH_USER_REQUEST,
+  DESTROY_AUTH_USER_SUCCESS,
+  DESTROY_AUTH_USER_FAILURE,
 } = UserConstant;
 
 export const fetchUserRequest = () => {
@@ -60,6 +63,26 @@ export const authUserSuccess = (data) => {
 export const authUserFailure = (data) => {
   return {
     type: AUTH_USER_FAILURE,
+    payload: data,
+  };
+};
+
+export const changePasswordUserRequest = () => {
+  return {
+    type: CHANGE_PASSWORD_USER_REQUEST,
+  };
+};
+
+export const changePasswordUserSuccess = (data) => {
+  return {
+    type: CHANGE_PASSWORD_USER_SUCCESS,
+    payload: data,
+  };
+};
+
+export const changePasswordUserFailure = (data) => {
+  return {
+    type: CHANGE_PASSWORD_USER_FAILURE,
     payload: data,
   };
 };

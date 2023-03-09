@@ -19,6 +19,9 @@ const {
   AUTH_USER_REQUEST,
   AUTH_USER_SUCCESS,
   AUTH_USER_FAILURE,
+  CHANGE_PASSWORD_USER_REQUEST,
+  CHANGE_PASSWORD_USER_SUCCESS,
+  CHANGE_PASSWORD_USER_FAILURE,
   DESTROY_AUTH_USER_REQUEST,
   DESTROY_AUTH_USER_SUCCESS,
   DESTROY_AUTH_USER_FAILURE,
@@ -156,6 +159,27 @@ export const userReducer = (state = initialState, action) => {
         status: "SUCCESS",
       };
     case AUTH_USER_FAILURE:
+      return {
+        ...state,
+        message: action.payload,
+        loading: true,
+        status: "FAILED",
+      };
+    case CHANGE_PASSWORD_USER_REQUEST:
+      return {
+        ...state,
+        message: "",
+        loading: true,
+        status: "",
+      };
+    case CHANGE_PASSWORD_USER_SUCCESS:
+      return {
+        ...state,
+        message: action.payload,
+        loading: true,
+        status: "SUCCESS",
+      };
+    case CHANGE_PASSWORD_USER_FAILURE:
       return {
         ...state,
         message: action.payload,

@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import {Link} from "react-router-dom"
-import { authUser } from "../redux/async/user.async";
-import CheckCookie from "../components/CheckCookie"
+import { Link } from "react-router-dom";
+import { changePasswordUser } from "../redux/async/user.async";
+import CheckCookie from "../components/CheckCookie";
+import {toast} from "react-toastify";
 
-const Login = () => {
+const ForgotPassword = () => {
   const dispatch = useDispatch();
   const [Data, setData] = useState({
     email: "",
     password: "",
+    confirmPassword: "",
   });
 
   const inputEvent = (e) => {
@@ -20,7 +22,7 @@ const Login = () => {
       };
     });
   };
-  
+
   return (
     <>
       <CheckCookie path="login" />
@@ -65,6 +67,24 @@ const Login = () => {
                         </div>
                       </div>
                     </div>
+                    <div className="form-group row">
+                      <label className="col-md-3" htmlFor="frm_pass">
+                        Confirm Password
+                      </label>
+                      <div className="col-md-6">
+                        <div className="pass-content">
+                          <input
+                            type="password"
+                            className="form-control"
+                            name="confirmPassword"
+                            value={Data.confirmPassword}
+                            onChange={inputEvent}
+                            id="frm_pass"
+                          />
+                          {/* <span className="show-pass">show</span> */}
+                        </div>
+                      </div>
+                    </div>
                     <div className="form-group row mb-15">
                       <div className="col-12 text-center">
                         {/* <Link className="btn-forgot" href="#/">
@@ -74,24 +94,21 @@ const Login = () => {
                           className="btn-signin"
                           onClick={(e) => {
                             e.preventDefault();
-                            dispatch(authUser(Data));
+                            if(Data.password === Data.confirmPassword){
+                                dispatch(changePasswordUser(Data));
+                            }else{
+                                toast.error("confirm password and password should be same")
+                            }
                           }}
                         >
-                          Sign in
+                          Change Password
                         </button>
                       </div>
                     </div>
                   </form>
                 </div>
-                <Link className="btn-create-account" to="/forgot-password">
-                  Forgot Password? Click Here
-                </Link>
-                <Link className="btn-create-account" to="/register">
-                  No account? Create one here
-                </Link>
-                <Link className="btn-create-account" to="/admin">
-                  Admin Login? Click Here
-                </Link>
+                Already have an account?{" "}
+                <Link to="/login">Log in instead!</Link>
               </div>
             </div>
           </div>
@@ -101,4 +118,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default ForgotPassword;

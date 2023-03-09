@@ -90,6 +90,25 @@ Router.post("/user", async (req, res, next) => {
   }
 });
 
+//change password
+
+Router.patch("/user/change-password/", async (req, res, next) => {
+  try {
+
+      const updateUser = await User.updateOne(
+        { email: req.body.email },
+        { $set: { password: req.body.password } }
+      );
+      if (!updateUser) {
+        throw new BadRequestError("user not found");
+      }
+    res.status(200).send("password changed successfully");
+  } catch (error) {
+    next(error);
+  }
+});
+
+
 // Router.post("/user/admin",async(req,res,next)=>{
 //     try{
 //         const admin = new Admin(req.body);
