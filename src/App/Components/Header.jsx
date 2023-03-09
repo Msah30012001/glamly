@@ -140,7 +140,7 @@ const Header = () => {
               </div>
               <div className="col col-md-4 col-sm-12">
                 <div className="header-logo-area text-center">
-                  <Link to="index.html">
+                  <Link to="/">
                     <img
                       className="logo-main"
                       src={`${process.env.PUBLIC_URL}/assets/img/logo.png`}
@@ -371,7 +371,7 @@ const Header = () => {
               <div className="col-4">
                 <div className="header-item justify-content-center">
                   <div className="header-logo-area">
-                    <Link to="index.html">
+                    <Link to="/">
                       <img
                         className="logo-main"
                         src={`${process.env.PUBLIC_URL}/assets/img/logo.png`}

@@ -135,7 +135,7 @@ const Footer = () => {
                       <div className="about-widget">
                         <div className="inner-content">
                           <div className="footer-logo">
-                            <Link to="index.html">
+                            <Link to="/">
                               <img
                                 className="logo-light"
                                 src={`${process.env.PUBLIC_URL}/assets/img/logo-light.png`}
