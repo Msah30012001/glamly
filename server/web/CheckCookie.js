@@ -49,7 +49,7 @@ Router.get("/redirect-order", authenticate, async (req, res, next) => {
     }
     res.status(200).send();
   } catch (error) {
-    next(error);
+    next(error)
   }
 });
 

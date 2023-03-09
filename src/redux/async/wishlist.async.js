@@ -43,6 +43,7 @@ export const postWishlist = (Data) => {
     try {
       dispatch(postWishlistRequest());
       const response = await wishlistService.postWishlist(Data);
+      if(response) dispatch(fetchWishlist())
       dispatch(postWishlistSuccess(response));
     } catch (error) {
       console.log(error)

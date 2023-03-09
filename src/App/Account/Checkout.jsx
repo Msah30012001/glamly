@@ -13,16 +13,20 @@ const Checkout = () => {
   const user = useSelector((state) => state.user);
   let check = 0;
   let TotalPrice = 0;
-  if (
-    user.data.length &&
-    Object.hasOwn(user.data[0], "shipping") &&
-    Object.hasOwn(user.data[0], "billing")
-  ) {
-    check = 1;
-  }
+
+  console.log(user.data.shipping !== undefined);
   useEffect(() => {
     dispatch(fetchCart());
   }, [dispatch]);
+  if (
+    Object.keys(user.data).length &&
+    user.data.shipping !== undefined &&
+    user.data.hasOwnProperty("shipping") &&
+    user.data.billing !== undefined &&
+    user.data.hasOwnProperty("billing")
+  ) {
+    check = 1;
+  }
   useEffect(() => {
     dispatch(fetchSingleUser());
   }, []);
@@ -120,23 +124,23 @@ const Checkout = () => {
                           <table className="table">
                             <tr>
                               <th scope="row">Country</th>
-                              <td>{user.data[0].shipping.country}</td>
+                              <td>{user.data.shipping.country}</td>
                             </tr>
                             <tr>
                               <th scope="row">City</th>
-                              <td>{user.data[0].shipping.city}</td>
+                              <td>{user.data.shipping.city}</td>
                             </tr>
                             <tr>
                               <th scope="row">State</th>
-                              <td>{user.data[0].shipping.state}</td>
+                              <td>{user.data.shipping.state}</td>
                             </tr>
                             <tr>
                               <th scope="row">Pincode</th>
-                              <td>{user.data[0].shipping.pincode}</td>
+                              <td>{user.data.shipping.pincode}</td>
                             </tr>
                             <tr>
                               <th scope="row">Address </th>
-                              <td>{user.data[0].shipping.address}</td>
+                              <td>{user.data.shipping.address}</td>
                             </tr>
                           </table>
                         </div>
@@ -145,23 +149,23 @@ const Checkout = () => {
                           <table className="table">
                             <tr>
                               <th scope="row">Country</th>
-                              <td>{user.data[0].billing.country}</td>
+                              <td>{user.data.billing.country}</td>
                             </tr>
                             <tr>
                               <th scope="row">City</th>
-                              <td>{user.data[0].billing.city}</td>
+                              <td>{user.data.billing.city}</td>
                             </tr>
                             <tr>
                               <th scope="row">State</th>
-                              <td>{user.data[0].billing.state}</td>
+                              <td>{user.data.billing.state}</td>
                             </tr>
                             <tr>
                               <th scope="row">Pincode</th>
-                              <td>{user.data[0].billing.pincode}</td>
+                              <td>{user.data.billing.pincode}</td>
                             </tr>
                             <tr>
                               <th scope="row">Address </th>
-                              <td>{user.data[0].billing.address}</td>
+                              <td>{user.data.billing.address}</td>
                             </tr>
                           </table>
                         </div>

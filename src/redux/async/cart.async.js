@@ -46,6 +46,7 @@ export const postCart = (Data) => {
     try {
       dispatch(postCartRequest());
       const response = await cartService.postCart(Data);
+      if(response) dispatch(fetchCart())
       dispatch(postCartSuccess(response));
     } catch (error) {
       dispatch(postCartFailure(error));

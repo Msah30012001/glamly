@@ -27,7 +27,7 @@ const Header = () => {
     dispatch(fetchBrand());
     dispatch(fetchCart());
     dispatch(fetchWishlist());
-  }, []);
+  }, [dispatch]);
 
   const showSearchBar = () => {
     if (Search) setSearch(0);
@@ -173,16 +173,17 @@ const Header = () => {
                               setS(e.target.value);
                             }}
                           />
-                          <button
+                          <Link
                             type="submit"
                             className="btn-src"
-                            onClick={(e) => {
-                              e.preventDefault();
-                              window.location.href = `/search/?s=${S}`;
-                            }}
+                            to={`/search/?s=${S}`}
+                            // onClick={(e) => {
+                            //   e.preventDefault();
+                            //   window.location.href = `/search/?s=${S}`;
+                            // }}
                           >
-                            <i className="icon-magnifier"></i>
-                          </button>
+                            <i className="icon-magnifier ml-15"></i>
+                          </Link>
                         </div>
                       </form>
                     </div>
@@ -204,7 +205,7 @@ const Header = () => {
                           {cart.data.map((item) => {
                             return (
                               <li className="product-list-item" key={item._id}>
-                                <Link to="product-single.html">
+                                <Link to={`/d/${item.slug}`}>
                                   <img
                                     src={`${process.env.PUBLIC_URL}/assets/upload/${item.product[0].thumbnail}`}
                                     alt="HasTech"

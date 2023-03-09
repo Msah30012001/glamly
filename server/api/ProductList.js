@@ -31,46 +31,69 @@ Router.get("/product-list/:slug*?", async (req, res, next) => {
           },
         ]);
         res.status(200).send(productSku);
-      }
+      }else{
 
-      const subCategory = await SubCategory.find({ slug: slug });
-      const childCategory = await ChildCategory.find({ slug: slug });
-      const brand = await Brand.find({name:slug});
-
-      let category = subCategory.length > 0 ? subCategory : childCategory;
-      let brandData = brand.length > 0 ?brand:"";
-      const product = await Product.find({
-        $or: [{ subCategory: category }, { childCategory: category },{brand:brand}],
-      });
-      let productData = product.length ? product : null;
-
-      let id = [];
-      if (!productData) {
-        throw new BadRequestError("product not exist");
-      }
-      productData.map((item) => {
-        id.push(item._id);
-      });
-      const productSku = await ProductSku.aggregate([
-        {
-          $lookup: {
-            from: "feedbacks",
-            localField: "_id",
-            foreignField: "product",
-            as: "feedbacks",
-          },
-        },
-        {
-          $addFields: {
-            avg: {
-              $avg: "$feedbacks.rate",
+        const subCategory = await SubCategory.find({ slug: slug });
+        const childCategory = await ChildCategory.find({ slug: slug });
+        const brand = await Brand.find({name:slug});
+  
+        let category = subCategory.length > 0 ? subCategory : childCategory;
+        let brandData = brand.length > 0 ?brand:"";
+        const product = await Product.find({
+          $or: [{ subCategory: category }, { childCategory: category },{brand:brand}],
+        });
+        let productData = product.length ? product : null;
+  
+        let id = [];
+        if (!productData) {
+          throw new BadRequestError("product not exist");
+        }
+        productData.map((item) => {
+          id.push(item._id);
+        });
+        const productSku = await ProductSku.aggregate([
+          {
+            $lookup: {
+              from: "feedbacks",
+              localField: "_id",
+              foreignField: "product",
+              as: "feedbacks",
             },
           },
-        },
-        { $match: { $or: [{ product: { $in: id } }] } },
-      ]);
-      res.status(200).send(productSku);
+          {
+            $addFields: {
+              avg: {
+                $avg: "$feedbacks.rate",
+              },
+            },
+          },
+          { $match: { $or: [{ product: { $in: id } }] } },
+        ]);
+        res.status(200).send(productSku);
+      }
+
     } else {
+       const subCategory = await SubCategory.find({ slug: s });
+       const childCategory = await ChildCategory.find({ slug: s });
+       const brand = await Brand.find({ name: s });
+
+       let category = subCategory.length > 0 ? subCategory : childCategory;
+       let brandData = brand.length > 0 ? brand : "";
+       const product = await Product.find({
+         $or: [
+           { subCategory: category },
+           { childCategory: category },
+           { brand: brand },
+         ],
+       });
+       let productData = product.length ? product : null;
+
+       let id = [];
+       if (productData) {
+         productData.map((item) => {
+           id.push(item._id);
+         });
+       }
       const productSku = await ProductSku.aggregate([
         {
           $lookup: {
@@ -90,6 +113,7 @@ Router.get("/product-list/:slug*?", async (req, res, next) => {
         {
           $match: {
             $or: [
+              { product: { $in: id } },
               { name: { $regex: s, $options: "i" } },
               { description: { $regex: s, $options: "i" } },
             ],
