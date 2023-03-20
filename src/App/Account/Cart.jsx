@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import CheckCookie from "../../components/CheckCookie";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchCart ,deleteCart } from "../../redux/async/cart.async";
+import { fetchCart ,deleteCart , updateCart } from "../../redux/async/cart.async";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -65,6 +65,10 @@ const Cart = () => {
                                             id="quantity"
                                             title="Quantity"
                                             defaultValue={item.qty}
+                                            onChange={(e) => {
+                                              e.preventDefault();
+                                              dispatch(updateCart(item._id,{qty:e.target.value}));
+                                            }}
                                           />
                                         </div>
                                       </div>

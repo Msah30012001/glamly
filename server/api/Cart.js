@@ -74,6 +74,7 @@ Router.post("/cart",authenticate, async (req, res, next) => {
 Router.patch("/cart/:id",authenticate, async (req, res, next) => {
   try {
     const _id = req.params.id;
+    console.log(req.body)
     const updateCart = await Cart.findByIdAndUpdate(_id, req.body, {
       new: true,
     });

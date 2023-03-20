@@ -105,6 +105,7 @@ export const postOrder = (Data) => {
              action: "https://securegw-stage.paytm.in/order/process",
              params: paytmPaymentResponse,
            };
+           console.log(information)
            post(information);
           //  window.location.href = "/thank-you";
         } 

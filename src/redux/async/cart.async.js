@@ -62,6 +62,9 @@ export const updateCart = (id, Data) => {
         id,
         Data
       );
+      if(response){
+        dispatch(fetchCart())
+      }
       dispatch(updateCartSuccess(response));
     } catch (error) {
       dispatch(updateCartFailure(error));

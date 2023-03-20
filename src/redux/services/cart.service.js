@@ -32,10 +32,12 @@ const service = () => {
   };
   const updateCart = (id, Data) => {
     return axios
-      .patch(`${CART_API}/${id}`, Data)
+      .patch(`${CART_API}/${id}`, Data, {
+        withCredentials: true,
+      })
       .then((res) => res.data)
       .catch((err) => {
-        throw err.response.data.message
+        throw err.response.data.message;
       });
   };
   const deleteCart = (id) => {

@@ -41,7 +41,6 @@ Router.post("/paytm-callback", async (req, res, next) => {
         paytmParams["CHECKSUMHASH"] = checksum;
 
         var post_data = JSON.stringify(paytmParams);
-
         var options = {
           /* for Staging */
           hostname: "securegw-stage.paytm.in",
@@ -64,9 +63,9 @@ Router.post("/paytm-callback", async (req, res, next) => {
           post_res.on("data", function (chunk) {
             response += chunk;
           });
-
           post_res.on("end", async function () {
             let result = JSON.parse(response);
+
             if (result.STATUS === "TXN_SUCCESS") {
               //store in db
               const orderDetail = await Order.findOne({
@@ -101,7 +100,7 @@ Router.post("/paytm-callback", async (req, res, next) => {
               if (!updatePayment) {
                 throw new BadRequestError("payment  not found");
               }
-            } else if (result.STATUS === "TXN_FAILED") {
+            } else if (result.STATUS === "TXN_FAILURE") {
               //store in db
               const orderDetail = await Order.findOne({
                 order_id: result.ORDERID,
@@ -136,7 +135,6 @@ Router.post("/paytm-callback", async (req, res, next) => {
                 throw new BadRequestError("payment  not found");
               }
             }
-
             res.redirect(`http://localhost:3000/status/${result.ORDERID}`);
           });
         });
@@ -154,6 +152,8 @@ Router.post("/paytm-callback", async (req, res, next) => {
 });
 
 Router.post("/payment/paytm", authenticate, async (req, res, next) => {
+
+  
   const userId = req.userId;
 
   const user = await User.findById(userId);
@@ -175,7 +175,6 @@ Router.post("/payment/paytm", authenticate, async (req, res, next) => {
   list.map((item) => {
     totalAmount += item.qty * (item.price - item.discount);
   });
-
   /* import checksum generation utility */
 
   var params = {};
