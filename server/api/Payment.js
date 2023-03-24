@@ -11,6 +11,7 @@ const formidable = require("formidable");
 const { v4: uuidv4 } = require("uuid");
 const https = require("https");
 const config = require("../config/config");
+const Razorpay = require("razorpay");
 
 //const firebase = require("firebase");
 //const db = require("./firebase");
@@ -211,6 +212,190 @@ Router.post("/payment/paytm", authenticate, async (req, res, next) => {
       console.log(error);
     });
 });
+
+Router.post("/razorpay-callback",async(req,res,next)=>{
+  try {
+
+    console.log(req.body);
+
+    if(req.body.error != undefined){
+
+      let response = JSON.parse(req.body.error.metadata)
+      console.log(response)
+      const orderDetail = await Order.findOne({
+        order_id: response.order_id,
+      });
+      const updateOrder = await Order.findByIdAndUpdate(
+        orderDetail._id,
+        { $set: { status: "FAILED" } },
+        { new: true }
+      );
+      if (!updateOrder) {
+        throw new BadRequestError("order not found");
+      }
+
+      //  let list = [];
+      //  list = updateOrder.list;
+      //  list.map(async (item) => {
+      //    let productSku = await ProductSku.updateOne(
+      //      { sku_code: item.sku_code },
+      //      { $inc: { qty: -item.qty } }
+      //    );
+      //  });
+
+      //  let cart = await Cart.deleteMany({ user: updateOrder.user_id });
+      //  console.log(cart);
+      const updatePayment = await Payment.findByIdAndUpdate(
+        updateOrder.payment_id,
+        { status: "FAILED", txn_id: response.payment_id },
+        { new: true }
+      );
+      //  console.log(updatePayment);
+      if (!updatePayment) {
+        throw new BadRequestError("payment  not found");
+      }
+      return res.redirect(
+        `http://localhost:3000/status/${response.order_id}`
+      );
+    }
+    else{
+      //store in db
+      const orderDetail = await Order.findOne({
+        order_id: req.body.razorpay_order_id,
+      });
+      const updateOrder = await Order.findByIdAndUpdate(
+        orderDetail._id,
+        { $set: { status: "SUCCESS" } },
+        { new: true }
+      );
+      if (!updateOrder) {
+        throw new BadRequestError("order not found");
+      }
+
+      let list = [];
+      list = updateOrder.list;
+      list.map(async (item) => {
+        let productSku = await ProductSku.updateOne(
+          { sku_code: item.sku_code },
+          { $inc: { qty: -item.qty } }
+        );
+      });
+
+      let cart = await Cart.deleteMany({ user: updateOrder.user_id });
+      const updatePayment = await Payment.findByIdAndUpdate(
+        updateOrder.payment_id,
+        { status: "SUCCESS", txn_id: req.body.razorpay_payment_id },
+        { new: true }
+      );
+      if (!updatePayment) {
+        throw new BadRequestError("payment  not found");
+      }
+    }
+  
+              
+
+      res.redirect(`http://localhost:3000/status/${req.body.razorpay_order_id}`);
+    // sucss
+//     {
+//   razorpay_payment_id: 'pay_LV6kFy9RkOhIxs',
+//   razorpay_order_id: 'order_LV6j8rfIf9DVQJ',
+//   razorpay_signature: '3b20aaf5ae1bc78da54b9649bea27287dac5543e1b265dbd8e7744cd3a27c80b'
+// }
+  } catch (error) {
+    next(error)
+  }
+
+})
+
+Router.post("/payment/razorpay",authenticate,async(req,res,next)=>{
+  try{
+    let data = {}
+    const userId = req.userId;
+
+    const user = await User.findById(userId);
+
+    const email = user.email;
+    const phone = user.phone;
+    const cust_id = "CUST" + user._id;
+
+    const orderId = req.body.order;
+
+    const order = await Order.findById(orderId);
+
+    const order_id = order.order_id;
+
+    let totalAmount = 0;
+
+    let list = [];
+    list = order.list;
+    list.map((item) => {
+      totalAmount += item.qty * (item.price - item.discount);
+    });
+    /* import checksum generation utility */
+
+    var instance = new Razorpay({
+      key_id: config.RAZORPAY_API_KEY,
+      key_secret: config.RAZORPAY_API_SECRET,
+    });
+
+    const payment_capture = 1
+    const currency = "INR"
+    const options = {
+      amount: (totalAmount * 100),
+      currency,
+      receipt: order_id,
+      payment_capture,
+    };
+    const response = await instance.orders.create(options)
+    const updateOrder = await Order.findByIdAndUpdate(orderId,{order_id:response.id})
+    data = {name:user.name,email:user.email,phone:user.phone,order_id,amount:response.amount,id:response.id,currency:response.currency}
+
+    res.status(200).send(data)
+  }catch(error){
+    next(error)
+  }
+})
+
+// Router.post("/payment/razorpay",authenticate,async (req,res,next)=>{
+//   try{
+//     const userId = req.userId;
+
+//   const user = await User.findById(userId);
+
+//   const email = user.email;
+//   const phone = user.phone;
+//   const cust_id = "CUST" + user._id;
+
+//   const orderId = req.body.order;
+
+//   const order = await Order.findById(orderId);
+
+//   const order_id = order.order_id;
+
+//   let totalAmount = 0;
+
+//   let list = [];
+//   list = order.list;
+//   list.map((item) => {
+//     totalAmount += item.qty * (item.price - item.discount);
+//   });
+//       let instance new Razorpay({key_id: "",key_secret: ""})
+//       let options = {
+//         amount: totalAmount*100,
+//         currency: "INR",
+//         recceipt: order_id
+//       }
+//       instance.orders.create(options,function (err,order) {
+//         if(err){
+//           throw new Error("server error")
+//         }
+//         res.send()
+//         console.log(order)
+//       })
+//   }catch(error){
+//     next(error);
+//   }
+// })
 
 // fetch all records
 Router.get("/payment", async (req, res, next) => {
